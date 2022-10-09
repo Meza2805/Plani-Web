@@ -8915,7 +8915,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-    margin-bottom: 3rem !important;
+    margin-bottom: 2rem !important;
 }
 
 .ml-5,
@@ -10973,7 +10973,7 @@ h5,
 }
 
 .ftco-section {
-    padding: 7em 0;
+    padding: 1em 0;
 }
 
 .ftco-no-pt {
@@ -10985,8 +10985,8 @@ h5,
 }
 
 .heading-section {
-    font-size: 28px;
-    color: #fff;
+    font-size: 38px;
+    color: white;
 }
 
 .img {
@@ -11251,4 +11251,8 @@ textarea.form-control {
     margin: auto;
     height: 15rem;
     width: 15rem;
+}
+
+.estilo_letra {
+    font-family: 'Times New Roman', Times, serif;
 }
