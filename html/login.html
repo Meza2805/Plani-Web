@@ -10,40 +10,59 @@
     <link rel="stylesheet" href="/node_modules/animate.css/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="/node_modules/bootstrap-5.2.2-dist/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="/scss/style.css"> -->
+    <script src="/node_modules/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
     <title>Acceso</title>
+
 </head>
 
 <body class="cuerpo">
-    <div class="layout">
-        <h1 class="heading-section estilo_letra text-center"> Sistema de Control y Planificacion Academica </h1>
-        <h1 class="heading-section estilo_letra text-center"> SICOPLAD </h1>
-        <section class="ftco-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-6 text-center mb-5">
-                        <img src="/images/logo02.png" class="logo" class="img-fluid" alt="Responsive image">
-                    </div>
+
+    <h1 class="heading-section estilo_letra text-center"> Sistema de Control y Planificación Académica</h1>
+    <h1 class="heading-section estilo_letra text-center"> SICOPLAD </h1>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <img src="/images/logo02.png" class="logo" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="login-wrap p-0">
+                    <form action="#" class="signin-form">
+
+                        <!-- <div class="form-floating form-group mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="Usuario">
+                            <label for="floatingInput">Usuario</label>
+                        </div>
+                        <div class="form-floating form-group mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                            <label for="floatingPassword">Contraseña</label>
+                        </div> -->
+                        <div class="form-group mb-4">
+                            <input type="text" class="form-control" placeholder="Usuario" required>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <input id="password-field" type="password" class="form-control" placeholder="Contraseña" required>
+                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+
+                        <div class="form-group mb-5">
+
+                            <button type="submit" class="form-control btn btn-primary px-3">Acceder</button>
+
+                        </div>
+                    </form>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="login-wrap p-0">
-                            <!-- <h3 class="mb-4 text-center">Acceso</h3> -->
-                            <form action="#" class="signin-form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Usuario" required>
-                                </div>
+            </div>
+        </div>
+    </div>
 
-                                <div class="form-group">
-                                    <input id="password-field" type="password" class="form-control" placeholder="Contraseña" required>
-                                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary submit px-3">Acceder</button>
-                                </div>
-
-                                <!--POR SI OLVIDO LA CONTRASEÑA-->
-                                <div class="form-group d-md-flex">
+    <!--POR SI OLVIDO LA CONTRASEÑA-->
+    <!-- <div class="form-group d-md-flex">
                                     <div class="w-50">
                                         <label class="checkbox-wrap checkbox-primary">Recuerdame
 										<input type="checkbox" checked>
@@ -53,27 +72,24 @@
                                     <div class="w-50 text-md-right">
                                         <a href="#" style="color: #fff">Olvide mi Contraseña</a>
                                     </div>
-                                </div>
-                            </form>
-                            <!-- <h3 class="mb-4 text-center">Sistema de control y planificación académica para actividades curriculares y extracurriculares </h3> -->
-                            <!--<p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p> -->
+                                </div> -->
+    <!-- <h3 class="mb-4 text-center">Sistema de control y planificación académica para actividades curriculares y extracurriculares </h3> -->
+    <!--<p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p> -->
 
-                            <!--COMENTARIADO DE LOS BOTONES-->
-                            <!-- <div class="social d-flex text-center">
+    <!--COMENTARIADO DE LOS BOTONES-->
+    <!-- <div class="social d-flex text-center">
 	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
 	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
 	          </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- </div> -->
 
-        <script src="js/jquery.min.js"></script>
+    <!-- </div> -->
+
+    <!-- <script src="js/jquery.min.js"></script>
         <script src="js/popper.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/main.js"></script> -->
+
+
 
 </body>
 
