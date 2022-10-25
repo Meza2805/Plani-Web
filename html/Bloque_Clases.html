@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="/node_modules/animate.css/animate.css">
     <link rel="stylesheet" href="/node_modules/bootstrap-5.2.2-dist/css/bootstrap.css">
     <script src="/node_modules/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
-
-    <title>Registro Personal</title>
+    <title>Bloques de Clases</title>
 </head>
 
 <body>
+
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <div class="container-fluid">
@@ -160,78 +160,113 @@
                     <!-- espacio para formularios -->
                     <div class="col py-3">
                         <!-- <img src="/images/perfil.png" alt=""> -->
-                        <form class="form-card needs-validation" novalidate onsubmit="event.preventDefault()">
-                            <div class="row justify-content-between text-center mt-3 position-relative">
+                        <form class="form-card needs-validation" novalidate>
+                            <div class="row mt-4">
+                                <div class="text-center flex-column d-flex">
+                                    <h1 class="text-primary"> <i class="bi bi-aspect-ratio"></i> Bloques de Clases</h1>
+                                </div>
+                            </div>
 
-                                <div class="form-group  flex-column d-flex">
+                            <div class="row mt-1">
+                                <div class="text-left flex-column d-flex">
+                                    <h3 class="text-primary"> Datos de Grupo</h3>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between text-left mt-1 position-relative">
+
+                                <div class="form-group col-sm-6 flex-column d-flex mt-1">
+                                    <select class="form-select form-control" name="" id="" required>
+                                        <option selected disabled value="">Modalidad</option>
+                                        <option value="1">Preescolar Comunitario</option>
+                                        <option value="1">Primaria Regular</option>
+                                        <option value="1">Secundaria Diurna</option>
+                                    </select>
+                                    <div class="invalid-tooltip">
+                                        Campo Obligatorio
+                                    </div>
+                                </div>
 
 
-                                    <h1 class="text-primary"> <i class="bi bi-person-badge-fill"></i> Personal Educativo</h1>
+                                <div class="form-group col-sm-6 flex-column d-flex mt-1">
+                                    <select class="form-select form-control" name="" id="" required>
+                                            <option selected disabled  value="">Grado</option>
+                                            <option value="1">Primero</option>
+                                            <option value="1">Segundo</option>
+                                            <option value="1">Tercero</option>
+                                            <option value="1">....</option>
+                                    </select>
+                                    <div class="invalid-tooltip">
+                                        Campo Obligatorio
+                                    </div>
+                                </div>
 
 
+
+                            </div>
+                            <div class="row justifiy-conten text-left mt-3 position-relative">
+
+
+                                <div class="form-group col-sm-6 flex-column d-flex mt-1">
+                                    <select class="form-select form-control" name="" id="" required>
+                                        <option selected disabled value="">Turno</option>
+                                        <option value="1">Matutino</option>
+                                        <option value="1">Vespertino</option>
+                                    </select>
+                                    <div class="invalid-tooltip">
+                                        Campo Obligatorio
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-6 flex-column d-flex mt-1">
+                                    <select class="form-select form-control" name="" id="" required>
+                                    
+                                        <option selected disabled value="">Sección</option>
+                                        <option value="1">A</option>
+                                        <option value="2">B</option>
+                                    </select>
+                                    <div class="invalid-tooltip">
+                                        Campo Obligatorio
+                                    </div>
 
                                 </div>
 
+
+
                             </div>
-                            <div class="row justify-content-between text-left mt-3 position-relative">
+
+                            <!-- <div class="row justifiy-conten text-left mt-3 position-relative">
+
+                            </div> -->
+
+
+                            <div class="row mt-3">
+                                <div class="text-left flex-column d-flex">
+                                    <h4 class="text-primary"> Datos académicos</h4>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row justify-content-between text-left mt-1 position-relative">
+
                                 <div class="form-group col-sm-6 flex-column d-flex">
-                                    <input type="text" class="form-control" placeholder="Numero de Cedula    (incluya los guiones)" minlength="0" maxlength="16" required>
-                                    <div class="invalid-tooltip">
-                                        Campo Obligatorio
-                                    </div>
-                                    <!-- <input type="text" id="fname" name="fname" placeholder="Primer Nombre" onblur="validate(1)"> -->
-                                </div>
-                            </div>
-
-
-
-
-                            <div class="row justify-content-between text-left mt-3 position-relative">
-
-                                <div class="form-group col-sm-6 flex-column d-flex mt-1">
-                                    <input type="text" class="form-control" placeholder="Primer Nombre" minlength="0" maxlength="15" required>
-                                    <div class="invalid-tooltip">
-                                        Campo Obligatorio
-                                    </div>
-                                    <!-- <input type="text" id="fname" name="fname" placeholder="Primer Nombre" onblur="validate(1)"> -->
-                                </div>
-
-
-
-                                <div class="form-group col-sm-6 flex-column d-flex mt-1">
-                                    <input type="text" class="form-control" placeholder="Segundo Nombre" minlength="0" maxlength="15">
-                                </div>
-                            </div>
-                            <div class="row justify-content-between text-left mt-3 position-relative">
-                                <div class="form-group col-sm-6 flex-column d-flex mt-1">
-                                    <input type="text" class="form-control" placeholder="Primer Apellido" minlength="0" maxlength="15" required>
-                                    <div class="invalid-tooltip">
-                                        Campo Obligatorio
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Nombre de Profesor" required>
+                                        <button class="btn btn-outline-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                                        <div class="invalid-tooltip">
+                                            Campo Obligatorio
+                                        </div>
                                     </div>
 
-                                    <!-- <input type="text" id="fname" name="fname" placeholder="Primer Nombre" onblur="validate(1)"> -->
                                 </div>
+
                                 <div class="form-group col-sm-6 flex-column d-flex mt-1">
-                                    <input type="text" class="form-control" placeholder="Segundo Apellido" minlength="0" maxlength="15">
-                                </div>
-                            </div>
-                            <div class="row justify-content-between text-left mt-3 position-relative">
-                                <div class="form-group col-sm-6 flex-column d-flex mt-1">
-                                    <!-- <input type="text" class="form-control" placeholder="Primer Apellido" required> -->
-                                    <label for="fecha" class="form-label">Fecha de Nacimiento</label>
-                                    <input type="date" class="form-control" required id="fecha">
-                                    <div class="invalid-tooltip">
-                                        Campo Obligatorio
-                                    </div>
-                                    <!-- <input type="text" id="fname" name="fname" placeholder="Primer Nombre" onblur="validate(1)"> -->
-                                </div>
-                                <div class="form-group col-sm-6 flex-column d-flex mt-1">
-                                    <label class="form-label">Sexo</label>
-                                    <select class="form-select form-control" required>
-                                            <option selected disabled value="">Seleccione...</option>
-                                            <option value="1">Masculino</option>
-                                            <option value="2">Femenino</option>
-                                        </select>
+                                    <select class="form-select form-control" name="" id="" required>
+                                    
+                                        <option selected disabled value="">Asignatura</option>
+                                        <option value="1">Lengua y Literatura</option>
+                                        <option value="2">Lengua Extranjera</option>
+                                        <option value="3">Matematicas</option>
+                                    </select>
                                     <div class="invalid-tooltip">
                                         Campo Obligatorio
                                     </div>
@@ -239,19 +274,76 @@
                                 </div>
 
                             </div>
-                            <div class="row justify-content-between text-left mt-3 position-relative">
+
+
+
+
+
+                            <!-- <div class="table-responsive mt-1">
+                                <table class="table table-striped mt-1">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+
+                                            <th scope="col">Nombre de Profesor</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+
+                                            <td>Otto</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+
+                                            <td>Otto</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div> -->
+
+                            <div class="row mt-3">
+                                <div class="text-left flex-column d-flex">
+                                    <h4 class="text-primary"> Datos Cronológicos</h4>
+                                </div>
+                            </div>
+
+
+                            <div class="row justifiy-conten text-left mt-1 position-relative">
+
+
                                 <div class="form-group col-sm-6 flex-column d-flex mt-1">
-                                    <input type="text" class="form-control" placeholder="Numero Telefonico +505" minlength="0" maxlength="8" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" required>
+                                    <select class="form-select form-control" name="" id="" required>
+                                        <option selected disabled value="">Número de Bloque</option>
+                                        <option value="1">Bloque 1</option>
+                                        <option value="1">Bloque 2</option>
+                                        <option value="1">Bloque 3</option>
+                                        <option value="1">Bloque 4</option>
+                                    </select>
                                     <div class="invalid-tooltip">
                                         Campo Obligatorio
                                     </div>
                                 </div>
                                 <div class="form-group col-sm-6 flex-column d-flex mt-1">
-                                    <input type="text" class="form-control" placeholder="Direccion" minlength="0" maxlength="100" required>
+                                    <select class="form-select form-control" name="" id="" required>
+                                    
+                                        <option selected disabled value="">Dia de la Semana</option>
+                                        <option value="1">Lunes</option>
+                                        <option value="1">Martes</option>
+                                        <option value="2">Miércoles</option>
+                                    </select>
                                     <div class="invalid-tooltip">
                                         Campo Obligatorio
                                     </div>
+
                                 </div>
+
+
 
                             </div>
 
@@ -260,51 +352,23 @@
                                 <div class="form-group col-sm-3 flex-column d-flex mt-1">
                                     <button class="btn btn-primary" type="submit">Guardar</button>
                                 </div>
-                                <!-- <div class="form-group col-sm-3 flex-column d-flex mt-1">
-                                    <button class="btn btn-primary" type="submit">Actualizar</button>
-                                </div> -->
-                                <!-- <div class="form-group col-sm-3 flex-column d-flex mt-1">
-                                    <button class="btn btn-primary" type="submit">Dar de Baja</button>
-                                </div> -->
+
                                 <div class="form-group col-sm-3 flex-column d-flex mt-1">
                                     <button class="btn btn-primary" type="submit">Limpiar</button>
                                 </div>
-                                <!-- <div class="form-group col-sm-2 flex-column d-flex mt-1">
-                                    <button class="btn btn-primary" type="submit">Guardar</button>
-                                </div> -->
+
                             </div>
 
-                            <!-- <div class="row justify-content-between text-left mt-3">
-                                <div class="col">
-                                    <button class="btn btn-primary" type="submit">Guardar</button>
-                                </div>
-                                <div class="col">
-
-                                    <button class="btn btn-primary" type="submit">Actualizar</button>
-                                </div>
-                                <div class="col-2">
-
-                                    <button class="btn btn-primary" type="submit">Eliminar</button>
-                                </div>
-
-                            </div> -->
 
                         </form>
-                        <div class="table-responsive">
+                        <div class="table-responsive mt-1">
                             <table class="table table-striped mt-4">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Numero de Cedula</th>
-                                        <th scope="col">Primer Nombre</th>
-                                        <th scope="col">Segundo Nombre</th>
-                                        <th scope="col">Primer Apellido</th>
-                                        <th scope="col">Segundo Apellido</th>
-                                        <th scope="col">Fecha de Nacimiento</th>
-                                        <th scope="col">Sexo</th>
-                                        <th scope="col">Telefono</th>
-                                        <th scope="col">Direccion</th>
+                                        <th scope="col">Codigo</th>
                                         <th scope="col">Cargo</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -312,40 +376,19 @@
                                         <th scope="row">1</th>
                                         <td>Mark</td>
                                         <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
+
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>Mark</td>
                                         <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
+
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td>Mark</td>
                                         <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
+
                                     </tr>
                                 </tbody>
                             </table>
@@ -383,6 +426,8 @@
             })
         })()
     </script>
+
+</body>
 
 </body>
 
