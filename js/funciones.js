@@ -1,0 +1,1 @@
+function agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nac, sexo, telefono, direccion, cargo)

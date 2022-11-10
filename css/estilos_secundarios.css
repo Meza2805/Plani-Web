@@ -2124,6 +2124,11 @@ progress {
     opacity: 1;
 }
 
+.form-control:-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
 .form-control::placeholder {
     color: #6c757d;
     opacity: 1;
@@ -2649,6 +2654,11 @@ textarea.form-control-lg {
     color: transparent;
 }
 
+.form-floating>.form-control:-ms-input-placeholder,
+.form-floating>.form-control-plaintext:-ms-input-placeholder {
+    color: transparent;
+}
+
 .form-floating>.form-control::placeholder,
 .form-floating>.form-control-plaintext::placeholder {
     color: transparent;
@@ -2656,6 +2666,12 @@ textarea.form-control-lg {
 
 .form-floating>.form-control:not(:-moz-placeholder-shown),
 .form-floating>.form-control-plaintext:not(:-moz-placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.form-floating>.form-control:not(:-ms-input-placeholder),
+.form-floating>.form-control-plaintext:not(:-ms-input-placeholder) {
     padding-top: 1.625rem;
     padding-bottom: 0.625rem;
 }
@@ -2680,6 +2696,11 @@ textarea.form-control-lg {
 }
 
 .form-floating>.form-control:not(:-moz-placeholder-shown)~label {
+    opacity: 0.65;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+.form-floating>.form-control:not(:-ms-input-placeholder)~label {
     opacity: 0.65;
     transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
@@ -3048,6 +3069,7 @@ textarea.form-control.is-invalid {
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
     border-radius: var(--bs-btn-border-radius);
@@ -3959,8 +3981,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-    color: white;
-    /* COMENTARIO DE COLOR DE FONDO DE LETRA EN MENU */
+    color: var(--bs-nav-link-hover-color);
 }
 
 .nav-link.disabled {
@@ -5139,6 +5160,12 @@ fieldset:disabled .btn {
     color: #101214;
 }
 
+@-webkit-keyframes progress-bar-stripes {
+    0% {
+        background-position-x: 1rem;
+    }
+}
+
 @keyframes progress-bar-stripes {
     0% {
         background-position-x: 1rem;
@@ -5186,11 +5213,13 @@ fieldset:disabled .btn {
 }
 
 .progress-bar-animated {
+    -webkit-animation: 1s linear infinite progress-bar-stripes;
     animation: 1s linear infinite progress-bar-stripes;
 }
 
 @media (prefers-reduced-motion: reduce) {
     .progress-bar-animated {
+        -webkit-animation: none;
         animation: none;
     }
 }
@@ -5622,6 +5651,7 @@ fieldset:disabled .btn {
     pointer-events: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     opacity: 0.25;
 }
@@ -6581,7 +6611,15 @@ fieldset:disabled .btn {
     height: var(--bs-spinner-height);
     vertical-align: var(--bs-spinner-vertical-align);
     border-radius: 50%;
+    -webkit-animation: var(--bs-spinner-animation-speed) linear infinite var(--bs-spinner-animation-name);
     animation: var(--bs-spinner-animation-speed) linear infinite var(--bs-spinner-animation-name);
+}
+
+@-webkit-keyframes spinner-border {
+    to {
+        transform: rotate(360deg)/* rtl:ignore */
+        ;
+    }
 }
 
 @keyframes spinner-border {
@@ -6606,6 +6644,16 @@ fieldset:disabled .btn {
     --bs-spinner-width: 1rem;
     --bs-spinner-height: 1rem;
     --bs-spinner-border-width: 0.2em;
+}
+
+@-webkit-keyframes spinner-grow {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @keyframes spinner-grow {
@@ -7290,7 +7338,14 @@ fieldset:disabled .btn {
 }
 
 .placeholder-glow .placeholder {
+    -webkit-animation: placeholder-glow 2s ease-in-out infinite;
     animation: placeholder-glow 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes placeholder-glow {
+    50% {
+        opacity: 0.2;
+    }
 }
 
 @keyframes placeholder-glow {
@@ -7304,7 +7359,15 @@ fieldset:disabled .btn {
     mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
     -webkit-mask-size: 200% 100%;
     mask-size: 200% 100%;
+    -webkit-animation: placeholder-wave 2s linear infinite;
     animation: placeholder-wave 2s linear infinite;
+}
+
+@-webkit-keyframes placeholder-wave {
+    100% {
+        -webkit-mask-position: -200% 0%;
+        mask-position: -200% 0%;
+    }
 }
 
 @keyframes placeholder-wave {
@@ -8476,7 +8539,6 @@ fieldset:disabled .btn {
 .py-3 {
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
-    background-color: white;
 }
 
 .py-4 {
@@ -8924,12 +8986,14 @@ fieldset:disabled .btn {
 .user-select-auto {
     -webkit-user-select: auto !important;
     -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
     user-select: auto !important;
 }
 
 .user-select-none {
     -webkit-user-select: none !important;
     -moz-user-select: none !important;
+    -ms-user-select: none !important;
     user-select: none !important;
 }
 
@@ -11538,35 +11602,141 @@ fieldset:disabled .btn {
     }
 }
 
-.negrita {
-    font-weight: bold;
+
+/*# sourceMappingURL=estlios.css.map */
+
+.logo {
+    height: 3rem;
+    width: 3rem;
 }
 
-.subrayado {
-    text-decoration: underline;
+.logo_foto {
+    height: 5rem;
+    width: 5rem;
 }
 
-.centrar_imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo_menu {
+    height: 3rem;
+    width: 3rem;
+}
+
+* Color of the links BEFORE scroll */ .navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+    color: #A2D9CE;
 }
 
 
-/*para que la imagen se ponga de fondo con el fondo oscuro*/
+/* Color of the links AFTER scroll */
 
-iframe {
-    height: 100%
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+    color: #fff;
 }
 
 
-/*Para centrar imagenes*/
+/* Color of the navbar AFTER scroll */
 
+.navbar-scroll,
+.navbar-scrolled {
+    background-color: #cbbcb1;
+}
 
-/*clase para redimensionar tamaño de TextArea*/
+.mask-custom {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, .15);
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: 3px;
+}
+
+@media screen and (min-width:777px) {
+    .nav-link {
+        padding: 18px 0;
+        min-width: 120px;
+    }
+    .navbar {
+        padding: 0
+    }
+}
+
+.fondo {
+    background-color: #1F618D;
+}
+
+.cuerpo {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/Fondo02.png") no-repeat center top;
+    background-size: cover;
+}
 
 .limitar_area {
     resize: vertical;
     min-height: 100px;
     max-height: 180px;
+}
+
+.letra_fondo {
+    /* color: #000000; */
+    color: #1F618D;
+}
+
+.fondo_boton {
+    background-color: #2E4053;
+}
+
+.escudo_index {
+    width: 15rem;
+    height: 15rem;
+}
+
+
+/* barra de scroll */
+
+
+/* Works on Chrome, Edge, and Safari */
+
+
+/* Works on Firefox */
+
+
+/* Works on Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #1F618D;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    border: 3px solid #1F618D;
+}
+
+
+/* Scroll en tablas */
+
+.table-wrapper {
+    max-height: 100px;
+    overflow: auto;
+    display: inline-block;
+}
+
+
+/* Segundo intento para scroll en tablas */
+
+#div1 {
+    overflow: scroll;
+    height: 200px;
+    width: 500px;
+}
+
+#div1 table {
+    width: 500px;
+    background-color: lightgray;
 }
