@@ -74,11 +74,12 @@
                             <i class="bi bi-book"></i>  <strong> Datos Académicos</strong>
                             </a>
                             <ul class="dropdown-menu fondo mx-1">
+                          
+                                <li><a class="dropdown-item text-white" href="../view/modalidades.php"><strong>MODALIDADES</strong></a></li>
+                                <hr>
                                 <li><a class="dropdown-item text-white" href="../view/asignatura.php">  <strong>ASIGNATURAS</strong></a></li>
                                 <hr>
-                                <li><a class="dropdown-item text-white" href="../view/modalidades.php"><strong>MODALIDADES</strong></a></li>
-                            
-                               
+                                <li><a class="dropdown-item text-white" href="../view/asignatura_modalidades.php">  <strong>ASIGNATURAS Y MODALIDADES</strong></a></li>
                             </ul>
                         </li>
 
@@ -90,6 +91,7 @@
                                 <li><a class="dropdown-item text-white" href="../view/actividades.php">  <strong>ACTIVIDADES</strong></a></li>
                                 <hr>
                                 <li><a class="dropdown-item text-white" href="../view/grupos.php"><strong>GRUPOS DE CLASES</strong></a></li>
+                                <hr>
                                 <li><a class="dropdown-item text-white" href="../view/turno.php"><strong>TURNOS</strong></a></li>
                                 <hr>
                                 <li><a class="dropdown-item text-white" href="../view/grados.php"><strong>GRADOS</strong></a></li>

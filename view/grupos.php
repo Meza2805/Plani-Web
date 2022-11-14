@@ -10,7 +10,7 @@ include '../includes/header02.php';
                                 </div>
                             </div>
 
-                            <div class="row mt-1">
+                            <!-- <div class="row mt-1">
                                 <div class="text-left flex-column d-flex">
                                     <h3 class="letra_fondo"> Datos Generales</h3>
                                 </div>
@@ -136,40 +136,18 @@ include '../includes/header02.php';
                             </div>
 
 
-                        </form>
-                        <div class="table-responsive mt-1">
-                            <table class="table table-striped mt-4 table-primary">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Codigo</th>
-                                        <th scope="col">Cargo</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
+                        </form> -->
+                        <div class="table-responsive mt-1" id="tabla_grupo">
+                          
                         </div>
 
 <?php
 include '../includes/footer02.php';
 ?>
+
+<script text="type/javascript">
+    $(document).ready(function(){
+        $('#tabla_grupo').load('../componentes/tabla_grupo.php');
+
+    });
+</script>

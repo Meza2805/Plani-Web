@@ -4,7 +4,7 @@ include '../includes/header02.php';
    <form class="form-card needs-validation" novalidate onsubmit="event.preventDefault()">
                     <div class="row mt-4">
                         <div class="text-center">
-                            <h1 class="letra_fondo"> <i class="bi bi-pencil-square"></i> <strong>Registro de Asignaturas</strong> </h1>
+                            <h1 class="letra_fondo"> <i class="bi bi-pencil-square"></i> <strong>Designación de Asignaturas en Modalidades</strong> </h1>
                         </div>
                     </div>
                     <hr>
@@ -84,7 +84,7 @@ include '../includes/header02.php';
                     </div>
 
                 </form> -->
-                <div class="table-responsive mt-4" id="tabla_asignatura">
+                <div class="table-responsive mt-4" id="tabla_asig">
                   
                 </div>
 
@@ -95,7 +95,7 @@ include '../includes/footer02.php';
 
 <script text="text/javascript">
     $(document).ready(function(){
-    $('#tabla_asignatura').load('../componentes/tabla_asignatura.php');
+    $('#tabla_asig').load('../componentes/tabla_asignatura_modalidad.php');
     });
 
 </script>
