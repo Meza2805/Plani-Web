@@ -32,41 +32,25 @@ include '../includes/header02.php';
 
 
                         </form>
-                        <div class="table-responsive mt-4">
-                            <table class="table table-striped mt-4 table-primary">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Codigo</th>
-                                        <th scope="col">Cargo</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="table-responsive mt-4" id="cargo-remoto">
+                           
                         </div>
+
+
+
+
 
 
 
 <?php
 include '../includes/footer02.php';
 ?>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('#cargo-remoto').load('../componentes/tabla_cargo.php');
+    });
+
+</script>

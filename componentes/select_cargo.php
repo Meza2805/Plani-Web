@@ -5,7 +5,7 @@
 ?>
 
 
-<select class="form-select form-control letra_fondo" required>
+<select class="form-select form-control letra_fondo"  id="select_cargo" required>
   <option selected value="">Cargo</option>       
   <?php
     while ($data_select = mysqli_fetch_array($cargo)) { ?>

@@ -48,10 +48,3 @@
 </html>
 
 
-<!-- para llamar a cargo -->
-<script src="text/javascript">
-    $(document).ready(function(){
-        $('#cargo').load('../componentes/select_cargo.php');
-
-    });
-</script>
