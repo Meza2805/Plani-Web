@@ -9,11 +9,11 @@
                             © 2022 Copyright SICOPLAD
                         </div>
                     </div>
-                    <div class="col-md-7 text-center text-md-start">
+                    <!-- <div class="col-md-7 text-center text-md-start">
                         <div class="p-3">
                           <img src="../images/uni.png" alt="" class="logo">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
         </div>

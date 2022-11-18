@@ -12,11 +12,13 @@ require_once "../includes/conexion.php";
                                         <th scope="col">AÑO ESCOLAR</th>
                                         <th scope="col">ESTADO DE GRUPO</th>
                                         <th scope="col">DOCENTE GUIA</th>
+                                        <th scope="col">EDITAR</th>
+                                        <th scope="col">ELIMINAR</th>
                                     </tr>
                                 </thead>
 
                                 <?php
-                                    $conteo = 1;
+                                 
                                     $sql = "call SP_Mostrar_Grupos()";
                                     $resultado = mysqli_query($conexion,$sql);
                                    while($ver = mysqli_fetch_row($resultado)){

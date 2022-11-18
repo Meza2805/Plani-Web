@@ -17,29 +17,29 @@
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/estilos_secundarios.css">
 
-    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-
-    <link rel="stylesheet" href="../css/alertifyjs/css/alertify.css">
-    <link rel="stylesheet" href="../css/alertifyjs/css/themes/default.css">
-        
- 
+    <!-- <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> -->
 
     <script src="../css/jquery-3.6.1.min.js"></script>
     <script src="../css/alertifyjs/alertify.js"></script>
+    
+    <link rel="stylesheet" href="../css/alertifyjs/css/alertify.css">
+    <link rel="stylesheet" href="../css/alertifyjs/css/themes/default.css">
+        
+
 
     <script src="../node_modules/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
     <script src="../js/mi_hoja_java.js"></script>
      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Libreria de Sweet Alert -->
      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+     <script src="../js/funciones.js"></script>
 
 
 
         <!-- link para las tablas  INICIO -->
         <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> -->
-     <script src="../js/api_tabla.js"></script>
-     <script src="../js/funciones.js"></script>
+     <!-- <script src="../js/api_tabla.js"></script> -->
+
      <!-- <script src="../js/busqueda_personal.js"></script> -->
     <!-- link para las tablas  FIN -->
 
@@ -150,11 +150,11 @@
     <!-- FIN DE MENU -->
 
 
-    <script>
+<!-- Modal de pregunta para consulta salir -->
+<script>
     function salir(){
         Swal.fire({
   title: '¿Esta seguro que desea salir?',
-
   icon: 'warning',
   showCancelButton: true,
   confirmButtonColor: '#1F618D',
@@ -163,14 +163,11 @@
   cancelButtonText: 'No'
 }).then((result) => {
   if (result.isConfirmed) {
-
-    location.href="../includes/salir.php";
-  }
-})
-    }
+    location.href="../includes/salir.php";}
+})}
 </script>
 
 
 
-    <main class="container p-5 mt-5">
+<main class="container p-5 mt-5">
         

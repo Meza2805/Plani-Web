@@ -3,7 +3,7 @@
   $consulta_cargo = "call SP_Mostrar_Cargo();";
   $cargo = mysqli_query($conexion,$consulta_cargo);
 ?>
-<select class="form-select form-control letra_fondo"  id="select_cargo" required>
+<select class="form-select form-control letra_fondo"  id="select_cargo_u" required>
   <option selected value="">CARGO</option>       
   <?php
     while ($data_select = mysqli_fetch_array($cargo)) { ?>

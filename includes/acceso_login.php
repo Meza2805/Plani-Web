@@ -1,5 +1,10 @@
 
 <?php
+
+
+
+
+
     // se establece la conexio para el archivo de conexion
       require'../includes/conexion.php';
         session_start(); //Inicio de sesion

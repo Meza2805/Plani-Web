@@ -22,6 +22,7 @@ require_once "../includes/conexion.php";
                                     $resultado = mysqli_query($conexion,$sql);
                                     $contador = 1;
                                    while($ver = mysqli_fetch_row($resultado)){
+                                    $cedula=$ver[0];
                                 ?>
                                 <tbody >
                                     <tr>
@@ -33,11 +34,11 @@ require_once "../includes/conexion.php";
                                         <td><?php echo $ver [4]?></td>
                                         <td><?php echo $ver [5]?></td>
                                         <td><?php echo $ver [6]?></td>
-                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-editar" >
+                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editar_personal" onclick="cargar_form('<?php echo $cedula?>')">
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
-                                        <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                                        <td><button class="btn btn-danger" onclick="Eliminar('<?php  echo $ver[0]?>','<?php  echo $ver[1]?>')"><i class="bi bi-trash"></i></button></td>
                                      
                                     </tr>
                             <?php
