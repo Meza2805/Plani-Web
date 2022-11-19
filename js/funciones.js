@@ -13,7 +13,6 @@ function agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
         "&direccion=" + direccion +
         "&value_cargo=" + value_cargo;
 
-
     $.ajax({
         type: "POST",
         url: "../includes/agregar_personal.php",
@@ -91,7 +90,6 @@ function eliminar_personal(cedula_recibe) {
     });
 }
 
-
 function agregar_cargo(cargo) {
     agregar_cargo = "cargo=" + cargo;
     $.ajax({
@@ -105,7 +103,6 @@ function agregar_cargo(cargo) {
         }
     });
 }
-
 
 function cargar_form_cargo(id_cargo, cargo) {
     $('#id_c_u').val(id_cargo);
@@ -126,4 +123,19 @@ function actualizar_cargo(id_cargo, cargo) {
             location.reload();
         }
     });
+}
+
+function eliminar_cargo(id_cargo) {
+    eli_cargo = "id_cargo=" + id_cargo;
+    $.ajax({
+        type: "POST",
+        url: "../includes/eliminar_cargo.php",
+        dataType: "json",
+        data: eli_cargo,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+
 }

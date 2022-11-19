@@ -26,7 +26,7 @@ require_once "../includes/conexion.php";
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
-                                        <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                                        <td><button class="btn btn-danger" onclick="Eliminar('<?php echo $ver[0] ?>','<?php echo $ver[1] ?>')"><i class="bi bi-trash"></i></button></td>
                                      
                                     </tr>
                             <?php

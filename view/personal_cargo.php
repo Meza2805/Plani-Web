@@ -18,27 +18,27 @@ include '../includes/header02.php';
     </div>
 
     <!-- llamado al modal de registro  cargo INCIO-->
-    <form action="" class="needs-validation" novalidate >
-    <div class="modal fade" id="modal-cargo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5 letra_fondo" id="exampleModalLabel">  <i class="bi bi-pencil"></i> <strong>Registrar Cargo Administrativo</strong> </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <form action="" class="needs-validation" novalidate>
+        <div class="modal fade" id="modal-cargo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 letra_fondo" id="exampleModalLabel">  <i class="bi bi-pencil"></i> <strong>Registrar Cargo Administrativo</strong> </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    <div class="modal-body">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="cargo" class="form-control letra_fondo text-uppercase" placeholder=""   minlength="0" maxlength="16" required>
+                            <label for="floatingInput" class="letra_fondo">CARGO ACADÉMICO </label>
+                        </div>
                     </div>
-                <div class="modal-body">
-                    <div class="form-floating mb-3">
-                        <input type="text" id="cargo" class="form-control letra_fondo text-uppercase" placeholder="Numero de Cedula"   minlength="0" maxlength="16" required>
-                        <label for="floatingInput" class="letra_fondo">CARGO ACADÉMICO </label>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" id="agregar_cargo">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     </div>
-                </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary" id="agregar_cargo">Guardar</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+             </div>
             </div>
         </div>
-      </div>
-    </div>
     </form>
     <!-- llamado al modal de registro FIN-->
 
@@ -106,5 +106,25 @@ $(document).ready(function(){
 </script>
 
 
+<!-- Modal de pregunta para consulta Eliminacion de Cargo -->
+<script type="text/javascript">
+    function Eliminar(id_cargo,cargo){
+        Swal.fire({
+  title: '¿ELIMINAR EL REGISTRO DE '+ cargo + ' ?',
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#1F618D',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Si',
+  cancelButtonText: 'No'
+}).then((result) => {
+  if (result.isConfirmed) {
+    $(document).ready(function(){
+        eliminar_cargo(id_cargo);
+        // alert(id_cargo);
+    });
+  }
+})}
+</script>
 
 

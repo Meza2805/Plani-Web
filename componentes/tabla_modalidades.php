@@ -24,7 +24,7 @@ require_once "../includes/conexion.php";
                                         <td><?php echo $ver [0] ?></td>
                                         <td><?php echo $ver [1]?></td>
                                         <td><?php echo $ver [2]?></td>
-                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-editar" >
+                                        <td><button class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#modal-actualizar">
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>

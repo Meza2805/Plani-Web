@@ -268,14 +268,9 @@ $(document).ready(function(){
     $(document).ready(function(){
         eliminar_personal(cedula);
     });
-    
- 
   }
 })}
 </script>
-
-
-
 
 <?php
 include '../includes/footer02.php';

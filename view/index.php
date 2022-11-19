@@ -16,7 +16,7 @@ include '../includes/header02.php';
     <h1 class="letra_fondo"> <strong> Sistema de Control y Planificación Académica</strong></h1>
     <h1 class="letra_fondo"> <strong> SICOPLAD </strong></h1>
 
-    <h1> <?php echo $nombre ?>  </h1>
+    <!-- <h1> <?php echo $nombre ?>  </h1> -->
     <img src="/images/logo.png" alt="" class="escudo_index" width="">
 
     <h1 class="letra_fondo"> <strong> Escuela pública José Daniel Ortega Saavedra </strong></h1>
