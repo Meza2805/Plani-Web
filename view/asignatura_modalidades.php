@@ -8,94 +8,113 @@ include '../includes/header02.php';
                         </div>
                     </div>
                     <hr>
-                    <!-- <div class="row mt-3">
-                        <div class="text-left flex-column d-flex">
-                            <h3 class="letra_fondo">Datos Generales</h3>
-                        </div>
-                    </div>
-                    <div class="row justify-content-between text-left mt-4 position-relative">
-                        
-                        <div class="form-group col-sm-6 flex-column d-flex">
-                            <input type="text" class="form-control letra_fondo" placeholder="Descripcion de Asignatura" minlength="0" maxlength="25" required>
-                            <div class="invalid-tooltip">
-                                Campo Obligatorio
-                            </div>
-                
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row mt-3">
-                        <div class="text-left flex-column d-flex">
-                            <h3 class="letra_fondo">Modalidades de Asignatura</h3>
-                        </div>
-                    </div>
-                    <div class="row justify-content-between text-left mt-1 position-relative letra_fondo">
-                        <div class="form-group col-sm-3 flex-column d-flex">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                          Preescolar Formal
-                                        </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                          Prescolar Comunitario
-                                        </label>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-3 flex-column d-flex letra_fondo">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                          Primaria Regular
-                                        </label>
-                            </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                          Secundaria Diurna
-                                        </label>
-                            </div>
-
-
-
-
-                        </div>
-                        <div class="form-group col-sm-6 flex-column d-flex">
-
-                            </select>
-                            <div class="invalid-tooltip">
-                                Campo Obligatorio
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row justify-content text-left mt-3">
-                        <div class="form-group col-sm-3 flex-column d-flex mt-1">
-                            <button class="btn btn-primary" type="submit"> <strong>Guardar</strong></button>
-                        </div>
-
-                        <div class="form-group col-sm-3 flex-column d-flex mt-1">
-                            <button class="btn btn-primary" type="submit"> <strong>Limpiar</strong></button>
-                        </div>
-
-                    </div>
-
-                </form> -->
+                    <caption>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-agregar">
+                    Designar Asignatura<i class="bi bi-pencil-square"></i>
+                    </button>
+    </form>
                 <div class="table-responsive mt-4" id="tabla_asig">
                   
                 </div>
+
+               <!-- Modal de registro de Personal FIN -->
+<form  id="id_form" action="" class="needs-validation" novalidate >
+    <div class="modal fade" id="modal-agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 letra_fondo" id="exampleModalLabel">  <i class="bi bi-person-badge-fill"></i>  <strong>ASIGNAR MODALIDAD A ASIGNATURA</strong> </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                <div class="modal-body"> 
+                    
+
+                    
+
+                <div  class="mb-3 mt-5" id="select_asignatura">
+                </div> 
+
+                <div class="mb-3 mt-5" id="select_modalidades">
+                </div>
+
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" id="guardar" >Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>     
+                </div>
+              
+            </div>
+           
+      </div>
+    </div>
+</form>
+<!-- Modal de registro de Personal FIN --> 
 
 <?php
 
 include '../includes/footer02.php';
 ?>
 
+<!-- cargar tabla asignatura -->
 <script text="text/javascript">
     $(document).ready(function(){
     $('#tabla_asig').load('../componentes/tabla_asignatura_modalidad.php');
     });
 
+</script>
+
+<!-- cargar select de asignatura -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#select_asignatura').load('../componentes/select_asignatura_am.php');
+    });
+</script>
+
+<!-- cargar select de modalidades -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#select_modalidades').load('../componentes/select_modalidades.php');
+    });
+</script>
+
+<!-- Evento del boton Guardar Asignacion Modalidad Asignatura -->
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#guardar').click(function(){
+        // /*Ubicando el select de la asignatura*/ 
+        let select_asignatura= document.getElementById('select_asig');
+        // /*Obteniendo el valor de la opcion de asignatura*/
+        let id_asignatura = select_asignatura.value;
+
+         // /*Ubicando el select de la asignatura*/ 
+        let select_modalidad = document.getElementById('select_modalidad');
+        // /*Obteniendo el valor de la opcion de asignatura*/
+        let id_modalidad = select_modalidad.value;
+    
+        agregar_asmd(id_asignatura,id_modalidad);
+    });
+    });
+</script>
+
+
+<!-- Modal de pregunta para consulta Eliminacion de Asignacion -->
+<script type="text/javascript">
+    function Eliminar_Asignacion(id,asignatura){
+        Swal.fire({
+            title: '¿ELIMINAR LA ASIGNACIÒN DE '+ asignatura + ' ?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#1F618D',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si',
+            cancelButtonText: 'No'
+         }).then((result) => {
+            if (result.isConfirmed) {
+                $(document).ready(function(){
+                    eliminar_asignatura(id);
+                });
+  }
+})}
 </script>

@@ -17,11 +17,14 @@
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/estilos_secundarios.css">
 
-    <!-- <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> -->
 
     <script src="../css/jquery-3.6.1.min.js"></script>
     <script src="../css/alertifyjs/alertify.js"></script>
     
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+ 
+
+
     <link rel="stylesheet" href="../css/alertifyjs/css/alertify.css">
     <link rel="stylesheet" href="../css/alertifyjs/css/themes/default.css">
         
@@ -32,23 +35,12 @@
      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Libreria de Sweet Alert -->
      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
      <script src="../js/funciones.js"></script>
-
-
-
-        <!-- link para las tablas  INICIO -->
-        <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> -->
-     <!-- <script src="../js/api_tabla.js"></script> -->
-
-     <!-- <script src="../js/busqueda_personal.js"></script> -->
-    <!-- link para las tablas  FIN -->
-
-
+     <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"> </script>
     <title></title>
 </head>
 
 <body class="cuerpo">
-    
+
     <!-- MENU -->
     <header>
         <nav class="navbar navbar-expand-lg fondo navbar-light shadow-sm fixed-top">

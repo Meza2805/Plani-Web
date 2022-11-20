@@ -24,11 +24,11 @@ require_once "../includes/conexion.php";
                                         <td><?php echo $ver [0] ?></td>
                                         <td><?php echo $ver [1]?></td>
                                         <td><?php echo $ver [2]?></td>
-                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-editar" >
+                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-editar" onclick="cargar_asignatura('<?php echo $ver[0] ?>','<?php echo $ver[1] ?>')" >
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
-                                        <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                                        <td><button class="btn btn-danger" onclick="Eliminar_Asignatura('<?php echo $ver[0] ?>','<?php echo $ver[1] ?>')"><i class="bi bi-trash"></i></button></td>
                                      
                                     </tr>
                             <?php
@@ -38,3 +38,6 @@ require_once "../includes/conexion.php";
                                   
                                 </tbody>
                             </table>
+
+
+

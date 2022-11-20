@@ -139,3 +139,132 @@ function eliminar_cargo(id_cargo) {
     });
 
 }
+
+function agregar_modalidad(modalidad) {
+    agregar_modalidad = "modalidad=" + modalidad;
+    $.ajax({
+        type: "POST",
+        url: "../includes/agregar_modalidad.php",
+        dataType: "json",
+        data: agregar_modalidad,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+}
+
+function cargar_modalidad(id, modalidad) {
+    $('#codigou').val(id);
+    $('#modalidadu').val(modalidad);
+}
+
+function actualizar_modalidad(id, modalidad) {
+    modalidad = "id_modalidad=" + id +
+        "&modalidad=" + modalidad;
+    $.ajax({
+        type: "POST",
+        url: "../includes/actualizar_modalidad.php",
+        dataType: "json",
+        data: modalidad,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+}
+
+function eliminar_modalidad(id_modalidad) {
+    eli_modalidad = "id_modalidad=" + id_modalidad;
+    $.ajax({
+        type: "POST",
+        url: "../includes/eliminar_modalidad.php",
+        dataType: "json",
+        data: eli_modalidad,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+
+}
+
+
+function cargar_asignatura(id, asignatura) {
+    $('#codigou').val(id);
+    $('#asigu').val(asignatura);
+}
+
+function agregar_asignatura(asignatura) {
+    agregar_asig = "asignatura=" + asignatura;
+    $.ajax({
+        type: "POST",
+        url: "../includes/agregar_asignatura.php",
+        dataType: "json",
+        data: agregar_asig,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+}
+
+function actualizar_asignatura(id, asignatura) {
+    act_asig = "id_asignatura=" + id +
+        "&asignatura=" + asignatura;
+    $.ajax({
+        type: "POST",
+        url: "../includes/actualizar_asignatura.php",
+        dataType: "json",
+        data: act_asig,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+}
+
+
+function eliminar_asignatura(id_asignatura) {
+    eli_asig = "id_asignatura=" + id_asignatura;
+    $.ajax({
+        type: "POST",
+        url: "../includes/eliminar_asignatura.php",
+        dataType: "json",
+        data: eli_asig,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+}
+
+
+function agregar_asmd(id_asignatura, id_modalidad) {
+    agregar_asmd = "id_asignatura=" + id_asignatura +
+        "&id_modalidad=" + id_modalidad;
+    $.ajax({
+        type: "POST",
+        url: "../includes/asignar_asignatura.php",
+        dataType: "json",
+        data: agregar_asmd,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+}
+
+function eliminar_asignatura(id) {
+    eli_asm = "id=" + id;
+    $.ajax({
+        type: "POST",
+        url: "../includes/eliminar_asm.php",
+        dataType: "json",
+        data: eli_asm,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+}

@@ -86,7 +86,7 @@ include '../includes/header02.php';
                 </div>
                
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" id="guardar" onclick="mostrar()">Guardar</button>
+                    <button type="submit" class="btn btn-primary" id="guardar">Guardar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>     
                 </div>
               
@@ -174,7 +174,7 @@ include '../includes/header02.php';
 
 
 
-<!-- FUNCIONE DE JAVASCRIPT -->
+<!-- FUNCIONES DE JAVASCRIPT -->
 
 <!-- para llamar al selectt cargo -->
 <script type="text/javascript">
@@ -270,6 +270,13 @@ $(document).ready(function(){
     });
   }
 })}
+</script>
+
+
+<script>
+$(document).ready( function () {
+    $('#registro').DataTable();
+} );
 </script>
 
 <?php

@@ -1,7 +1,7 @@
 <?php
 require_once "../includes/conexion.php";    
 ?>
-<table class="table table-striped mt-4 table-primary table-hover table-bordered" id="registro">
+<table class="table table-striped mt-4 table-primary table-hover table-bordered display prueba_tabla" id="registro">
                                 <thead>
                                     <tr>
                                         <th scope="col">NO.</th>

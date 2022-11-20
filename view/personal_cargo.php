@@ -127,4 +127,11 @@ $(document).ready(function(){
 })}
 </script>
 
+<script>
+$(document).ready( function () {
+    $('#cargo_tabla').DataTable();
+} );
+</script>
+
+
 
