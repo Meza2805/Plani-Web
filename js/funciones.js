@@ -21,8 +21,6 @@ function agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
             alert(mensaje);
             //Actualizamos la página
             location.reload();
-
-            // $('#tabla_personal').load('../componentes/tabla_personal.php');
         }
     });
 }
@@ -225,7 +223,7 @@ function actualizar_asignatura(id, asignatura) {
 }
 
 
-function eliminar_asignatura(id_asignatura) {
+function delete_asig(id_asignatura) {
     eli_asig = "id_asignatura=" + id_asignatura;
     $.ajax({
         type: "POST",
@@ -255,16 +253,16 @@ function agregar_asmd(id_asignatura, id_modalidad) {
     });
 }
 
-function eliminar_asignatura(id) {
-    eli_asm = "id=" + id;
-    $.ajax({
-        type: "POST",
-        url: "../includes/eliminar_asm.php",
-        dataType: "json",
-        data: eli_asm,
-        success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
-        }
-    });
-}
+// function eliminar_asignatura(id) {
+//     eli_asm = "id=" + id;
+//     $.ajax({
+//         type: "POST",
+//         url: "../includes/eliminar_asm.php",
+//         dataType: "json",
+//         data: eli_asm,
+//         success: function(data) {
+//             alert(data.MENSAJE);
+//             location.reload();
+//         }
+//     });
+// }

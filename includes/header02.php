@@ -16,26 +16,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/estilos_secundarios.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
 
-
+    <script src="../js/funciones.js"></script>
     <script src="../css/jquery-3.6.1.min.js"></script>
-    <script src="../css/alertifyjs/alertify.js"></script>
-    
-    <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
- 
-
-
-    <link rel="stylesheet" href="../css/alertifyjs/css/alertify.css">
-    <link rel="stylesheet" href="../css/alertifyjs/css/themes/default.css">
-        
-
-
-    <script src="../node_modules/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
     <script src="../js/mi_hoja_java.js"></script>
-     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Libreria de Sweet Alert -->
-     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-     <script src="../js/funciones.js"></script>
-     <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"> </script>
+    <script src="../node_modules/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!--Libreria de Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+   
+
+
+     <!-- otra alerta -->
+     <!-- JavaScript -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+
+<!-- 
+    RTL version
+-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.rtl.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.rtl.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.rtl.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css"/>
+
+
+
+
+
+
     <title></title>
 </head>
 
@@ -124,7 +145,7 @@
                                 </strong> 
                             </a>
                             <ul class="dropdown-menu fondo mx-4">
-                                <li><a class="dropdown-item text-white" href="../view/usuario_perfil.php"><strong>PERFIL</strong></a></li>
+                                <li><a class="dropdown-item text-white" href="../view/usuario_perfil.php"> <i class="bi bi-gear"></i> <strong>ADMIN USUARIOS</strong></a></li>
                                 <hr>
                                 <li><a class="dropdown-item text-white" href="#" onclick="salir()"><strong>SALIR</strong></a></li>
                             </ul>

@@ -18,7 +18,7 @@ include '../includes/header02.php';
     </div>
 
     <!-- llamado al modal de registro  cargo INCIO-->
-    <form action="" class="needs-validation" novalidate>
+    <form  id="form_cargo">
         <div class="modal fade" id="modal-cargo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
@@ -44,7 +44,7 @@ include '../includes/header02.php';
 
 
       <!-- llamado al modal de actualizacon  cargo INCIO-->
-    <form action="" class="needs-validation" novalidate >
+    <form id="form_cargo_u" >
         <div class="modal fade" id="modal-cargo_u" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -85,24 +85,26 @@ include '../includes/footer02.php';
 </script>
 
 <!-- Evento agregar cargo -->
-<script type="text/javascript">
-$(document).ready(function(){
-    $('#agregar_cargo').click(function(){
-        let cargo=$('#cargo').val();
-        agregar_cargo(cargo);
-    });
-    });
+<script>
+ var form = document.getElementById('form_cargo');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+    // var cargo = document.getElementById('cargo');
+    let cargo=$('#cargo').val();
+    agregar_cargo(cargo);
+ });
 </script>
 
 <!-- Evento actualizar cargo -->
 <script type="text/javascript">
-$(document).ready(function(){
-    $('#actualizar_cargo').click(function(){
-        let id_cargo=$('#id_c_u').val();
-        let cargo=$('#cargo_u').val();
-        actualizar_cargo(id_cargo,cargo);
-    });
-    });
+var form = document.getElementById('form_cargo_u');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+    let id_cargo=$('#id_c_u').val();
+    let cargo=$('#cargo_u').val();
+  
+    actualizar_cargo(id_cargo,cargo);
+ });
 </script>
 
 

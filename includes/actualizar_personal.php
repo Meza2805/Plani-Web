@@ -11,7 +11,7 @@
     $direccion= $_POST['direccion'];
     $cargo =  $_POST['value_cargo'];
 
-    $sql=  "call SP_Actualizar_Datos_Basicos_Personal('$cedula','$p_nombre','$s_nombre','$s_apellido','$p_apellido','$fecha_nac'
+    $sql=  "call SP_Actualizar_Datos_Basicos_Personal('$cedula','$p_nombre','$s_nombre','$p_apellido','$s_apellido','$fecha_nac'
     ,$sexo,'$telefono','$direccion',$cargo)";
     $r= mysqli_query($conexion,$sql);
     $row = mysqli_fetch_assoc($r);

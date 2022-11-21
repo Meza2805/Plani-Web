@@ -26,7 +26,7 @@ include '../includes/header02.php';
 <!-- Llamado a tabla del personal ubicada en carpeta complemento FIN -->
 
 <!-- Modal de registro de Personal FIN -->
-<form action="" class="needs-validation" novalidate >
+<form id="form_registro" >
     <div class="modal fade" id="modal-agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -36,7 +36,7 @@ include '../includes/header02.php';
                  </div>
                 <div class="modal-body"> 
                     <div class="form-floating mb-3">
-                        <input type="text" id="cedula" class="form-control letra_fondo text-uppercase" placeholder="Numero de Cedula"   minlength="0" maxlength="16" required>
+                        <input type="text" id="cedula" class="form-control letra_fondo text-uppercase" placeholder="Numero de Cedula"   minlength="0" maxlength="16" pattern="^\d{3}-\d{6}-\d{4}[A-Z]{1}$" required>
                         <label for="floatingInput" class="letra_fondo">Numero de Cedula    (incluya "-")</label>
                     </div>
 
@@ -67,8 +67,8 @@ include '../includes/header02.php';
                     <div class="letra_fondo mb-3">
                         <select class="form-select form-control letra_fondo"  id="sexo" required>
                                 <option selected disabled value="">SEXO</option>
-                                <option value="1" class="letra_fondo">Masculino</option>
-                                <option value="2" class="letra_fondo" >Femenino</option>
+                                <option value="1" class="letra_fondo">Femenino</option>
+                                <option value="2" class="letra_fondo" >Masculino</option>
                         </select>
                      </div> 
                      
@@ -99,7 +99,7 @@ include '../includes/header02.php';
 
 
 <!-- Modal de actualizacion de Personal INICIO -->
-<form action="" class="needs-validation" novalidate >
+<form id="form_actualizar" >
     <div class="modal fade" id="editar_personal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -110,7 +110,7 @@ include '../includes/header02.php';
                 <div class="modal-body">
        
                     <div class="form-floating mb-3">
-                        <input type="text" id="cedulau" class="form-control letra_fondo text-uppercase" placeholder="Numero de Cedula"   minlength="0" maxlength="16" required>
+                        <input type="text" id="cedulau" class="form-control letra_fondo text-uppercase" placeholder="Numero de Cedula"   minlength="0" maxlength="16" disabled required>
                         <label for="floatingInput" class="letra_fondo">Numero de Cedula    (incluya "-")</label>
                     </div>
 
@@ -142,8 +142,8 @@ include '../includes/header02.php';
                     <div class="letra_fondo mb-3">
                         <select class="form-select form-control letra_fondo"  id="sexou" required>
                                 <option selected disabled value="">SEXO</option>
-                                <option value="1" class="letra_fondo">Masculino</option>
-                                <option value="2" class="letra_fondo" >Femenino</option>
+                                <option value="1" class="letra_fondo">Femenino</option>
+                                <option value="2" class="letra_fondo" >Masculino</option>
                         </select>
                     </div> 
 
@@ -200,9 +200,10 @@ include '../includes/header02.php';
 
 <!-- Evento del boton Guardar Personal -->
 <script type="text/javascript" >
-$(document).ready(function(){
-    $('#guardar').click(function(){
-        let cedula=$('#cedula').val();
+var form = document.getElementById('form_registro');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+    let cedula=$('#cedula').val();
         let p_nombre=$('#p_nombre').val();
         let s_nombre=$('#s_nombre').val();
         let p_apellido=$('#p_apellido').val();
@@ -219,17 +220,18 @@ $(document).ready(function(){
         let select_sexo = document.getElementById('sexo');
         // /*Obteniendo el valor de la opcion de sexo*/
         let value_sexo = select_sexo.value;
+     
         agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nac, value_sexo, telefono, direccion, value_cargo);
-    });
-    });
+ });
+
 </script>
 
 <!-- Evento del boton Actualizar Personal -->
 <script type="text/javascript" >
-$(document).ready(function(){
-    // 
-    $('#Ac_Personal').click(function(){
-        let cedula=$('#cedulau').val();
+var form = document.getElementById('form_actualizar');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+    let cedula=$('#cedulau').val();
         let p_nombre=$('#p_nombreu').val();
         let s_nombre=$('#s_nombreu').val();
         let p_apellido=$('#p_apellidou').val();
@@ -246,9 +248,9 @@ $(document).ready(function(){
         let select_sexo = document.getElementById('sexou');
         // /*Obteniendo el valor de la opcion de sexo*/
         let value_sexo = select_sexo.value;
+
         actualizar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nac, value_sexo, telefono, direccion, value_cargo);
-    });
-    });
+});
 </script>
 
 

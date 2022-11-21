@@ -20,7 +20,7 @@ include '../includes/header02.php';
 
 
 <!-- Modal de registro de MODALIDADES FIN -->
-<form action="" class="needs-validation" novalidate >
+<form id="form_agregar" >
     <div class="modal fade" id="modal-agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -48,7 +48,7 @@ include '../includes/header02.php';
 
 
 <!-- Modal de actualizacion de MODALIDADES FIN -->
-<form action="" class="needs-validation" novalidate >
+<form id="form_actualizar" >
     <div class="modal fade" id="modal-actualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -98,25 +98,25 @@ include '../includes/footer02.php';
 
 
 <!-- Evento del boton Guardar Modalidad -->
-<script type="text/javascript" >
-$(document).ready(function(){
-    $('#guardar').click(function(){
-        let modalidad=$('#modalidad').val();  
-        agregar_modalidad(modalidad);
-    });
-    });
+<script>
+var form = document.getElementById('form_agregar');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+    let modalidad=$('#modalidad').val(); 
+    agregar_modalidad(modalidad);
+});
 </script>
 
 
 <!-- Evento del boton Actualizar Modalidad -->
 <script type="text/javascript" >
-$(document).ready(function(){
-    $('#atualizar').click(function(){
-        let id=$('#codigou').val();
-        let modalidad=$('#modalidadu').val(); 
-        actualizar_modalidad(id,modalidad);
-    });
-    });
+var form = document.getElementById('form_actualizar');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+    let id=$('#codigou').val();
+    let modalidad=$('#modalidadu').val(); 
+    actualizar_modalidad(id,modalidad);
+});
 </script>
 
 
@@ -137,8 +137,10 @@ $(document).ready(function(){
                 $(document).ready(function(){
                     eliminar_modalidad(id_modalida);
                 });
-  }
-})}
+            }
+            })
+
+}
 </script>
 
 

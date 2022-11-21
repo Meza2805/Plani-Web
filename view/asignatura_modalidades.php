@@ -19,7 +19,7 @@ include '../includes/header02.php';
                 </div>
 
                <!-- Modal de registro de Personal FIN -->
-<form  id="id_form" action="" class="needs-validation" novalidate >
+<form  id="id_form" >
     <div class="modal fade" id="modal-agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -28,10 +28,6 @@ include '../includes/header02.php';
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                  </div>
                 <div class="modal-body"> 
-                    
-
-                    
-
                 <div  class="mb-3 mt-5" id="select_asignatura">
                 </div> 
 
@@ -81,10 +77,11 @@ include '../includes/footer02.php';
 
 <!-- Evento del boton Guardar Asignacion Modalidad Asignatura -->
 <script type="text/javascript">
-$(document).ready(function(){
-    $('#guardar').click(function(){
-        // /*Ubicando el select de la asignatura*/ 
-        let select_asignatura= document.getElementById('select_asig');
+var form = document.getElementById('id_form');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+     // /*Ubicando el select de la asignatura*/ 
+     let select_asignatura= document.getElementById('select_asig');
         // /*Obteniendo el valor de la opcion de asignatura*/
         let id_asignatura = select_asignatura.value;
 
@@ -94,8 +91,10 @@ $(document).ready(function(){
         let id_modalidad = select_modalidad.value;
     
         agregar_asmd(id_asignatura,id_modalidad);
-    });
-    });
+
+});
+
+
 </script>
 
 

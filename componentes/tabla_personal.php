@@ -1,10 +1,10 @@
 <?php
 require_once "../includes/conexion.php";    
 ?>
-<table class="table table-striped mt-4 table-primary table-hover table-bordered display prueba_tabla" id="registro">
+<table class="table table-striped mt-4 table-primary table-hover table-bordered display" id="registro">
                                 <thead>
                                     <tr>
-                                        <th scope="col">NO.</th>
+                                        
                                         <th scope="col">CEDULA</th>
                                         <th scope="col">NOMBRE</th>
                                         <th scope="col">EDAD</th>
@@ -20,21 +20,21 @@ require_once "../includes/conexion.php";
                                 <?php
                                     $sql = "call SP_Mostrar_Personal()";
                                     $resultado = mysqli_query($conexion,$sql);
-                                    $contador = 1;
+    
                                    while($ver = mysqli_fetch_row($resultado)){
-                                    $cedula=$ver[0];
+                                    $cedula=$ver["CEDULA"];
                                 ?>
                                 <tbody >
                                     <tr>
-                                        <th scope="row"><?php echo $contador ?></th>
+                                        
                                         <td><?php echo $ver [0] ?></td>
-                                        <td><?php echo $ver [1]?></td>
-                                        <td><?php echo $ver [2]?></td>
-                                        <td><?php echo $ver [3]?></td>
-                                        <td><?php echo $ver [4]?></td>
-                                        <td><?php echo $ver [5]?></td>
-                                        <td><?php echo $ver [6]?></td>
-                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editar_personal" onclick="cargar_form('<?php echo $cedula?>')">
+                                        <td><?php echo $ver [1] ?></td>
+                                        <td><?php echo $ver [2] ?></td>
+                                        <td><?php echo $ver [3] ?></td>
+                                        <td><?php echo $ver [4] ?></td>
+                                        <td><?php echo $ver [5] ?></td>
+                                        <td><?php echo $ver [6] ?></td>
+                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editar_personal" onclick="cargar_form('<?php echo $ver [0] ?>')">
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
@@ -42,8 +42,25 @@ require_once "../includes/conexion.php";
                                      
                                     </tr>
                             <?php
-                                 $contador++;   }
+                                }
                             ?>
                                   
                                 </tbody>
                             </table>
+
+
+
+
+<script  type="text/javascript">
+    $(document).ready(function () {
+        $('#registro').DataTable({
+        scrollY: '48vh',
+        scrollCollapse: true,
+        paging: true,
+       
+            language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json'
+            }
+        });
+    });
+</script>

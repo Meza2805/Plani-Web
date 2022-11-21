@@ -2,7 +2,7 @@
 include '../includes/header02.php';
 ?>
 
-    <form class="form-card needs-validation letra_fondo" novalidate onsubmit="event.preventDefault()">
+    <!-- <form class="form-card needs-validation letra_fondo" novalidate onsubmit="event.preventDefault()">
                             <div class="row">
                                 <div class="text-center">
                                     <h1 class="letra_fondo">   <i class="bi bi-journal-medical"></i>   <strong> Actividades Académicas</strong>     </h1>
@@ -33,7 +33,7 @@ include '../includes/header02.php';
                                     <div class="invalid-tooltip">
                                         Campo Obligatorio
                                     </div>
-                                    <!-- <input type="text" id="fname" name="fname" placeholder="Primer Nombre" onblur="validate(1)"> -->
+                                  
                                 </div>
                                 <div class="form-group col-sm-6 flex-column d-flex mt-1">
                                     <input type="text" class="form-control" placeholder="Meta Trimestral" minlength="0" maxlength="4" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" required>
@@ -49,7 +49,7 @@ include '../includes/header02.php';
                                         Campo Obligatorio
                                     </div>
 
-                                    <!-- <input type="text" id="fname" name="fname" placeholder="Primer Nombre" onblur="validate(1)"> -->
+                                 
                                 </div>
                                 <div class="form-group col-sm-6 flex-column d-flex mt-1">
                                     <input type="text" class="form-control" placeholder="Participantes Masculinos" minlength="0" maxlength="4" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" required>
@@ -62,7 +62,7 @@ include '../includes/header02.php';
 
                             </div>
                             <div class="row justify-content-between text-left mt-3 position-relative">
-                                <!-- <label class="text-primary" for="">Valoración Cualitativa</label> -->
+                             
                                 <h4 class="text-center">Valoración Cualitativa </h4>
                                 <div class="form-floating col-sm-6 mt-1">
                                     <textarea class="form-control limitar_area" placeholder="¿Qué se hizo? " id="floatingTextarea" maxlength="300" required></textarea>
@@ -117,7 +117,7 @@ include '../includes/header02.php';
 
                             <div class="row justify-content-between text-left mt-3 position-relative">
                                 <h4 class="text-center">Principales Dificultades </h4>
-                                <!-- <label for="">Principales Dificultades</label> -->
+                          
                                 <div class="form-floating col-sm-12 mt-1 text-center">
                                     <textarea class="form-control limitar_area" placeholder=" Redacte un párrafo donde señale la causa del incumplimiento " id="floatingTextarea" maxlength="300"></textarea>
                                     <label for="floatingTextarea"> Redacte un párrafo donde señale la causa del incumplimiento </label>
@@ -130,7 +130,7 @@ include '../includes/header02.php';
 
 
                             <div class="row justify-content-between text-left mt-3 position-relative">
-                                <!-- <label class="text-primary" for="">Valoración Cualitativa</label> -->
+                              
                                 <h4 class="text-center">Plan de Medidas </h4>
                                 <div class="form-floating col-sm-6 mt-1">
                                     <textarea class="form-control limitar_area" placeholder="¿Qué se hizo? " id="floatingTextarea" maxlength="300" required></textarea>
@@ -182,7 +182,7 @@ include '../includes/header02.php';
 
 
                             <div class="row justify-content-between text-left mt-3 position-relative">
-                                <!-- <label class="text-primary" for="">Valoración Cualitativa</label> -->
+                            
                                 <h4 class="text-center">Detalles Curriculares </h4>
                                 <div class="form-floating col-sm-6 mt-1">
                                     <textarea class="form-control limitar_area" placeholder="¿Qué se hizo? " id="floatingTextarea" maxlength="300" required></textarea>
@@ -221,76 +221,33 @@ include '../includes/header02.php';
                                 <div class="form-group col-sm-3 flex-column d-flex mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
                                     <button class="btn btn-primary" type="submit"> <strong>  Guardar </strong></button>
                                 </div>
-                             
-                                <div class="form-group col-sm-3 flex-column d-flex mt-1">
-                                    <button class="btn btn-primary"  type="reset">  <strong>Limpiar</strong> </button>
-                                </div>
-                               
                             </div>
                            
                           
-                        </form>
+                        </form> -->
 
-                        <div class="table-responsive">
-                            <table class="table table-striped mt-4 table-primary">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Numero de Cedula</th>
-                                        <th scope="col">Primer Nombre</th>
-                                        <th scope="col">Segundo Nombre</th>
-                                        <th scope="col">Primer Apellido</th>
-                                        <th scope="col">Segundo Apellido</th>
-                                        <th scope="col">Fecha de Nacimiento</th>
-                                        <th scope="col">Sexo</th>
-                                        <th scope="col">Telefono</th>
-                                        <th scope="col">Direccion</th>
-                                        <th scope="col">Cargo</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
-                                        <td>Otto</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div class="row mt-4">
+                    <div class="text-center">
+                        <h1 class="letra_fondo"> <i class="bi bi-pencil-square"></i> <strong>Registro de Actividades</strong> </h1>
+                    </div>
+                </div>
+                <hr>
+                <caption>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-agregar">
+                    Agregrar Nueva<i class="bi bi-pencil-square"></i>
+                    </button>
+                </caption> 
+
+                <div class="row mt-2">
+                    <div class="text-center">
+                        <h2 class="letra_fondo">  Generalidades</h2>
+                    </div>
+                </div>
+
+                        <div id="actividad01">
+
                         </div>
+
 
 
 
@@ -298,3 +255,17 @@ include '../includes/header02.php';
 <?php
 include '../includes/footer02.php';
 ?>
+
+<!-- <script>
+    $(document).ready( function(){
+   
+} );
+</script> -->
+
+<!-- para llamar la tabla de actividad01 -->
+<script type="text/javascript">
+    $(document).ready(function(){
+       
+        $('#actividad01').load('../componentes/tabla_Actividad01.php');
+    });
+</script>

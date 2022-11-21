@@ -21,7 +21,7 @@ include '../includes/header02.php';
 
 
 <!-- Modal de registro de ASIGNATURA FIN -->
-<form action="" class="needs-validation" novalidate >
+<form id="form_agregar">
     <div class="modal fade" id="modal-agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -49,7 +49,7 @@ include '../includes/header02.php';
 
 
 <!-- Modal de actualizacion de ASIGNATURA FIN -->
-<form action="" class="needs-validation" novalidate >
+<form id="form_actualizar" >
     <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -111,7 +111,7 @@ include '../includes/footer02.php';
          }).then((result) => {
             if (result.isConfirmed) {
                 $(document).ready(function(){
-                    eliminar_asignatura(id);
+                    delete_asig(id);
                 });
   }
 })}
@@ -120,21 +120,21 @@ include '../includes/footer02.php';
 
 <!-- Evento agregar ASIGNATURA -->
 <script type="text/javascript">
-$(document).ready(function(){
-    $('#guardar').click(function(){
-        let asig=$('#asignatura').val();
-        agregar_asignatura(asig);
-    });
-    });
+var form = document.getElementById('form_agregar');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+    let asig=$('#asignatura').val();
+    agregar_asignatura(asig);
+});
 </script>
 
 <!-- Evento ACTUALIZAR ASIGNATURA -->
 <script type="text/javascript">
-$(document).ready(function(){
-    $('#atualizar').click(function(){
-        let id=$('#codigou').val();
+var form = document.getElementById('form_actualizar');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+    let id=$('#codigou').val();
         let asig=$('#asigu').val();
         actualizar_asignatura(id,asig);
-    });
-    });
+});
 </script>
