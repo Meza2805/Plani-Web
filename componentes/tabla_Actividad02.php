@@ -40,7 +40,7 @@ require_once "../includes/conexion.php";
 
 <script  type="text/javascript">
 $(document).ready(function () {
-            $('#actividad_tabla01').DataTable({
+            $('#actividad_tabla02').DataTable({
                 scrollY: '48vh',
                 scrollCollapse: true,
                 paging: true,

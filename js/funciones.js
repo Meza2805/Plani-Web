@@ -253,16 +253,52 @@ function agregar_asmd(id_asignatura, id_modalidad) {
     });
 }
 
-// function eliminar_asignatura(id) {
-//     eli_asm = "id=" + id;
-//     $.ajax({
-//         type: "POST",
-//         url: "../includes/eliminar_asm.php",
-//         dataType: "json",
-//         data: eli_asm,
-//         success: function(data) {
-//             alert(data.MENSAJE);
-//             location.reload();
-//         }
-//     });
-// }
+function eliminar_asignatura_modalidad(id) {
+    eli_asm = "id=" + id;
+    $.ajax({
+        type: "POST",
+        url: "../includes/eliminar_asm.php",
+        dataType: "json",
+        data: eli_asm,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+}
+
+function agregar_actividad(cedula, linea_accion, prota, meta_anual, meta_trimestral, p_femenino, p_masculino, cp01, cp02, cp03, cp04, cp05, mp01, mp02, mp03, mp04, mp05, dificultades, alertas, propuestas, observaciones) {
+    agregar_act = "cedula=" + cedula +
+        "&linea=" + linea_accion +
+        "&prota=" + prota +
+        "&meta_anual=" + meta_anual +
+        "&meta_trimestral=" + meta_trimestral +
+        "&p_femenino=" + p_femenino +
+        "&p_masculino=" + p_masculino +
+        "&cp01=" + cp01 +
+        "&cp02=" + cp02 +
+        "&cp03=" + cp03 +
+        "&cp04=" + cp04 +
+        "&cp05=" + cp05 +
+        "&mp01=" + mp01 +
+        "&mp02=" + mp02 +
+        "&mp03=" + mp03 +
+        "&mp04=" + mp04 +
+        "&mp05=" + mp05 +
+        "&dificultades=" + dificultades +
+        "&alertas=" + alertas +
+        "&propuestas=" + propuestas +
+        "&observaciones=" + observaciones;
+
+    // alert(agregar_actividad);
+    $.ajax({
+        type: "POST",
+        url: "../includes/agregar_actividad.php",
+        dataType: "json",
+        data: agregar_act,
+        success: function(data) {
+            alert(data.MENSAJE);
+            location.reload();
+        }
+    });
+}

@@ -24,6 +24,7 @@
             $salida= $row["MENSAJE"];
             $nombre = $row["NOMBRE"];
             $cargo = $row["CARGO"];
+            $cedula = $row["CEDULA"];
 
           
 
@@ -35,6 +36,7 @@
             {
                 $_SESSION['username']=$nombre;
                 $_SESSION['c']= $cargo;
+                $_SESSION['cedula']= $cedula;
                 if($cargo=='DOCENTE')
                 {
                     echo "<script language='JavaScript'>

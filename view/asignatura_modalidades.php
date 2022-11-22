@@ -112,7 +112,7 @@ var form = document.getElementById('id_form');
          }).then((result) => {
             if (result.isConfirmed) {
                 $(document).ready(function(){
-                    eliminar_asignatura(id);
+                    eliminar_asignatura_modalidad(id);
                 });
   }
 })}

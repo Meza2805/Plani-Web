@@ -9,7 +9,7 @@ include '../includes/header02.php';
   title: 'BIENVENIDO',
   text: ' USUARIO:  <?php echo "$usuario "?> ROL: <?php echo "$rol "?> ',
 })
-   swal("Acceso Exitoso", "  USUARIO:  <?php echo "$usuario "?>  ROL: <?php echo "$rol "?> ","success");
+   // swal("Acceso Exitoso", "  USUARIO:  <?php echo "$usuario "?>  ROL: <?php echo "$cedula "?> ","success");
 </script>
 
 <div class="text-center">

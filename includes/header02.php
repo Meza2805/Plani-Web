@@ -2,6 +2,7 @@
     session_start();
     $usuario = $_SESSION['username'];
     $rol = $_SESSION['c'];
+    $cedula =$_SESSION['cedula'];
      if(!isset($usuario))
      {
          header("location: ../view/login.php");
