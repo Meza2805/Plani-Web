@@ -187,7 +187,6 @@ function eliminar_modalidad(id_modalidad) {
 
 }
 
-
 function cargar_asignatura(id, asignatura) {
     $('#codigou').val(id);
     $('#asigu').val(asignatura);
@@ -222,7 +221,6 @@ function actualizar_asignatura(id, asignatura) {
     });
 }
 
-
 function delete_asig(id_asignatura) {
     eli_asig = "id_asignatura=" + id_asignatura;
     $.ajax({
@@ -236,7 +234,6 @@ function delete_asig(id_asignatura) {
         }
     });
 }
-
 
 function agregar_asmd(id_asignatura, id_modalidad) {
     agregar_asmd = "id_asignatura=" + id_asignatura +
@@ -301,4 +298,147 @@ function agregar_actividad(cedula, linea_accion, prota, meta_anual, meta_trimest
             location.reload();
         }
     });
+}
+
+
+function Buscar() {
+    const tableReg = document.getElementById('datos');
+    const searchText = document.getElementById('searchTerm').value.toLowerCase();
+    let total = 0;
+
+    // Recorremos todas las filas con contenido de la tabla
+    for (let i = 1; i < tableReg.rows.length; i++) {
+
+        // Si el td tiene la clase "noSearch" no se busca en su cntenido
+        if (tableReg.rows[i].classList.contains("noSearch")) {
+            continue;
+        }
+        let found = false;
+        const cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+
+        // Recorremos todas las celdas
+        for (let j = 0; j < cellsOfRow.length && !found; j++) {
+            const compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+
+            // Buscamos el texto en el contenido de la celda
+            if (searchText.length == 0 || compareWith.indexOf(searchText) > -1) {
+                found = true;
+                total++;
+            }
+        }
+        if (found) {
+            tableReg.rows[i].style.display = '';
+        } else {
+
+            // si no ha encontrado ninguna coincidencia, esconde la
+            // fila de la tabla
+            tableReg.rows[i].style.display = 'none';
+        }
+    }
+
+    // mostramos las coincidencias
+    const lastTR = tableReg.rows[tableReg.rows.length - 1];
+    const td = lastTR.querySelector("td");
+    lastTR.classList.remove("hide", "red");
+    if (searchText == "") {
+        lastTR.classList.add("hide");
+    } else if (total) {
+        td.innerHTML = "Se ha encontrado " + total + " coincidencia" + ((total > 1) ? "s" : "");
+    } else {
+        lastTR.classList.add("red");
+        td.innerHTML = "No se han encontrado coincidencias";
+    }
+}
+
+
+function login(usuario, contra) {
+    var login = "usuario=" + usuario +
+        "&contra=" + contra;
+
+    $.ajax({
+        type: "POST",
+        url: "../includes/login.php",
+        dataType: "json",
+        data: login,
+        success: function(data) {
+            // alert(data.MENSAJE);
+            if (data.MENSAJE == "ACCESO EXITOSO") {
+                // var nombre = data.NOMBRE;
+                // var cargo = data.CARGO;
+                // var cedula = data.CEDULA;
+
+                //  window.location.href = window.location.href + "?var01=" + nombre + "&var02=" + cargo + "&var03=" + cedula;
+                location.assign('principal.php');
+                // window.location = "principal.php?var01=" + nombre + "&var02=" + cargo + "&var03=" + cedula;
+
+            } else {
+                Swal.fire({
+                    // title: 'MENSAJE',
+                    text: data.MENSAJE,
+                    icon: 'error',
+                    confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
+                });
+
+            }
+
+
+        }
+    });
+
+
+    // Swal.fire({
+    //     title: 'MENSAJE',
+    //     text: login,
+    //     icon: 'info'
+    // });
+
+}
+
+
+
+//Tecla mayuscula activada
+// $('#contra').keypress(function(e) {
+//     var s = String.fromCharCode(e.which);
+//     if (s.toUpperCase() === s && s.toLowerCase() !== s && !e.shiftKey) {
+//         alert('Bloq Mayus está activado.');
+//     }
+// });
+
+
+
+// function comprobarNombre(valor, campo) {
+
+//     var mensaje = "";
+
+//     // comprobar los posibles errores
+//     if (this.value == "") {
+//         mensaje = "El email no puede estar vacío";
+//     } else if (this.value.indexOf("@") < 0) {
+//         mensaje = "El email debe contener una @";
+//     } else if (this.value.indexOf(".com", this.value.indexOf("@")) < 0) {
+//         mensaje = "El email debe contener .com detras de la @";
+//     }
+
+//     // mostrar/resetear mensaje (el mensaje se resetea poniendolo a "")
+//     this.setCustomValidity(mensaje);
+// }
+
+// var email = document.querySelector("#contra");
+
+// // cuando se cambie el valor del campo o sea incorrecto, mostrar/resetear mensaje
+// email.addEventListener("invalid", comprobarNombre);
+// email.addEventListener("input", comprobarNombre);
+
+function mensaje() {
+    //  var contra = document.querySelector("#contra");
+    $('#contra').get(0).setCustom('SIRVE');
+
+
+    // contra.setCustomValidity("funcion");
+    // alert("You pressed a key inside the input field");
+
 }

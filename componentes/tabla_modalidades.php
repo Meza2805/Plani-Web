@@ -1,7 +1,7 @@
 <?php
 require_once "../includes/conexion.php";    
 ?>
-<table class="table table-striped mt-4 table-primary table-hover table-bordered" id="asignatura-tabla">
+<table class="table table-striped mt-4 table-primary table-hover table-bordered" id="datos">
                                 <thead>
                                     <tr>
                                         <th scope="col">CODIGO</th>

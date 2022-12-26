@@ -35,7 +35,7 @@ require_once "../includes/conexion.php";
                                         <td><?php echo $ver [6]?></td>
                                         <td><?php echo $ver [7]?></td>
                                       
-                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#" onclick="cargar_asignatura('<?php echo $ver[0] ?>','<?php echo $ver[1] ?>')" >
+                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal_actividad03" onclick="cargar_asignatura('<?php echo $ver[0] ?>','<?php echo $ver[1] ?>')" >
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>

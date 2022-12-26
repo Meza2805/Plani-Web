@@ -8,11 +8,6 @@ require_once "../includes/conexion.php";
                                         <th scope="col">LINEA DE ACCIÓN</th>
                                         <th scope="col">EDITAR</th>
                                         <th scope="col">ELIMINAR</th>
-                                        <!-- <th scope="col">PROTAGONISTAS</th>
-                                        <th scope="col">PRINCIPALES DIFICULTADES</th>
-                                        <th scope="col">SITUACIONES EN ESTADO DE ALERTA</th>
-                                        <th scope="col">PROPUESTA DE TOMA DE DECISIONES PARA LA DIRECCIÓN SUPERIOR</th>
-                                        <th scope="col">OBSERVACIONES</th> -->
                                     </tr>
                                 </thead>
 
@@ -26,13 +21,8 @@ require_once "../includes/conexion.php";
                                     <tr>
                                         <td><?php echo $ver [0] ?></td>
                                         <td><?php echo $ver [1]?></td>
-                                        <!-- <td><?php echo $ver [2]?></td>
-                                        <td><?php echo $ver [3]?></td>
-                                        <td><?php echo $ver [4] ?></td>
-                                        <td><?php echo $ver [5]?></td>
-                                        <td><?php echo $ver [6]?></td>
-                                        <td><?php echo $ver [7]?></td> -->
-                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#" onclick="cargar_asignatura('<?php echo $ver[0] ?>','<?php echo $ver[1] ?>')" >
+                                       
+                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal_actividad01" onclick="cargar_actividad01('<?php echo $ver[0] ?>')" >
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
@@ -40,7 +30,7 @@ require_once "../includes/conexion.php";
                                      
                                     </tr>
                             <?php
-                                $conteo++;
+                          
                                  }
                             ?>
                                   

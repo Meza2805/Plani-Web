@@ -7,8 +7,6 @@ require_once "../includes/conexion.php";
                                         <th scope="col">CODIGO</th>
                                         <th scope="col">PROTAGONISTAS</th>
                                         <th scope="col">EDITAR</th>
-                                        <!-- <th scope="col">ELIMINAR</th> -->
-                                      
                                     </tr>
                                 </thead>
 
@@ -22,16 +20,14 @@ require_once "../includes/conexion.php";
                                     <tr>
                                         <td><?php echo $ver [0] ?></td>
                                         <td><?php echo $ver [1]?></td>
-                                      
-                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#" onclick="cargar_asignatura('<?php echo $ver[0] ?>','<?php echo $ver[1] ?>')" >
+                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal_actividad02">
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
-                                        <!-- <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td> -->
-                                     
+                                      
                                     </tr>
                             <?php
-                                $conteo++;
+                             
                                  }
                             ?>
                                   

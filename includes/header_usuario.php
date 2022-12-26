@@ -19,12 +19,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- referencia a hoja de estilos principal ubicada localmente -->
+    <link rel="stylesheet" href="../node_modules/bootstrap-5.2.2-dist/css/estilos_principales.css">
+    <!-- <link rel="stylesheet" href="../css/footer_estatico.css"> -->
+
+    <!-- referencia a hoja de estilos de iconos de boostrap ubicacada localmente -->
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/estilos_secundarios.css">
-    <script src="../node_modules/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
+
+  
+   
+    <!-- Referencia a hoja de las principales funciones Javscript -->
+    <script src="../js/funciones.js"></script>
+    <script src="../css/jquery-3.6.1.min.js"></script>
     <script src="../js/mi_hoja_java.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../node_modules/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
+
+         <!--Libreria de Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title></title>
 </head>
 

@@ -1,8 +1,8 @@
 
 <?php
     // se establece la conexio para el archivo de conexion
-      require'../includes/conexion.php';
-        session_start(); //Inicio de sesion
+    require'../includes/conexion.php';
+    session_start(); //Inicio de sesion
      if (isset ($_POST['acceder']))
      {
     //    echo "Presiono el boton";
@@ -20,6 +20,7 @@
             $contra = $_POST['contra'];
             $sql = "call SP_Login('$usuario','$contra')";
             $resultado = mysqli_query($conexion,$sql);
+          
             $row = mysqli_fetch_assoc($resultado);
             $salida= $row["MENSAJE"];
             $nombre = $row["NOMBRE"];
@@ -37,26 +38,32 @@
                 $_SESSION['username']=$nombre;
                 $_SESSION['c']= $cargo;
                 $_SESSION['cedula']= $cedula;
-                if($cargo=='DOCENTE')
+
+                if($contra== "temporal")
                 {
                     echo "<script language='JavaScript'>
-                    location.assign('../view/index_usser.php')
+                    location.assign('../view/cambio_contraseña.php')
                     </script>"; 
-
-                    // echo "<script language='JavaScript'>
-                    // alert('BIENVENIDO $nombre   ROL: $cargo')
-                    // location.assign('../view/index_usser.php')
-                    // </script>"; 
                 }
                 else
                 {
-                   
-                    echo "<script language='JavaScript'>
-                    location.assign('../view/index.php')
-                    </script>"; 
+                    
+                    if($cargo=='DOCENTE')
+                    {
+                        echo "<script language='JavaScript'>
+                        location.assign('../view/index_usser.php')
+                        </script>"; 
+
+                    
+                    }
+                    else
+                    {
+                    
+                        echo "<script language='JavaScript'>
+                        location.assign('../view/index.php')
+                        </script>"; 
+                    }
                 }
-
-
             }
             else if ($salida == "CONTRASEÑA INCORRECTA")
             {
