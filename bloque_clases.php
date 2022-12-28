@@ -1,5 +1,10 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <title>BLOQUE DE CLASES</title>
 <?php
-include '../includes/header.php';
+include 'includes/header.php';
 ?>
 
 <form class="form-card needs-validation" novalidate>
@@ -226,7 +231,7 @@ include '../includes/header.php';
                             </table>
                         </div>
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>
 
 

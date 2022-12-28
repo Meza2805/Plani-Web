@@ -1,7 +1,11 @@
-<?php
-include '../includes/header.php';
-?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
 
+    <title>REGISTROS DE BLOQUES</title>
+<?php
+include 'includes/header.php';
+?>
 <form class="form-card needs-validation" novalidate>
                             <div class="row mt-4">
                                 <div class="text-center">
@@ -41,8 +45,6 @@ include '../includes/header.php';
                                     </div>
                                 </div>
                             </div>
-
-
                             <div class="row justify-content-between text-left mt-1 position-relative">
                                 <div class="col-sm-6 flex-column d-flex mt-1">
                                     <label for="" class="">Turno</label>
@@ -55,7 +57,6 @@ include '../includes/header.php';
                                         Campo Obligatorio
                                     </div>
                                 </div>
-
                             </div>
                             <hr style="color: #072342;" size="" />
 
@@ -107,16 +108,13 @@ include '../includes/header.php';
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
                             <div class="col">
                                 <div class="row justify-content">
                                     <div class="form-group col-sm-2 flex-column d-flex mt-3">
                                         <h5 class="text-primary">Fin</h5>
                                     </div>
                                 </div>
-
                                 <div class="row mt-1 mb-0">
                                     <div class="col-sm-3 flex-column d-flex mt-1">
                                         <div class="input-group">
@@ -167,9 +165,6 @@ include '../includes/header.php';
                                     <button class="btn btn-primary" type="reset"> <strong>Limpiar</strong> </button>
                                 </div>
                             </div>
-
-
-
                         </form>
                         <div class="table-responsive mt-4">
                             <table class="table table-striped mt-4 table-primary">
@@ -203,8 +198,6 @@ include '../includes/header.php';
                                 </tbody>
                             </table>
                         </div>
-
-
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>

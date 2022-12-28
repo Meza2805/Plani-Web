@@ -1,5 +1,10 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <title>GRUPOS DE CLASES</title>
 <?php
-include '../includes/header.php';
+include 'includes/header.php';
 ?>
 
 
@@ -142,7 +147,7 @@ include '../includes/header.php';
                         </div>
 
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>
 
 <script text="type/javascript">

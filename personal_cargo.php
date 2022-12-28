@@ -1,5 +1,10 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <title>CARGO</title>
 <?php
-include '../includes/header02.php';
+include 'includes/header.php';
 ?>
     <form class="form-card needs-validation" novalidate onsubmit="event.preventDefault()">
         <div class="row mt-4 mb-5">
@@ -83,7 +88,7 @@ include '../includes/header02.php';
     </form>
     <!-- llamado al modal de registro FIN-->
 <?php
-include '../includes/footer02.php';
+include 'includes/footer.php';
 ?>
 
 <!-- Funcion para agregar tabla -->

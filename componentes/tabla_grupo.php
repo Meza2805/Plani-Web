@@ -34,7 +34,7 @@ require_once "../includes/conexion.php";
                                         <td><?php echo $ver [5]?></td>
                                         <td><?php echo $ver [6] ?></td>
                                         <td><?php echo $ver [7]?></td>
-                                        <td><?php echo $ver [8]?></td>
+                                      
                                         <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-editar" >
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>

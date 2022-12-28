@@ -1,5 +1,10 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <title>TURNOS</title>
 <?php
-include '../includes/header02.php';
+include 'includes/header.php';
 ?>
 
 <form class="form-card needs-validation" novalidate onsubmit="event.preventDefault()">
@@ -71,8 +76,6 @@ include '../includes/header02.php';
                                 </tbody>
                             </table>
                         </div>
-
-
 <?php
-include '../includes/footer02.php';
+include 'includes/footer.php';
 ?>

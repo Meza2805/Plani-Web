@@ -1,5 +1,12 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <title>ACTIVIDADES</title>
+   
 <?php
-include '../includes/header.php';
+include 'includes/header.php';
 ?>
                 <div class="row mt-4">
                     <div class="text-center">
@@ -286,7 +293,7 @@ include '../includes/header.php';
 
    
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>
 
 <!-- Evento agregar actividad -->

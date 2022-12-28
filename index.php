@@ -39,7 +39,8 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;">
-            <div class="wrap-login100 text-center" style="background-image: radial-gradient(circle at 50% -20.71%, #a3a7ff 0, #7a8ffc 25%, #3c78f2 50%, #0063e8 75%, #0051de 100%);">
+            <div class="wrap-login100 text-center" style=" background: rgb(2, 0, 36);
+            background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(35, 106, 201, 1) 100%, rgba(0, 212, 255, 1) 100%);">
                 <form class="login100-form" id="form_login" >
 
                     <span class="login100-form-title p-b-26">

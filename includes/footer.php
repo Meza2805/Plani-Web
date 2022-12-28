@@ -1,6 +1,6 @@
 </main>
-<br><br><br>
- <footer class="text-center text-lg-start text-white fondo">
+
+ <footer class="text-center text-lg-start text-white fondo_degradado_azul">
         <div class="container p-4 pb-0">
             <section class="p-3 pt-0">
                 <div class="row d-flex align-items-center">

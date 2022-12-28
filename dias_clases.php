@@ -1,7 +1,11 @@
-<?php
-include '../includes/header.php';
-?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
 
+    <title>DIAS DE CLASES</title>
+<?php
+include 'includes/header.php';
+?>
 <form class="form-card needs-validation" novalidate onsubmit="event.preventDefault()">
                             <div class="row mt-4">
                                 <div class="text-center">
@@ -14,8 +18,7 @@ include '../includes/header.php';
                                     <h3 class="letra_fondo">Datos Generales</h3>
                                 </div>
                             </div>
-                            <div class="row justify-content-between text-left mt-4 position-relative">
-                              
+                            <div class="row justify-content-between text-left mt-4 position-relative"> 
                                 <div class="form-group col-sm-6 flex-column d-flex">
                                     <select class="form-select form-control" required>
                                         <option selected disabled value="">Seleccione Dia de la Semana...</option>
@@ -33,20 +36,14 @@ include '../includes/header.php';
                                 </div>
                             </div>
                             <hr>
-
-
                             <div class="row justify-content text-left mt-3">
                                 <div class="form-group col-sm-3 flex-column d-flex mt-1">
                                     <button class="btn btn-primary" type="submit"> <strong>Guardar</strong> </button>
                                 </div>
-
                                 <div class="form-group col-sm-3 flex-column d-flex mt-1">
                                     <button class="btn btn-primary" type="reset"> <strong>Limpiar</strong></button>
                                 </div>
-
                             </div>
-
-
                         </form>
                         <div class="table-responsive mt-4">
                             <table class="table table-striped mt-4 table-primary">
@@ -55,7 +52,6 @@ include '../includes/header.php';
                                         <th scope="col">#</th>
                                         <th scope="col">Codigo</th>
                                         <th scope="col">Cargo</th>
-
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -63,25 +59,20 @@ include '../includes/header.php';
                                         <th scope="row">1</th>
                                         <td>Mark</td>
                                         <td>Otto</td>
-
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>Mark</td>
                                         <td>Otto</td>
-
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td>Mark</td>
                                         <td>Otto</td>
-
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-
-
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>

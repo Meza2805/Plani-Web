@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <title>REGISTRO DE PERSONAL</title>
 <?php
 include 'includes/header.php';
 
@@ -291,6 +296,6 @@ $(document).ready( function () {
 </script>
 
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>
 

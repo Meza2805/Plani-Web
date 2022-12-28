@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>ASIGNATURA</title>
 <?php
-include '../includes/header.php';
+include 'includes/header.php';
 ?>
    <form class="form-card needs-validation" novalidate onsubmit="event.preventDefault()">
                     <div class="row mt-4">
@@ -101,7 +105,7 @@ include '../includes/header.php';
 
 
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>
 
 <script text="text/javascript">
