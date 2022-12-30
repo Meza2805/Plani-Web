@@ -3,6 +3,7 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.9.1",
+    "datatables.net-dt": "^1.13.1",
     "sweetalert2": "^11.6.15"
   }
 }

@@ -1,5 +1,4 @@
 // Funcion para insertar personal educativo
-
 function agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
     fecha_nac, value_sexo, telefono, direccion, value_cargo) {
     cadena = "cedula=" + cedula +
@@ -24,8 +23,7 @@ function agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
         }
     });
 }
-
-
+// Funcion para actualizar personal educativo
 function actualizar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
     fecha_nac, value_sexo, telefono, direccion, value_cargo) {
     cadena_actualizar = "cedula=" + cedula +
@@ -49,8 +47,7 @@ function actualizar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
         }
     });
 }
-
-
+// Funcion para cargar los datos de la tabla en el formulario
 function cargar_form(cedula) {
     busqueda = "cedula=" + cedula;
     $.ajax({
@@ -72,7 +69,7 @@ function cargar_form(cedula) {
 
     });
 }
-
+// Funcion para eliminar o dar de baja a un personal educativo
 function eliminar_personal(cedula_recibe) {
     eliminar = "cedula=" + cedula_recibe;
     $.ajax({
@@ -87,7 +84,7 @@ function eliminar_personal(cedula_recibe) {
 
     });
 }
-
+// Funcion para agregar un cargo administrativo
 function agregar_cargo(cargo) {
     agregar_cargo = "cargo=" + cargo;
     $.ajax({
@@ -101,12 +98,12 @@ function agregar_cargo(cargo) {
         }
     });
 }
-
+// Funcion para cargar los datos de la tabla al formulario de cargo administrativo
 function cargar_form_cargo(id_cargo, cargo) {
     $('#id_c_u').val(id_cargo);
     $('#cargo_u').val(cargo);
 }
-
+// Funcion para actualizar el nombre de un cargo administrativo
 function actualizar_cargo(id_cargo, cargo) {
 
     act_cargo = "id_cargo=" + id_cargo +
@@ -122,7 +119,7 @@ function actualizar_cargo(id_cargo, cargo) {
         }
     });
 }
-
+// Funcion para eliminar un cargo administrativo
 function eliminar_cargo(id_cargo) {
     eli_cargo = "id_cargo=" + id_cargo;
     $.ajax({
@@ -137,7 +134,7 @@ function eliminar_cargo(id_cargo) {
     });
 
 }
-
+// Funcion para agregar una modalidad escolar
 function agregar_modalidad(modalidad) {
     agregar_modalidad = "modalidad=" + modalidad;
     $.ajax({
@@ -151,12 +148,12 @@ function agregar_modalidad(modalidad) {
         }
     });
 }
-
+// Funcion para cargar los datos una modalidad escolar en el formulario
 function cargar_modalidad(id, modalidad) {
     $('#codigou').val(id);
     $('#modalidadu').val(modalidad);
 }
-
+// Funcion para actualizar una modalidad escolar
 function actualizar_modalidad(id, modalidad) {
     modalidad = "id_modalidad=" + id +
         "&modalidad=" + modalidad;
@@ -171,7 +168,7 @@ function actualizar_modalidad(id, modalidad) {
         }
     });
 }
-
+// Funcion para eliminar o dar de baja una modalidad escolar
 function eliminar_modalidad(id_modalidad) {
     eli_modalidad = "id_modalidad=" + id_modalidad;
     $.ajax({
@@ -186,12 +183,12 @@ function eliminar_modalidad(id_modalidad) {
     });
 
 }
-
+// Funcion para mostrar los datos de una asignatura en el formulario
 function cargar_asignatura(id, asignatura) {
     $('#codigou').val(id);
     $('#asigu').val(asignatura);
 }
-
+// Funcion para agregar una nueva asignatura
 function agregar_asignatura(asignatura) {
     agregar_asig = "asignatura=" + asignatura;
     $.ajax({
@@ -205,7 +202,7 @@ function agregar_asignatura(asignatura) {
         }
     });
 }
-
+// Funcion para actualizar una asignatura
 function actualizar_asignatura(id, asignatura) {
     act_asig = "id_asignatura=" + id +
         "&asignatura=" + asignatura;
@@ -220,7 +217,7 @@ function actualizar_asignatura(id, asignatura) {
         }
     });
 }
-
+// Funcion para eliminar o dar de baja una asignatura
 function delete_asig(id_asignatura) {
     eli_asig = "id_asignatura=" + id_asignatura;
     $.ajax({
@@ -234,7 +231,7 @@ function delete_asig(id_asignatura) {
         }
     });
 }
-
+// Funcion para asignar una asignatura a una o varias modalidades
 function agregar_asmd(id_asignatura, id_modalidad) {
     agregar_asmd = "id_asignatura=" + id_asignatura +
         "&id_modalidad=" + id_modalidad;
@@ -249,7 +246,7 @@ function agregar_asmd(id_asignatura, id_modalidad) {
         }
     });
 }
-
+// Funcion para eliminar o dar de baja una asignatura a una o varias modalidades
 function eliminar_asignatura_modalidad(id) {
     eli_asm = "id=" + id;
     $.ajax({
@@ -263,7 +260,7 @@ function eliminar_asignatura_modalidad(id) {
         }
     });
 }
-
+// Funcion para agregar una actividad escolar
 function agregar_actividad(cedula, linea_accion, prota, meta_anual, meta_trimestral, p_femenino, p_masculino, cp01, cp02, cp03, cp04, cp05, mp01, mp02, mp03, mp04, mp05, dificultades, alertas, propuestas, observaciones) {
     agregar_act = "cedula=" + cedula +
         "&linea=" + linea_accion +
@@ -299,8 +296,7 @@ function agregar_actividad(cedula, linea_accion, prota, meta_anual, meta_trimest
         }
     });
 }
-
-
+// La siguiente funcion fue usada en caso de la Libreria de DataTable no funcione!!
 function Buscar() {
     const tableReg = document.getElementById('datos');
     const searchText = document.getElementById('searchTerm').value.toLowerCase();
@@ -349,8 +345,7 @@ function Buscar() {
         td.innerHTML = "No se han encontrado coincidencias";
     }
 }
-
-
+// Funcion acceder al sistema a traves de usuario y contraseña
 function login(usuario, contra) {
     var login = "usuario=" + usuario +
         "&contra=" + contra;
@@ -397,6 +392,61 @@ function login(usuario, contra) {
     // });
 
 }
+// Funcion para llamar al cuadro de consulta para salir del sistema
+function salir() {
+    Swal.fire({
+        title: '¿Esta seguro que desea salir?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#1F618D',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si',
+        cancelButtonText: 'No'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            location.href = "../includes/salir.php";
+        }
+    })
+}
+// Codigo para establecer la libreria DataTable.net a las tablas requeridas
+$(document).ready(function() {
+    $('.tabla_d').DataTable({
+            language: {
+                "decimal": "",
+                "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+        }
+
+
+    );
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -433,12 +483,12 @@ function login(usuario, contra) {
 // email.addEventListener("invalid", comprobarNombre);
 // email.addEventListener("input", comprobarNombre);
 
-function mensaje() {
-    //  var contra = document.querySelector("#contra");
-    $('#contra').get(0).setCustom('SIRVE');
+// function mensaje() {
+//   var contra = document.querySelector("#contra");
+//     $('#contra').get(0).setCustom('SIRVE');
 
 
-    // contra.setCustomValidity("funcion");
-    // alert("You pressed a key inside the input field");
+//     contra.setCustomValidity("funcion");
+//     alert("You pressed a key inside the input field");
 
-}
+// }

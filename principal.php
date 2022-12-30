@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
 
-    <title>PRINCIPAL</title>
+    <title>Principal</title>
 <?php
 include 'includes/header.php';
 ?>

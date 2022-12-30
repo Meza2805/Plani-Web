@@ -65,13 +65,16 @@
         }
         
         *::-webkit-scrollbar-track {
-            background: #1F618D;
+            /* background: #1F618D; */
+            background: rgb(2, 0, 36);
+            background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(35, 106, 201, 1) 100%, rgba(0, 212, 255, 1) 100%);
         }
         
         *::-webkit-scrollbar-thumb {
-            background-color: white;
+            background: rgb(96, 109, 205);
+            background: linear-gradient(0deg, rgba(96, 109, 205, 1) 22%, rgba(179, 208, 233, 1) 100%, rgba(0, 212, 255, 1) 100%);
             border-radius: 20px;
-            border: 3px solid #1F618D;
+            /* border: 3px solid; */
         }
         
         .color_fondo {

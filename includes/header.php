@@ -27,16 +27,21 @@
     <!-- referencia a hoja de estilos principal ubicada localmente -->
     <link rel="stylesheet" href="../css/mis_estilos.css">
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/footable.bootstrap.css">
+    <link rel="stylesheet" href="../css/footable.bootstrap.min.css">
     <!-- <link rel="stylesheet" href="../css/footer_estatico.css"> -->
 
     <!-- referencia a hoja de estilos de iconos de boostrap ubicacada localmente -->
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+
     <!-- Referencia a hoja de las principales funciones Javscript -->
-    <script src="../js/funciones.js"></script>
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/funciones.js"></script>
     <script src="../js/mi_hoja_java.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  
 
          <!--Libreria de Sweet Alert -->
     <script src="../node_modules/sweetalert2/dist/sweetalert2.js"></script>
@@ -44,6 +49,20 @@
 
     <!-- Libreria de Animate.css -->
     <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+
+
+    <!-- Libreria de DataTable.net -->
+        <!-- Estilos CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"> -->
+    <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+
+        <!-- Javascript -->
+    <script src="../node_modules/datatables.net/js/jquery.dataTables.js"> </script>
+    <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"> </script>
+    <!-- <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script> -->
+
+  
 
 </head>
 
@@ -53,7 +72,11 @@
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top fondo_degradado_azul">
             <div class="container">
                 <a class="navbar-brand" href="../principal.php"><img src="/images/logo02.png" class="logo" alt=""></a>
-               
+                <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon text-light"></span> -->
+                <!-- <p>Menu</p -->
+                <i class="bi bi-menu-button-wide text-light"></i>
+              </button>
                 <div class=" collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto"  style="font-size: large">
                         <li class="nav-item dropdown">
@@ -72,7 +95,6 @@
                             <i class="bi bi-book"></i>  <strong> Datos Académicos</strong>
                             </a>
                             <ul class="dropdown-menu  mx-1">
-                          
                                 <li><a class="dropdown-item text-white" href="../modalidades.php"><strong>Modalidades</strong></a></li>
                                 <hr>
                                 <li><a class="dropdown-item text-white" href="../asignatura.php">  <strong>Asignaturas</strong></a></li>
@@ -80,7 +102,6 @@
                                 <li><a class="dropdown-item text-white" href="../asignatura_modalidades.php">  <strong>Asignaturas y Modalidades</strong></a></li>
                             </ul>
                         </li>
-
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-filter-square"></i> <strong> Organización</strong>
@@ -99,9 +120,6 @@
                                 <li><a class="dropdown-item text-white" href="../dias_clases.php"><strong>Dias de clases</strong></a></li>
                             </ul>
                         </li>
-
-                 
-
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-aspect-ratio"></i>  <strong> Bloques</strong>
@@ -137,40 +155,14 @@
                         </li>
 
                     </ul>
-
-
-
- 
                 </div>
             </div>
         </nav>
     </header>
     <!-- FIN DE MENU -->
 
-
-<!-- Modal de pregunta para consulta salir -->
-<script>
-    function salir(){
-        Swal.fire({
-  title: '¿Esta seguro que desea salir?',
-  icon: 'warning',
-  showCancelButton: true,
-  confirmButtonColor: '#1F618D',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Si',
-  cancelButtonText: 'No'
-}).then((result) => {
-  if (result.isConfirmed) {
-    location.href="../includes/salir.php";}
-})}
-</script>
+<main class="container mt-5">
+    <br>
 
 
-
-<main class="container p-5 mt-5">
-
-<style>
-
-
-</style>
         

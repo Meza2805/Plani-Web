@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 
-    <title>REGISTRO DE PERSONAL</title>
+    <title>Registro de Personal Educativo</title>
 <?php
 include 'includes/header.php';
 
@@ -11,28 +11,42 @@ include 'includes/header.php';
 <!-- Enunciado de pagina INICIO -->
 <div class="row justify-content-between text-center mt-3 position-relative">
     <div class="form-group  flex-column d-flex">
-        <h1 class="letra_fondo"> <i class="bi bi-person-badge-fill"></i> <strong> REGISTRO PERSONAL EDUCATIVO</strong> </h1>
+        <h2 class="letra_fondo"> <i class="bi bi-person-badge-fill"></i>Registro de Personal Educativo </h2>
     </div>
 
 </div>
-<hr>
+<!-- <hr> -->
 <!-- Enunciado de pagina FIN -->
 
 <!-- Boton de agregar INICIO -->
-<div class="container text-left mb-3">
+<!-- <div class="container text-left mb-3">
     <div class="row">
-        <div class="col-6">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-agregar">
-            AGREGAR NUEVO <i class="bi bi-person-plus-fill"></i>
+        <div class="col-3">
+        <button class="btn btn-info fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal-agregar">
+            Agregar Nuevo  <i class="bi bi-person-badge-fill"></i>
          </button>
         </div>
-        <div class="col-5">
+        <div class="col-3">
             <input type="text" class="form-control text-uppercase w-50"  placeholder="Buscar" id="searchTerm" type="text" onkeyup="Buscar()">
         </div>
     </div>
     <hr>
-</div> 
+</div>  -->
 <!-- Boton de agregar FIN -->
+
+<div class="mb-2">
+  <div class="row gx-5">
+    
+     <div class=""><button class="btn btn-info fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal-agregar">
+            Agregar Nuevo  <i class="bi bi-person-badge-fill"></i>
+         </button></div>
+   
+    <!-- <div class="col-5">
+      <div class="p-2"><input type="text" class="form-control"  placeholder="Buscar" id="searchTerm" type="text" onkeyup="Buscar()"></div>
+    </div> -->
+  </div>
+</div>
+
 
 <!-- Llamado a tabla del personal ubicada en carpeta complemento INICIO -->
 <div class="table-responsive" id="tabla_personal">
@@ -289,11 +303,10 @@ var form = document.getElementById('form_actualizar');
 </script>
 
 
-<script>
-$(document).ready( function () {
-    $('#registro').DataTable();
-} );
-</script>
+
+
+
+
 
 <?php
 include 'includes/footer.php';
