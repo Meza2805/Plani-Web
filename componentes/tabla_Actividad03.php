@@ -4,15 +4,15 @@ require_once "../includes/conexion.php";
                     <table class="table table-striped mt-4 table-primary table-hover table-bordered display" id="actividad_tabla03">
                                 <thead>
                                     <tr>
-                                        <th scope="col">CODIGO</th>
-                                        <th scope="col">META ANUAL</th>
-                                        <th scope="col">META TRIMESTRAL</th>
-                                        <th scope="col">PARTICIPANTES FEMININOS</th>
-                                        <th scope="col">PARTICIPANTES MASCULINOS</th>
-                                        <th scope="col">TOTAL DE PARTICIPANTES</th>
-                                        <th scope="col">ALCANCE TRIMESTRAL</th>
-                                        <th scope="col">ALCANCE ANUAL</th>
-                                        <th scope="col">EDITAR</th>
+                                        <th scope="col">Código</th>
+                                        <th scope="col">Meta Anual</th>
+                                        <th scope="col">Meta Trimestral</th>
+                                        <th scope="col">Participantes Femeninos</th>
+                                        <th scope="col">Participantes Masculinos</th>
+                                        <th scope="col">Total Participantes</th>
+                                        <th scope="col">Alcance Trimestral</th>
+                                        <th scope="col">Alcance Anual</th>
+                                        <th scope="col">Editar</th>
                                         <!-- <th scope="col">ELIMINAR</th> -->
                                       
                                     </tr>

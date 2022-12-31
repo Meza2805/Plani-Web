@@ -85,3 +85,17 @@
             background: rgb(2, 0, 36);
             background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(35, 106, 201, 1) 100%, rgba(0, 212, 255, 1) 100%);
         }
+        
+        .fondo_azul {
+            color: #2471A3;
+        }
+        
+        .fondo_degradado_rojo {
+            background: rgb(245, 62, 62);
+            background: linear-gradient(0deg, rgba(245, 62, 62, 1) 23%, rgba(179, 37, 54, 1) 63%);
+        }
+        
+        .fondo_degradado_verde {
+            background: rgb(107, 236, 97);
+            background: linear-gradient(0deg, rgba(107, 236, 97, 1) 4%, rgba(50, 120, 39, 1) 80%);
+        }

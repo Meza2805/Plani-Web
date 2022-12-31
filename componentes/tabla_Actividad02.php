@@ -4,9 +4,9 @@ require_once "../includes/conexion.php";
                     <table class="table table-striped mt-4 table-primary table-hover table-bordered display" id="actividad_tabla02">
                                 <thead>
                                     <tr>
-                                        <th scope="col">CODIGO</th>
-                                        <th scope="col">PROTAGONISTAS</th>
-                                        <th scope="col">EDITAR</th>
+                                        <th scope="col">Código</th>
+                                        <th scope="col">Protagonistas</th>
+                                        <th scope="col">Editar</th>
                                     </tr>
                                 </thead>
 

@@ -1,4 +1,3 @@
-
     <?php
     // Codigo php para establecer la sesion y caputar las variables de usuario, cargo y cedula
     $sesion =  session_start();
@@ -34,11 +33,14 @@
     <!-- referencia a hoja de estilos de iconos de boostrap ubicacada localmente -->
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+
 
     <!-- Referencia a hoja de las principales funciones Javscript -->
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/modales.js"></script>
+    <script src="../js/eventos.js"></script>
     <script src="../js/funciones.js"></script>
+    <script src="../js/codigo-Ready-Function.js"></script>
     <script src="../js/mi_hoja_java.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   

@@ -4,11 +4,11 @@ require_once "../includes/conexion.php";
 <table class="table table-striped mt-4 table-primary table-hover table-bordered" id="datos">
                                 <thead>
                                     <tr>
-                                        <th scope="col">CODIGO</th>
-                                        <th scope="col">DESCRIPCION</th>
-                                        <th scope="col">ESTADO</th>
-                                        <th scope="col">EDITAR</th>
-                                        <th scope="col">ELIMINAR</th>
+                                        <th scope="col">Código</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Estado</th>
+                                        <th scope="col">Editar</th>
+                                        <th scope="col">Eliminar</th>
                                     </tr>
                                 </thead>
 

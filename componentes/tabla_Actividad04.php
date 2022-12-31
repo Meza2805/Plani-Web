@@ -4,15 +4,13 @@ require_once "../includes/conexion.php";
                     <table class="table table-striped mt-4 table-primary table-hover table-bordered display" id="actividad_tabla04">
                                 <thead>
                                     <tr>
-                                        <th scope="col">CODIGO</th>
-                                        <th scope="col">¿QUÉ SE HIZO?</th>
-                                        <th scope="col">¿CON CUÁNTOS Y QUIÉNES FUERON LOS PROTAGONISTAS?</th>
-                                        <th scope="col">¿SOBRE QUÉ?</th>
-                                        <th scope="col">¿PARA QUÉ SE HIZO O CUÁL FUE EL RESULTADO?</th>
-                                        <th scope="col">¿CUÁL ES EL IMPACTO DEL RESULTADO?</th>
-                                        <th scope="col">EDITAR</th>
-                                      
-                                      
+                                        <th scope="col">Código</th>
+                                        <th scope="col">¿Qué se hizo?</th>
+                                        <th scope="col">¿Con cuántos y quiénes fueron los protagonistas?</th>
+                                        <th scope="col">¿sobre qué?</th>
+                                        <th scope="col">¿Para qué se hizo o cuál fue el resultado?</th>
+                                        <th scope="col">¿Cuál es el impacto del resultado?</th>
+                                        <th scope="col">Editar</th>  
                                     </tr>
                                 </thead>
 

@@ -4,13 +4,12 @@ require_once "../includes/conexion.php";
                     <table class="table table-striped mt-4 table-primary table-hover table-bordered display" id="actividad_tabla06">
                                 <thead>
                                     <tr>
-                                        <th scope="col">CODIGO</th>
-                                        <th scope="col">PRINCIPALES DIFICULTADES</th>
-                                        <th scope="col">SITUACIONES EN ESTADO DE ALERTA</th>
-                                        <th scope="col">PROPUESTA DE TOMA DESICIONES</th>
-                                        <th scope="col">OBSERVACIONES</th>
-                                        <th scope="col">EDITAR</th>
-                                      
+                                        <th scope="col">Código</th>
+                                        <th scope="col">Principales Dificultades</th>
+                                        <th scope="col">Situaciones en Estado de Alerta</th>
+                                        <th scope="col">Propuesta de Toma de Decisiones</th>
+                                        <th scope="col">Observaciones</th>
+                                        <th scope="col">Editar</th>
                                     </tr>
                                 </thead>
 

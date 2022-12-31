@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-    <title>CARGO</title>
+    <title>Cargo</title>
 <?php
 include 'includes/header.php';
 ?>
@@ -12,9 +11,6 @@ include 'includes/header.php';
                 <h1 class="letra_fondo"> <i class="bi bi-person-video2"></i></i> <strong> CARGO EDUCATIVO </strong></h1>
             </div>
         </div>
-       
-
-
         <div class="container text-left mb-3">
     <div class="row">
         <div class="col-6">

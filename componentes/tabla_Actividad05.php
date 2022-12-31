@@ -4,14 +4,13 @@ require_once "../includes/conexion.php";
                     <table class="table table-striped mt-4 table-primary table-hover table-bordered display" id="actividad_tabla05">
                                 <thead>
                                     <tr>
-                                        <th scope="col">CODIGO</th>
-                                        <th scope="col">¿CUÁNDO SE REALIZARÁ?</th>
-                                        <th scope="col">¿CON QUIÉNES?</th>
-                                        <th scope="col">¿CUÁNTOS?</th>
-                                        <th scope="col">¿CÓMO?</th>
-                                        <th scope="col">¿DONDE?</th>
-                                        <th scope="col">EDITAR</th>
-                                      
+                                        <th scope="col">Código</th>
+                                        <th scope="col">¿Cuándo se realizará?</th>
+                                        <th scope="col">¿Con quiénes?</th>
+                                        <th scope="col">¿Cuántos?</th>
+                                        <th scope="col">¿Cómo?</th>
+                                        <th scope="col">¿Donde?</th>
+                                        <th scope="col">Editar</th>
                                     </tr>
                                 </thead>
 
@@ -41,8 +40,7 @@ require_once "../includes/conexion.php";
                             <?php
                                 $conteo++;
                                  }
-                            ?>
-                                  
+                            ?>      
                                 </tbody>
                             </table>
 

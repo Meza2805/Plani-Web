@@ -35,11 +35,11 @@ $resultado = mysqli_query($conexion,$sql);
             <td><?php echo $ver[4]; ?></td>
             <td><?php echo $ver[5]; ?></td>
             <td><?php echo $ver[6]; ?></td> 
-          <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editar_personal" onclick="cargar_form('<?php echo $ver [0] ?>')">
+          <td><button class="btn fondo_degradado_verde" data-bs-toggle="modal" data-bs-target="#editar_personal" onclick="cargar_form('<?php echo $ver [0] ?>')">
                 <i class="bi bi-pencil text-white"></i>
                 </button>
             </td>
-            <td><button class="btn btn-danger" onclick="Eliminar(<?php  echo $ver[0]?>','<?php  echo $ver[1]?>')"><i class="bi bi-trash"></i></button></td> 
+            <td><button class="btn fondo_degradado_rojo text-light" onclick="Eliminar(<?php  echo $ver[0]?>','<?php  echo $ver[1]?>')"><i class="bi bi-trash"></i></button></td> 
         </tr>
             <?php
         }
@@ -48,7 +48,7 @@ $resultado = mysqli_query($conexion,$sql);
        
 </table>
 <!-- llamado a la hoja de funciones -->
-<script src="../js/funciones.js"></script>
+<script src="../js/DataTable.js"></script>
 
 
 

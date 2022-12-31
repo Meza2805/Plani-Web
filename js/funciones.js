@@ -1,3 +1,5 @@
+//////////////////////////---DECLARACION DE FUNCIONES---//////////////////////////
+
 // Funcion para insertar personal educativo
 function agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
     fecha_nac, value_sexo, telefono, direccion, value_cargo) {
@@ -408,34 +410,12 @@ function salir() {
         }
     })
 }
-// Codigo para establecer la libreria DataTable.net a las tablas requeridas
-$(document).ready(function() {
-    $('.tabla_d').DataTable({
-            language: {
-                "decimal": "",
-                "emptyTable": "No hay información",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-                "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-                "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-                "infoPostFix": "",
-                "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ Entradas",
-                "loadingRecords": "Cargando...",
-                "processing": "Procesando...",
-                "search": "Buscar:",
-                "zeroRecords": "Sin resultados encontrados",
-                "paginate": {
-                    "first": "Primero",
-                    "last": "Ultimo",
-                    "next": "Siguiente",
-                    "previous": "Anterior"
-                }
-            },
-        }
 
 
-    );
-});
+
+
+
+
 
 
 
