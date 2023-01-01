@@ -93,8 +93,8 @@
                      <div class="mb-3" id="cargo">
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" id="telefono" class="form-control fondo_azul" placeholder="Numero Telefonico +505" pattern="^\d{8}" minlength="0" maxlength="8" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"   required>
-                        <label for="floatingInput" class="text-primary">Numero Telefonico +505</label>
+                        <input type="text" id="telefono" class="form-control" placeholder="Numero Telefonico +505" pattern="^\d{8}" minlength="0" maxlength="8" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"   required>
+                        <label for="floatingInput" class="fondo_azul">Numero Telefonico +505</label>
                     </div>
                     <div class="form-floating col-sm-12 mt-3">
                         <textarea class="form-control limitar_area" placeholder="Dirección" id="direccion" maxlength="300" required></textarea>
@@ -122,51 +122,50 @@
                     </div>
                 <div class="modal-body">
                     <div class="form-floating mb-3">
-                        <input type="text" id="cedulau" class="form-control letra_fondo text-uppercase" placeholder="Numero de Cedula"   minlength="0" maxlength="16" disabled required>
-                        <label for="floatingInput" class="letra_fondo">Numero de Cedula    (incluya "-")</label>
+                        <input type="text" id="cedulau" class="form-control fondo_azul" placeholder="Numero de Cedula"   minlength="0" maxlength="16" disabled required>
+                        <label for="floatingInput" class="fondo_azul">Numero de Cedula</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" name="p_nombre" id="p_nombreu" class="form-control letra_fondo text-uppercase" placeholder="Primer Nombre" minlength="0" maxlength="15" required>
-                        <label for="floatingInput" class="letra_fondo">Primer Nombre</label>
+                        <input type="text" name="p_nombre" id="p_nombreu" class="form-control fondo_azul" placeholder="Primer Nombre" minlength="0" maxlength="15" required>
+                        <label for="floatingInput" class="fondo_azul">Primer Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" name="s_nombre" id="s_nombreu" class="form-control letra_fondo text-uppercase" placeholder="Segundo Nombre" minlength="0" maxlength="15">
-                        <label for="floatingInput" class="letra_fondo">Segundo Nombre</label>
+                        <input type="text" name="s_nombre" id="s_nombreu" class="form-control fondo_azul" placeholder="Segundo Nombre" minlength="0" maxlength="15">
+                        <label for="floatingInput" class="fondo_azul">Segundo Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" name="p_apellido" id="p_apellidou" class="form-control letra_fondo text-uppercase" placeholder="Primer Apellido" minlength="0" maxlength="15" required>
-                        <label for="floatingInput" class="letra_fondo">Primer apellido</label>
+                        <input type="text" name="p_apellido" id="p_apellidou" class="form-control fondo_azul" placeholder="Primer Apellido" minlength="0" maxlength="15" required>
+                        <label for="floatingInput" class="fondo_azul">Primer apellido</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" name="s_apellido" id="s_apellidou" class="form-control letra_fondo text-uppercase" placeholder="Segundo Apellido" minlength="0" maxlength="15">
-                        <label for="floatingInput" class="letra_fondo">Segundo apellido</label>
+                        <input type="text" name="s_apellido" id="s_apellidou" class="form-control fondo_azul" placeholder="Segundo Apellido" minlength="0" maxlength="15">
+                        <label for="floatingInput" class="fondo_azul">Segundo apellido</label>
                     </div>
-                     <div class="form-group letra_fondo mb-3">
-                        <label for="fecha" class="form-label letra_fondo"> Fecha de Nacimiento</label>
-                        <input type="date" name="fecha_nac" id="fecha_nacu" class="form-control letra_fondo text-uppercase" required id="fechau" max="2004-12-31" min="1957-01-01">
+                     <div class="form-group mb-3">
+                        <label for="fecha" class="form-label fondo_azul"> Fecha de Nacimiento</label>
+                        <input type="date" name="fecha_nac" id="fecha_nacu" class="form-control fondo_azul" required id="fechau" max="2004-12-31" min="1957-01-01">
                     </div>
-                    <div class="letra_fondo mb-3">
-                        <select class="form-select form-control letra_fondo"  id="sexou" required>
-                                <option selected disabled value="">SEXO</option>
-                                <option value="1" class="letra_fondo">Femenino</option>
-                                <option value="2" class="letra_fondo" >Masculino</option>
+                    <div class="mb-3">
+                        <select class="form-select form-control fondo_azul"  id="sexou" required>
+                                <option selected disabled value="">Sexo</option>
+                                <option value="1" class="fondo_azul">Femenino</option>
+                                <option value="2" class="fondo_azul" >Masculino</option>
                         </select>
                     </div>  
                     <!-- Llamado a todos los cargos actuales de la base de datos -->
-                    <div class="letra_fondo mb-3" id="cargo_u"> </div>
-                    <div class="form-floating letra_fondo mb-3">
-                        <input type="text" id="telefonou" class="form-control letra_fondo" placeholder="Numero Telefonico +505" pattern="^\d{8}" minlength="0" maxlength="8" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"   required>
-                        <label for="floatingInput" class="letra_fondo">Numero Telefonico +505</label>
+                    <div class="mb-3 fondo_azul" id="cargo_u"> </div>
+                    <div class="form-floating  mb-3">
+                        <input type="text" id="telefonou" class="form-control fondo_azul" placeholder="Numero Telefonico +505" pattern="^\d{8}" minlength="0" maxlength="8" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"   required>
+                        <label for="floatingInput" class="fondo_azul">Numero Telefonico +505</label>
                     </div>
-                    <div class="form-floating letra_fondo col-sm-12 mt-3">
-                        <textarea class="form-control limitar_area text-uppercase" placeholder=" ¿Cuál es el impacto del resultado? " id="direccionu" maxlength="300" required></textarea>
-                        <label for="floatingTextarea"> Dirección </label>
-                      
+                    <div class="form-floating col-sm-12 mt-3">
+                        <textarea class="form-control fondo_azul" placeholder="Dirección" id="direccionu" maxlength="300" required></textarea>
+                        <label for="floatingTextarea" class="fondo_azul"> Dirección </label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" id="Ac_Personal">Actualizar</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn fondo_degradado_azul text-light" id="Ac_Personal">Actualizar</button>
+                    <button type="button" class="btn fondo_degradado_rojo text-light" data-bs-dismiss="modal">Cancelar</button>
                 </div>
             </div>
       </div>
@@ -180,30 +179,29 @@
 
 <!-- Evento del boton Guardar Personal -->
 <script type="text/javascript" >
-// var form = document.getElementById('form_registro');
-//  form.addEventListener('submit',function(event){
-//     event.preventDefault();
-//     let cedula=$('#cedula').val();
-//         let p_nombre=$('#p_nombre').val();
-//         let s_nombre=$('#s_nombre').val();
-//         let p_apellido=$('#p_apellido').val();
-//         let s_apellido=$('#s_apellido').val();
-//         let telefono=$('#telefono').val();
-//         let direccion=$('#direccion').val();
-//         // /*variable para guardar fecha*/
-//         let fecha_nac=$('#fecha_nac').val();
-//         // /*Ubicando el select del cargo*/ 
-//         let select_cargo = document.getElementById('select_cargo');
-//         // /*Obteniendo el valor de la opcion de cargo*/
-//         let value_cargo = select_cargo.value;
-//         // /*Ubicando el select de sexo*/
-//         let select_sexo = document.getElementById('sexo');
-//         // /*Obteniendo el valor de la opcion de sexo*/
-//         let value_sexo = select_sexo.value;
+var form = document.getElementById('form_registro');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+    let cedula=$('#cedula').val();
+        let p_nombre=$('#p_nombre').val();
+        let s_nombre=$('#s_nombre').val();
+        let p_apellido=$('#p_apellido').val();
+        let s_apellido=$('#s_apellido').val();
+        let telefono=$('#telefono').val();
+        let direccion=$('#direccion').val();
+        // /*variable para guardar fecha*/
+        let fecha_nac=$('#fecha_nac').val();
+        // /*Ubicando el select del cargo*/ 
+        let select_cargo = document.getElementById('select_cargo');
+        // /*Obteniendo el valor de la opcion de cargo*/
+        let value_cargo = select_cargo.value;
+        // /*Ubicando el select de sexo*/
+        let select_sexo = document.getElementById('sexo');
+        // /*Obteniendo el valor de la opcion de sexo*/
+        let value_sexo = select_sexo.value;
      
-//         agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nac, value_sexo, telefono, direccion, value_cargo);
-//  });
-
+        agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nac, value_sexo, telefono, direccion, value_cargo);
+ });
 </script>
 
 <!-- Evento del boton Actualizar Personal -->
@@ -237,22 +235,22 @@ var form = document.getElementById('form_actualizar');
 <!-- Modal de pregunta para consulta Eliminacion de Personal -->
 <script type="text/javascript">
    function Eliminar(cedula, nombre) {
-    alert('Funciona');
-    // Swal.fire({
-    //     title: '¿ELIMINAR EL REGISTRO DE ' + nombre + ' ?',
-    //     icon: 'warning',
-    //     showCancelButton: true,
-    //     confirmButtonColor: '#1F618D',
-    //     cancelButtonColor: '#d33',
-    //     confirmButtonText: 'Si',
-    //     cancelButtonText: 'No'
-    // }).then((result) => {
-    //     if (result.isConfirmed) {
-    //         $(document).ready(function() {
-    //             eliminar_personal(cedula);
-    //         });
-    //     }
-    // })
+    
+    Swal.fire({
+        title: '¿ELIMINAR EL REGISTRO DE ' + nombre + ' ?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#1F618D',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si',
+        cancelButtonText: 'No'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $(document).ready(function() {
+                eliminar_personal(cedula);
+            });
+        }
+    })
 }
 
 </script>

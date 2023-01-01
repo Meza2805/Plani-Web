@@ -28,18 +28,21 @@ $resultado = mysqli_query($conexion,$sql);
         {
             ?>
         <tr>   
-           <td><?php echo $ver[0]; ?></td>
-            <td><?php echo $ver[1]; ?></td>
-            <td><?php echo $ver[2]; ?></td>
-            <td><?php echo $ver[3]; ?></td>
-            <td><?php echo $ver[4]; ?></td>
-            <td><?php echo $ver[5]; ?></td>
-            <td><?php echo $ver[6]; ?></td> 
+           <td><?php echo $ver[0] ?></td>
+            <td><?php echo $ver[1] ?></td>
+            <td><?php echo $ver[2] ?></td>
+            <td><?php echo $ver[3] ?></td>
+            <td><?php echo $ver[4] ?></td>
+            <td><?php echo $ver[5] ?></td>
+            <td><?php echo $ver[6] ?></td> 
           <td><button class="btn fondo_degradado_verde" data-bs-toggle="modal" data-bs-target="#editar_personal" onclick="cargar_form('<?php echo $ver [0] ?>')">
                 <i class="bi bi-pencil text-white"></i>
                 </button>
             </td>
-            <td><button class="btn fondo_degradado_rojo text-light" onclick="Eliminar(<?php  echo $ver[0]?>','<?php  echo $ver[1]?>')"><i class="bi bi-trash"></i></button></td> 
+            <td>
+                <button class="btn fondo_degradado_rojo text-light" onclick="Eliminar('<?php  echo $ver[0]?>','<?php  echo $ver[1]?>')"><i class="bi bi-trash"></i>
+            </button>
+        </td> 
         </tr>
             <?php
         }

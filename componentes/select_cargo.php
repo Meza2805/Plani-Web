@@ -5,7 +5,7 @@
 ?>
 
 <link rel="stylesheet" href="../css/mis_estilos.css">
-<select class="form-select form-control text-primary"  id="select_cargo" required>
+<select class="form-select form-control fondo_azul"  id="select_cargo" required>
   <option class="" selected value="">Cargo</option>       
   <?php
     while ($data_select = mysqli_fetch_array($cargo)) { ?>
