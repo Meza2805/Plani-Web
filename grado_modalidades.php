@@ -42,7 +42,7 @@ include 'includes/header.php';
                 
                 <div class="mb-3 mt-5" id="select_modalidades">
                 </div>
-                <div  class="mb-3 mt-5" id="select_turnos">
+                <div  class="mb-3 mt-5" id="select_grados">
                 </div> 
                 </div>
                 <div class="modal-footer">
@@ -67,12 +67,7 @@ include 'includes/footer.php';
 
 </script>
 
-<!-- cargar select de asignatura -->
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#select_turnos').load('../componentes/select_turno.php');
-    });
-</script>
+
 
 <!-- cargar select de modalidades -->
 <script type="text/javascript">
@@ -81,24 +76,43 @@ include 'includes/footer.php';
     });
 </script>
 
-<!-- Evento del boton Guardar Asignacion Modalidad Asignatura -->
-<script type="text/javascript">
-    var form = document.getElementById('id_form');
-    form.addEventListener('submit',function(event){
-        event.preventDefault();
-        // /*Ubicando el select de la asignatura*/ 
-        let select_turno= document.getElementById('select_turno');
-        // /*Obteniendo el valor de la opcion de asignatura*/
-        let id_turno = select_turno.value;
-        // /*Ubicando el select de la asignatura*/ 
-        let select_modalidad = document.getElementById('select_modalidad');
-        // /*Obteniendo el valor de la opcion de asignatura*/
-        let id_modalidad = select_modalidad.value;
-        agregar_turno(id_turno,id_modalidad);
-       
-      
-        });
-</script>
+<!-- cargar select de grado -->
+<!-- <script type="text/javascript">
+    $(document).ready(function(){
+        $('#select_grados').load('../componentes/select_grado.php');
+    });
+</script> -->
+
+
+
+ <!-- Codigo para cargar el select de grado en dependecia de la modalidad seleccionada -->
+ <script text="type/javascript">
+        var codigo_modalidad;
+        document.getElementById("select_modalidades").addEventListener('change', (event) => {
+        codigo_modalidad= (event.target.value);
+        $('#select_grados').load('../componentes/select_grados.php',{codigo_modalidad});
+    });   
+    </script>
+
+      <!-- Codigo para cargar el select de turno en dependecia de la modalidad seleccionada -->
+    <script text="type/javascript">
+        var codigo_modalidad;
+        document.getElementById("select_modalidad").addEventListener('change', (event) => {
+        codigo_modalidad= (event.target.value);
+        $('#select_turno').load('../componentes/select_turnos02.php',{codigo_modalidad});
+        });   
+    </script>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- Modal de pregunta para consulta Eliminacion de Asignacion -->

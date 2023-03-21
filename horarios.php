@@ -13,22 +13,36 @@
         </div>
     </div>
 
-    <div class="row">
-        <div id="select_modalidad" class="mt-3 fondo_azul"">
+
+    <div class="container">
+        <div class="row">
+            <div class="col" id="select_modalidad" class="mt-3 fondo_azul">
+            </div>
+            <div class="col"  id="select_grado" class="mt-3 fondo_azul"">
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col" id="select_turno" class="mt-3 fondo_azul">
+            </div>
+            <div class="col"  id="select_seccion" class="mt-3 fondo_azul"">
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div id="select_grado" class="mt-3 fondo_azul"">
-        </div>
+
+    <div class="container mt-3 mb-3" id="btn">
+        
     </div>
-    <div class="row">
-        <div id="select_turno" class="mt-3 fondo_azul"">
-        </div>
-    </div>
-    <div class="row">
-        <div id="select_seccion" class="mt-3 fondo_azul"">
-        </div>
-    </div>
+
+
+
+   
+
+
+    
+
+  
+  
 
    
 
@@ -125,15 +139,17 @@
         document.getElementById("select_modalidad").addEventListener('change', (event) => {
         codigo_modalidad= (event.target.value);
         $('#select_turno').load('../componentes/select_turnos02.php',{codigo_modalidad});
+        $('#select_seccion').load('../componentes/select_seccion.php');
+        $('#btn').load('../componentes/btn_buscarHorario.php');
         });   
     </script>
 
     <!-- Codigo para cargar el select de seccion  -->
-    <script text="type/javascript">
+    <!-- <script text="type/javascript">
         $(document).ready(function(){
             $('#select_seccion').load('../componentes/select_seccion.php');
         });
-    </script>
+    </script> -->
 
 <?php
 include 'includes/footer.php';

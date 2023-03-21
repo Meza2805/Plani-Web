@@ -97,18 +97,21 @@
                                 <i class="bi bi-book"></i>  <strong> Registros Académicos</strong>
                             </a>
                                 <ul class="dropdown-menu  mx-1">
-                                    <li><a class="dropdown-item text-white" href="../asignatura.php">  <strong>Asignaturas</strong></a></li>
+                                    <li ><a class="dropdown-item text-white" href="../asignatura.php">  <strong>Asignaturas</strong></a></li>
                                     <hr>
-                                    <li><a class="dropdown-item text-white" href="../grados.php"><strong>Grados</strong></a></li>
+                                    <li class=""><a class="dropdown-item text-white" href="../asignatura_modalidades.php">  <strong>Modalidades y Asignaturas</strong></a></li>
                                     <hr>
+                                    <li><a class="dropdown-item text-white mb-2" href="../actividades.php">  <strong>Actividades Curriculares</strong></a></li>
+                                    <!-- <li><a class="dropdown-item text-white" href="../grados.php"><strong>Grados</strong></a></li>
+                                    <hr> -->
                                    
-                                    <li class="mb-2"><a class="dropdown-item text-white" href="../modalidades.php"><strong>Modalidades</strong></a></li>
+                                    <!-- <li class="mb-2"><a class="dropdown-item text-white" href="../modalidades.php"><strong>Modalidades</strong></a></li> -->
                                     <!-- <hr>
                                   
                                     <li class="mb-2"><a class="dropdown-item text-white" href="../turno.php"><strong>Turnos</strong></a></li>  -->
                                 </ul>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-book"></i>  <strong> Asignacion</strong>
                             </a>
@@ -119,20 +122,24 @@
                             <hr>
                             <li class="mb-2"><a class="dropdown-item text-white" href="../turno_modalidades.php">  <strong>Modalidades y Turnos</strong></a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-filter-square"></i> <strong> Organización</strong>
                             </a>
                             <ul class="dropdown-menu mx-2">
-                                <li><a class="dropdown-item text-white" href="../actividades.php">  <strong>Actividades</strong></a></li>
-                                <hr>
+                                <!-- <li><a class="dropdown-item text-white" href="../actividades.php">  <strong>Actividades Curriculares</strong></a></li>
+                                <hr> -->
                                 <li class=""><a class="dropdown-item text-white" href="../grupos.php"><strong>Grupos de Clases</strong></a></li> 
                                 <hr>
-                                <li class="mb-2"><a class="dropdown-item text-white" href="../horarios.php"><strong>Horarios de Clases</strong></a></li>                             
+                                <li class=""><a class="dropdown-item text-white" href="../horarios.php"><strong>Horarios de Clases</strong></a></li>  
+                                <hr>
+                                <li><a class="dropdown-item text-white" href="../bloque.php">  <strong>titulo pendiente Bloque01</strong></a></li>
+                                <hr>
+                                <li><a class="dropdown-item text-white mb-2" href="../bloque_clases.php"><strong>titulo pendiente Bloque02</strong></a></li>                           
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-aspect-ratio"></i>  <strong> Bloques</strong>
                             </a>
@@ -141,7 +148,7 @@
                                 <hr>
                                 <li><a class="dropdown-item text-white" href="../bloque_clases.php"><strong>Bloque de Clases</strong></a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link mx-1 text-white" href="../reportes.php"> <i class="bi bi-file-break-fill"></i><strong> Reportes</strong> </a>
                         </li>
