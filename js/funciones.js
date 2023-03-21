@@ -19,9 +19,19 @@ function agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
         url: "../includes/agregar_personal.php",
         data: cadena,
         success: function(mensaje) {
-            alert(mensaje);
+            // alert(mensaje);
             //Actualizamos la página
-            location.reload();
+            // location.reload();
+            Swal.fire({
+                // title: 'MENSAJE',
+                text: mensaje,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 }
@@ -44,8 +54,18 @@ function actualizar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
         url: "../includes/actualizar_personal.php",
         data: cadena_actualizar,
         success: function(mensaje) {
-            alert(mensaje);
-            location.reload();
+            // alert(mensaje);
+            // location.reload();
+            Swal.fire({
+                // title: 'MENSAJE',
+                text: mensaje,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 }
@@ -79,9 +99,23 @@ function eliminar_personal(cedula_recibe) {
         url: "../includes/eliminar_personal.php",
         dataType: "json",
         data: eliminar,
+        // success: function(data) {
+        //     alert(data.MENSAJE);
+        //     location.reload();
+        // }
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            // alert(data.MENSAJE);
+            // location.reload();
+            Swal.fire({
+                // title: 'MENSAJE',
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
 
     });
@@ -95,8 +129,18 @@ function agregar_cargo(cargo) {
         dataType: "json",
         data: agregar_cargo,
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            // alert(data.MENSAJE);
+            // location.reload();
+            Swal.fire({
+                // title: 'MENSAJE',
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 }
@@ -107,7 +151,6 @@ function cargar_form_cargo(id_cargo, cargo) {
 }
 // Funcion para actualizar el nombre de un cargo administrativo
 function actualizar_cargo(id_cargo, cargo) {
-
     act_cargo = "id_cargo=" + id_cargo +
         "&cargo=" + cargo;
     $.ajax({
@@ -116,9 +159,23 @@ function actualizar_cargo(id_cargo, cargo) {
         dataType: "json",
         data: act_cargo,
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
-        }
+                // alert(data.MENSAJE);
+                // location.reload();
+                Swal.fire({
+                    // title: 'MENSAJE',
+                    text: data.MENSAJE,
+                    icon: 'success',
+                    confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
+                });
+            }
+            // success: function(data) {
+            //     alert(data.MENSAJE);
+            //     location.reload();
+            // }
     });
 }
 // Funcion para eliminar un cargo administrativo
@@ -129,9 +186,23 @@ function eliminar_cargo(id_cargo) {
         url: "../includes/eliminar_cargo.php",
         dataType: "json",
         data: eli_cargo,
+        // success: function(data) {
+        //     alert(data.MENSAJE);
+        //     location.reload();
+        // }
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            // alert(data.MENSAJE);
+            // location.reload();
+            Swal.fire({
+                // title: 'MENSAJE',
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 
@@ -144,9 +215,23 @@ function agregar_modalidad(modalidad) {
         url: "../includes/agregar_modalidad.php",
         dataType: "json",
         data: agregar_modalidad,
+        // success: function(data) {
+        //     alert(data.MENSAJE);
+        //     location.reload();
+        // }
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            // alert(data.MENSAJE);
+            // location.reload();
+            Swal.fire({
+                // title: 'MENSAJE',
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 }
@@ -164,9 +249,23 @@ function actualizar_modalidad(id, modalidad) {
         url: "../includes/actualizar_modalidad.php",
         dataType: "json",
         data: modalidad,
+        // success: function(data) {
+        //     alert(data.MENSAJE);
+        //     location.reload();
+        // }
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            // alert(data.MENSAJE);
+            // location.reload();
+            Swal.fire({
+                // title: 'MENSAJE',
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 }
@@ -178,9 +277,23 @@ function eliminar_modalidad(id_modalidad) {
         url: "../includes/eliminar_modalidad.php",
         dataType: "json",
         data: eli_modalidad,
+        // success: function(data) {
+        //     alert(data.MENSAJE);
+        //     location.reload();
+        // }
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            // alert(data.MENSAJE);
+            // location.reload();
+            Swal.fire({
+                // title: 'MENSAJE',
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 
@@ -198,9 +311,20 @@ function agregar_asignatura(asignatura) {
         url: "../includes/agregar_asignatura.php",
         dataType: "json",
         data: agregar_asig,
+        // success: function(data) {
+        //     alert(data.MENSAJE);
+        //     location.reload();
+        // }
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            Swal.fire({
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 }
@@ -213,9 +337,20 @@ function actualizar_asignatura(id, asignatura) {
         url: "../includes/actualizar_asignatura.php",
         dataType: "json",
         data: act_asig,
+        // success: function(data) {
+        //     alert(data.MENSAJE);
+        //     location.reload();
+        // }
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            Swal.fire({
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 }
@@ -227,9 +362,20 @@ function delete_asig(id_asignatura) {
         url: "../includes/eliminar_asignatura.php",
         dataType: "json",
         data: eli_asig,
+        // success: function(data) {
+        //     alert(data.MENSAJE);
+        //     location.reload();
+        // }
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            Swal.fire({
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 }
@@ -243,10 +389,20 @@ function agregar_asmd(id_asignatura, id_modalidad) {
         dataType: "json",
         data: agregar_asmd,
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            // alert(data.MENSAJE);
+            // location.reload();
+            Swal.fire({
+                text: data.MENSAJE,
+                icon: 'info',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
+
 }
 // Funcion para eliminar o dar de baja una asignatura a una o varias modalidades
 function eliminar_asignatura_modalidad(id) {
@@ -256,9 +412,20 @@ function eliminar_asignatura_modalidad(id) {
         url: "../includes/eliminar_asm.php",
         dataType: "json",
         data: eli_asm,
+        // success: function(data) {
+        //     alert(data.MENSAJE);
+        //     location.reload();
+        // }
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            Swal.fire({
+                text: data.MENSAJE,
+                icon: 'info',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 }
@@ -285,16 +452,34 @@ function agregar_actividad(cedula, linea_accion, prota, meta_anual, meta_trimest
         "&alertas=" + alertas +
         "&propuestas=" + propuestas +
         "&observaciones=" + observaciones;
-
-    // alert(agregar_actividad);
     $.ajax({
         type: "POST",
         url: "../includes/agregar_actividad.php",
         dataType: "json",
         data: agregar_act,
         success: function(data) {
-            alert(data.MENSAJE);
-            location.reload();
+            //alert(data.MENSAJE);
+            if (data.MENSAJE == "ACTIVIDAD REGISTRADA CORRECTAMENTE") {
+                Swal.fire({
+                    text: data.MENSAJE,
+                    icon: 'success',
+                    confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
+                });
+            } else {
+                Swal.fire({
+                    text: data.MENSAJE,
+                    icon: 'info',
+                    confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        //location.reload();
+                    }
+                });
+            }
         }
     });
 }
@@ -410,8 +595,119 @@ function salir() {
         }
     })
 }
+//Funcion para llenar el modal de actualizacion en Actividades
+function buscar_actividad(id) {
+    busqueda = "id=" + id;
+    $.ajax({
+        type: "POST",
+        url: "../includes/buscar_actividad.php",
+        dataType: "json",
+        data: busqueda,
 
+        success: function(data) {
+            // alert(data.DESCRIPCION);
+            $('#codigo_u').val(id);
+            $('#linea_accion_u').val(data.DESCRIPCION);
+            $('#des_u').val(data.PROTAGONISTA);
+            $('#meta_anual_u').val(data.META_ANUAL);
+            $('#meta_trimestral_u').val(data.METRA_TRIMESTRAL);
+            $('#p_f_u').val(data.PARTICIPANTES_F);
+            $('#p_m_u').val(data.PARTICIPANTES_M);
+            $('#cp01_u').val(data.PREGUNTA_01);
+            $('#cp02_u').val(data.PREGUNTA_02);
+            $('#cp03_u').val(data.PREGUNTA_03);
+            $('#cp04_u').val(data.PREGUNTA_04);
+            $('#cp05_u').val(data.PREGUNTA_05);
+            $('#mp01_u').val(data.P01);
+            $('#mp02_u').val(data.P02);
+            $('#mp03_u').val(data.P03);
+            $('#mp04_u').val(data.P04);
+            $('#mp05_u').val(data.P05);
+            $('#difi_u').val(data.DIFICULTADES);
+            $('#alerta_u').val(data.ALERTAS);
+            $('#propuesta_u').val(data.PROPUESTA);
+            $('#observaciones_u').val(data.OBSERVACION);
+        }
 
+    });
+}
+// Funcion para agregar una actividad escolar
+function actualizar_actividad(codigo, linea_accion, prota, meta_anual, meta_trimestral, p_femenino, p_masculino, cp01, cp02, cp03, cp04, cp05, mp01, mp02, mp03, mp04, mp05, dificultades, alertas, propuestas, observaciones) {
+    agregar_act = "codigo=" + codigo +
+        "&linea=" + linea_accion +
+        "&prota=" + prota +
+        "&meta_anual=" + meta_anual +
+        "&meta_trimestral=" + meta_trimestral +
+        "&p_femenino=" + p_femenino +
+        "&p_masculino=" + p_masculino +
+        "&cp01=" + cp01 +
+        "&cp02=" + cp02 +
+        "&cp03=" + cp03 +
+        "&cp04=" + cp04 +
+        "&cp05=" + cp05 +
+        "&mp01=" + mp01 +
+        "&mp02=" + mp02 +
+        "&mp03=" + mp03 +
+        "&mp04=" + mp04 +
+        "&mp05=" + mp05 +
+        "&dificultades=" + dificultades +
+        "&alertas=" + alertas +
+        "&propuestas=" + propuestas +
+        "&observaciones=" + observaciones;
+    $.ajax({
+        type: "POST",
+        url: "../includes/actualizar_actividad.php",
+        dataType: "json",
+        data: agregar_act,
+        success: function(data) {
+            //alert(data.MENSAJE);
+            if (data.MENSAJE == "Actividad Actualizada Correctamente") {
+                Swal.fire({
+                    text: data.MENSAJE,
+                    icon: 'success',
+                    confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
+                });
+            } else {
+                Swal.fire({
+                    text: data.MENSAJE,
+                    icon: 'info',
+                    confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        //location.reload();
+                    }
+                });
+            }
+        }
+    });
+}
+// Funcion para asignar una asignatura a una o varias modalidades
+function agregar_turno(id_turno, id_modalidad) {
+    agregar_turno = "id_turno=" + id_turno +
+        "&id_modalidad=" + id_modalidad;
+    $.ajax({
+        type: "POST",
+        url: "../includes/asignar_turno.php",
+        dataType: "json",
+        data: agregar_turno,
+        success: function(data) {
+            Swal.fire({
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
+        }
+    });
+
+}
 
 
 

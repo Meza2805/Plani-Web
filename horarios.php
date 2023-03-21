@@ -2,26 +2,35 @@
 <html lang="es">
 <head>
 
-    <title>Grupos de Clases</title>
+    <title>Horarios de Clases</title>
     <?php
     include 'includes/header.php';
     ?>
 
     <div class="row mt-4">
         <div class="text-center flex-column d-flex">
-            <h3 class="letra_fondo"> <i class="bi bi-people-fill"></i> Grupos de Clases</h3>
+            <h3 class="letra_fondo"> <i class="bi bi-alarm-fill"></i> Horarios de Clases</h3>
         </div>
     </div>
 
-    <hr>
-                <caption>
-                    <button class="btn fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal_grupo">
-                    Agregrar Nuevo <i class="bi bi-people-fill"></i>
-                    </button>
-                </caption> 
-     <hr>
-     <div class="table-responsive mt-1" id="tabla_grupo">    
+    <div class="row">
+        <div id="select_modalidad" class="mt-3 fondo_azul"">
+        </div>
     </div>
+    <div class="row">
+        <div id="select_grado" class="mt-3 fondo_azul"">
+        </div>
+    </div>
+    <div class="row">
+        <div id="select_turno" class="mt-3 fondo_azul"">
+        </div>
+    </div>
+    <div class="row">
+        <div id="select_seccion" class="mt-3 fondo_azul"">
+        </div>
+    </div>
+
+   
 
 
 
@@ -46,7 +55,6 @@
                                 <div class="container">
                                 <div class="form-floating">
                                     <div class="mt-2 p-3 border border-primary" id="tabla_docente">
-                                
                                     </div>
                                 </div>
                                 </div>

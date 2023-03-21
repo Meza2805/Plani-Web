@@ -11,6 +11,7 @@ include '../includes/header_usuario.php';
 </script>
 
 <div class="text-center">
+
     <h1 class="letra_fondo"> <strong> Sistema de Control y Planificación Académica</strong></h1>
     <h1 class="letra_fondo"> <strong> SICOPLAD </strong></h1>
 

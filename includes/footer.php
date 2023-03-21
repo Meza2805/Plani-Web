@@ -1,6 +1,6 @@
 </main>
 
- <footer class="text-center text-lg-start text-white fondo_degradado_azul">
+ <footer class="text-center text-lg-start text-white fondo_degradado_azul" id="my_footer">
         <div class="container p-4 pb-0">
             <section class="p-3 pt-0">
                 <div class="row d-flex align-items-center">
@@ -23,7 +23,7 @@
 
 
 
-    <script>
+    <!-- <script>
         (() => {
             'use strict'
 
@@ -42,7 +42,7 @@
                 }, false)
             })
         })()
-    </script>
+    </script> -->
 
 </body>
 </html>

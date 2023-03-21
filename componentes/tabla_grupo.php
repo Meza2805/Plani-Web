@@ -1,29 +1,30 @@
 <?php
 require_once "../includes/conexion.php";    
 ?>
-<table class="table table-striped mt-4 table-primary table-hover table-bordered" id="asignatura-tabla">
+<table class="table nowrap tabla_d  table-bordered compact hover display" id="">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Código</th>
-                                        <th scope="col">Grado</th>
-                                        <th scope="col">Modalidad</th>
-                                        <th scope="col">Sección</th>
-                                        <th scope="col">Turno</th>
-                                        <th scope="col">Año Escolar</th>
-                                        <th scope="col">Estado de Grupo</th>
-                                        <th scope="col">Docente Guía</th>
-                                        <th scope="col">Editar</th>
-                                        <th scope="col">Eliminar</th>
+                                        <th >Código</th>
+                                        <th >Grado</th>
+                                        <th >Modalidad</th>
+                                        <th >Sección</th>
+                                        <th >Turno</th>
+                                        <th >Año Escolar</th>
+                                        <th >Estado de Grupo</th>
+                                        <th>Docente Guía</th>
+                                        <th >Editar</th>
+                                        <th >Eliminar</th>
                                     </tr>
                                 </thead>
 
+                               
+                                <tbody >
                                 <?php
                                  
-                                    $sql = "call SP_Mostrar_Grupos()";
-                                    $resultado = mysqli_query($conexion,$sql);
-                                   while($ver = mysqli_fetch_row($resultado)){
-                                ?>
-                                <tbody >
+                                 $sql = "call SP_Mostrar_Grupos()";
+                                 $resultado = mysqli_query($conexion,$sql);
+                                while($ver = mysqli_fetch_row($resultado)){
+                             ?>
                                     <tr>
                                    
                                         <td><?php echo $ver [0] ?></td>
@@ -49,3 +50,6 @@ require_once "../includes/conexion.php";
                                   
                                 </tbody>
                             </table>
+
+<!-- llamado a la hoja de funciones -->
+<script src="../js/DataTable.js"></script>

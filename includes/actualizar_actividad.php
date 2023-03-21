@@ -1,6 +1,6 @@
 <?php
     require_once "conexion.php";
-    $cedula=$_POST['cedula'];
+    $codigo=$_POST['codigo'];
     $linea_accion=$_POST['linea'];
     $prota=$_POST['prota'];
     $meta_anual=$_POST['meta_anual'];
@@ -25,7 +25,7 @@
 
 
 
-    $sql=  "call SP_Insertar_Actividad('$cedula','$linea_accion','$prota',$meta_anual,$meta_trimestral,$p_femenino,$p_masculino,
+    $sql=  "call SP_Actualizar_Actividad($codigo,'$linea_accion','$prota',$meta_anual,$meta_trimestral,$p_femenino,$p_masculino,
     '$cp01','$cp02','$cp03','$cp04','$cp05','$dificultades','$mp01','$mp02','$mp03','$mp04','$mp05','$alertas',
     '$propuestas','$observaciones')";
     $r= mysqli_query($conexion,$sql);

@@ -1,7 +1,7 @@
 <?php
 require_once "../includes/conexion.php";    
 ?>
-<table class="table tabla_d table-responsive table-bordered compact hover display" id="datos">
+<table class="table nowrap tabla_d  table-bordered compact hover display" id="datos">
                                 <thead>
                                     <tr>
                                         <th scope="col">Código</th>
