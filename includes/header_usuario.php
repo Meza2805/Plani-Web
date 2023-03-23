@@ -26,6 +26,7 @@
 
     <!-- referencia a hoja de estilos de iconos de boostrap ubicacada localmente -->
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/footer_estatico.css">
 
   
    

@@ -27,6 +27,7 @@
     <!-- referencia a hoja de estilos principal ubicada localmente -->
     <link rel="stylesheet" href="../css/mis_estilos.css">
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="/css/footer_estatico.css">
     <link rel="stylesheet" href="../css/footable.bootstrap.css">
     <link rel="stylesheet" href="../css/footable.bootstrap.min.css">
     <!-- <link rel="stylesheet" href="../css/footer_estatico.css"> -->

@@ -2,12 +2,12 @@ html {
     height: 100%;
 }
 
-main {
+.cuerpo{
     display: flex;
     flex-direction: column;
     min-height: 100%;
 }
 
-footer {
+#my_footer{
     margin-top: auto;
 }

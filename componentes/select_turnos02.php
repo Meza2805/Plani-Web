@@ -8,7 +8,7 @@
   <option selected value="">Turno</option>       
   <?php
     while ($data_select = mysqli_fetch_array($turno)) { ?>
-    <option value="<?php echo $data_select["ID"]; ?>"> <?php echo $data_select["TURNO"]; ?> </option>
+     <option value="<?php echo $data_select["ID"]; ?>"> <?php echo $data_select["TURNO"]; ?> </option>
     <?php }?>
 </select>
 
