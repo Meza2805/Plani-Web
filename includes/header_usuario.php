@@ -59,11 +59,11 @@
                             <i class="bi bi-filter-square"></i> <strong>ASIGNACIONES</strong>
                             </a>
                             <ul class="dropdown-menu fondo mx-4">
-                                <li><a class="dropdown-item text-white" href="../view/actividades_docente.php">  <strong>ACTIVIDADES</strong></a></li>
+                                <li><a class="dropdown-item text-white" href="">  <strong>ACTIVIDADES</strong></a></li>
                                     <hr>
-                                <li><a class="dropdown-item text-white" href="../view/asignatura_docente.php">  <strong>ASIGNATURAS</strong></a></li>
+                                <li><a class="dropdown-item text-white" href="">  <strong>ASIGNATURAS</strong></a></li>
                                     <hr>
-                                <li><a class="dropdown-item text-white" href="../view/grupos_clases_docentes.php"><strong>GRUPOS DE CLASES</strong></a></li>
+                                <li><a class="dropdown-item text-white" href=""><strong>GRUPOS DE CLASES</strong></a></li>
                             </ul>
                         </li>
                     </ul>

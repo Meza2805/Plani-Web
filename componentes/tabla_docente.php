@@ -8,7 +8,7 @@ $resultado = mysqli_query($conexion,$sql);
     <input type="text" class="form-control text-uppercase"  placeholder="Buscar" id="searchTerm" type="text" onkeyup="Buscar()">
 </div> -->
 <link rel="stylesheet" type="text/css" href="../css/ancho_tabla.css">
-<table class="table nowrap table-bordered compact hover display" id="docente">
+<table class="table nowrap table-bordered compact hover display" id="tbdocente">
         <thead>
             <tr>
                 <th>Cedula</th>
@@ -33,8 +33,11 @@ $resultado = mysqli_query($conexion,$sql);
 </table>
 
 
+
+
+
 <script>
-$('#docente').DataTable({
+    $('#tbdocente').DataTable({
         language: {
             "decimal": "",
             "emptyTable": "No hay información",
@@ -55,11 +58,36 @@ $('#docente').DataTable({
                 "previous": "Anterior"
             }
         },
+        pageLength : 3,
+        lengthMenu: [[3], [3]]
     });
-
-
+    
 </script>
 
+
+
+<script>
+        //Cuando la página esté cargada completamente
+        $(document).ready(function(){
+            //Creamos el evento mouseover en el elemento con id = texto
+            $('#tbdocente').mouseover(function(){
+                //Al poner el cursor encima cambia el borde a rojo
+                $('#tbdocente').css("cursor","Pointer");
+            }); //Asimismo debemos crear el evento mouseout para que vuelva a ponerse negro  
+        });
+        $(document).ready(function () {
+             var table = $('#tbdocente').DataTable();
+                $('#tbdocente tbody').on('click', 'tr', function () {
+                    var data = table.row(this).data();
+                   // alert('You clicked on ' + data[0] + "'s row");
+                    $('#cedula02').val('');  //limpia el input
+                    $('#cedula02').val(data[0]);
+                });
+        });
+        
+
+        
+</script>
 
 
 

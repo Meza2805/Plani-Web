@@ -1,7 +1,7 @@
 <?php
 require_once "../includes/conexion.php";    
 ?>
-<table class="table nowrap tabla_d  table-bordered compact hover display" id="">
+<table class="table nowrap tabla_d  table-bordered compact hover display" id="tbGrupo">
                                 <thead>
                                     <tr>
                                         <th >Código</th>
@@ -53,3 +53,7 @@ require_once "../includes/conexion.php";
 
 <!-- llamado a la hoja de funciones -->
 <script src="../js/DataTable.js"></script>
+
+
+
+    <!-- Prueba de Funcion para capturar elemento de una tabla  -->

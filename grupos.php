@@ -20,8 +20,10 @@
                     </button>
                 </caption> 
      <hr>
-     <div class="table-responsive mt-1" id="tabla_grupo">    
+
+    <div class="table-responsive mt-1" id="tabla_grupo">    
     </div>
+
 
 
 
@@ -37,11 +39,7 @@
                         <div class="modal-body">
                         <!-- <h4 class="text-center letra_fondo">Buscar Docente </h4> -->
                             <div class="row">
-                                <div class="form-floating mt-3">
-                                            <input class="form-control " placeholder="Descripción de Protagonistas" id="observaciones" maxlength="1300"></input>
-                                            <label for="observaciones" class="letra_fondo">Cedula de Docente</label>   
-                                            
-                                </div>
+                               
                                 <h5 class=" letra_fondo mt-3">Busque y Seleccione el Docente </h5>
                                 <div class="container">
                                 <div class="form-floating">
@@ -51,6 +49,12 @@
                                 </div>
                                 </div>
                                 
+                            </div>
+                            <div class="row">
+                                <div class="form-floating mt-3">
+                                            <input class="form-control " placeholder="Descripción de Protagonistas" id="cedula" maxlength="1300" disabled></input>
+                                            <label for="observaciones" class="letra_fondo">Cedula de Docente</label>        
+                                </div>
                             </div>
                             <div class="row">
                                 <div id="select_modalidad" class="mt-3 fondo_azul"">
@@ -76,11 +80,7 @@
                 </div>
                 </div>
                  </div>
-        </form>
-      
-                       
-
-
+    </form>
     <!-- Funcion para llamar a la tabla docente -->
     <script text="type/javascript">
         $(document).ready(function(){
@@ -126,6 +126,19 @@
             $('#select_seccion').load('../componentes/select_seccion.php');
         });
     </script>
+
+        <!-- Prueba de Funcion para capturar elemento de una tabla  -->
+<!-- <script text="type/javascript">
+    $('#tbdocente tr').on('click', function(){
+        var dato = $(this).find('td:first').html();
+      
+    
+        $('#cedula').val(dato);
+ 
+    });
+</script> -->
+
+    
 
 <?php
 include 'includes/footer.php';
