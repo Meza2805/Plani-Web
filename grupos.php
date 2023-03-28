@@ -128,15 +128,15 @@
     </script>
 
         <!-- Prueba de Funcion para capturar elemento de una tabla  -->
-<!-- <script text="type/javascript">
-    $('#tbdocente tr').on('click', function(){
-        var dato = $(this).find('td:first').html();
-      
+    <!-- <script text="type/javascript">
+        $('#tbdocente tr').on('click', function(){
+            var dato = $(this).find('td:first').html();
+        
+        
+            $('#cedula').val(dato);
     
-        $('#cedula').val(dato);
- 
-    });
-</script> -->
+        });
+    </script> -->
 
     
 

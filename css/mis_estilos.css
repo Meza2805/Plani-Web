@@ -32,6 +32,11 @@
         .cuerpo {
             background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/Fondo02.png") no-repeat center top;
             background-size: cover;
+            /*esto me mantiene la img quieta, sin moverse a la hora de desplazar la info*/
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-size: 100% 100%; 
+            background-attachment:fixed;
         }
         
         .limitar_area {
