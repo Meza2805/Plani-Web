@@ -706,65 +706,48 @@ function agregar_turno(id_turno, id_modalidad) {
             });
         }
     });
-
 }
 
+function buscar_codigo_grupo(id_modalidad, id_grado, id_turno, id_seccion) {
+    cadena = "id_modalidad=" + id_modalidad +
+        "&id_grado=" + id_grado +
+        "&id_turno=" + id_turno +
+        "&id_seccion=" + id_seccion;
+    var resultado;
+    $.ajax({
+        type: "POST",
+        url: "../includes/buscar_codigo_grupo.php",
+        dataType: "json",
+        data: cadena,
+        success: function(data) {
 
+            resultado = data.MENSAJE
+            if (resultado == 'No Existe un grupo con esas caracteristicas') {
+                $('#tabla_guia').hide();
+                Swal.fire({
+                    text: data.MENSAJE,
+                    icon: 'error',
+                    confirmButtonText: 'ACEPTAR'
 
+                }).then((result) => {
+                    if (result.isConfirmed) {
 
+                    }
+                });
+            } else {
+                $('#tabla_guia').show();
+                $('#tabla_guia').load('../componentes/tabla_guia.php', { resultado });
+                $('#tabla_bloque').load('../componentes/tabla_bloque.php', { resultado });
+                $('#tabla_asignatura_horario').load('../componentes/tabla_asignatura_horario.php', { resultado });
 
+                Swal.fire({
+                    text: 'Grupo Encontrado, Horario Cargado',
+                    icon: 'success',
+                    confirmButtonText: 'ACEPTAR'
+                })
+            }
 
+        }
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-//Tecla mayuscula activada
-// $('#contra').keypress(function(e) {
-//     var s = String.fromCharCode(e.which);
-//     if (s.toUpperCase() === s && s.toLowerCase() !== s && !e.shiftKey) {
-//         alert('Bloq Mayus está activado.');
-//     }
-// });
-
-
-
-// function comprobarNombre(valor, campo) {
-
-//     var mensaje = "";
-
-//     // comprobar los posibles errores
-//     if (this.value == "") {
-//         mensaje = "El email no puede estar vacío";
-//     } else if (this.value.indexOf("@") < 0) {
-//         mensaje = "El email debe contener una @";
-//     } else if (this.value.indexOf(".com", this.value.indexOf("@")) < 0) {
-//         mensaje = "El email debe contener .com detras de la @";
-//     }
-
-//     // mostrar/resetear mensaje (el mensaje se resetea poniendolo a "")
-//     this.setCustomValidity(mensaje);
-// }
-
-// var email = document.querySelector("#contra");
-
-// // cuando se cambie el valor del campo o sea incorrecto, mostrar/resetear mensaje
-// email.addEventListener("invalid", comprobarNombre);
-// email.addEventListener("input", comprobarNombre);
-
-// function mensaje() {
-//   var contra = document.querySelector("#contra");
-//     $('#contra').get(0).setCustom('SIRVE');
-
-
-//     contra.setCustomValidity("funcion");
-//     alert("You pressed a key inside the input field");
-
-// }
+}

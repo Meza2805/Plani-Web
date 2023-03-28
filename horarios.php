@@ -43,7 +43,13 @@
         <div class="row mt-2">        
                 <div class="mt-2" id="tabla_guia">                    
                 </div>
-            </div>
+        </div>
+        <div class="row mt-2">        
+                <div class="mt-2 col-3" id="tabla_bloque">                    
+                </div>
+                <div class="mt-2 col-4" id="tabla_asignatura_horario">                    
+                </div>
+        </div>
     </form>
 
 
@@ -93,8 +99,10 @@
             var codigo_seccion= document.getElementById("select_s").value;
             
             // var cedula=$('#cedula02').val();
-            $('#tabla_guia').load('../componentes/tabla_guia.php',{codigo_modalidad,codigo_grado,codigo_turno,codigo_seccion});
- 
+            // $('#tabla_guia').load('../componentes/tabla_guia.php',{codigo_modalidad,codigo_grado,codigo_turno,codigo_seccion});
+            var retorno;
+           buscar_codigo_grupo(codigo_modalidad,codigo_grado,codigo_turno,codigo_seccion);
+           
         });
     </script>
 

@@ -1,9 +1,6 @@
 <?php
 require_once "../includes/conexion.php";    
-$codigo_modalidad= $_REQUEST['codigo_modalidad'];
-$codigo_grado= $_REQUEST['codigo_grado'];
-$codigo_turno= $_REQUEST['codigo_turno'];
-$codigo_seccion= $_REQUEST['codigo_seccion'];
+$codigo_grupo= $_REQUEST['resultado'];
 
 ?>
 <table class="table nowrap tabla_d  table-bordered compact hover display" id="">
@@ -20,7 +17,7 @@ $codigo_seccion= $_REQUEST['codigo_seccion'];
                                 </thead>
                                 <tbody >
                                 <?php
-                                    $sql = "call SP_Buscar_Grupo($codigo_grado,$codigo_seccion,$codigo_turno,$codigo_modalidad)";
+                                    $sql = "call SP_Buscar_Grupo($codigo_grupo)";
                                     $resultado = mysqli_query($conexion,$sql);
                                    while($ver = mysqli_fetch_row($resultado)){
                                 ?>
