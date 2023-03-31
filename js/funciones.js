@@ -739,6 +739,10 @@ function buscar_codigo_grupo(id_modalidad, id_grado, id_turno, id_seccion) {
                 $('#tabla_guia').load('../componentes/tabla_guia.php', { resultado });
                 $('#tabla_bloque').load('../componentes/tabla_bloque.php', { resultado });
                 $('#tabla_asignatura_horario').load('../componentes/tabla_asignatura_horario.php', { resultado });
+                $('#tabla_asignatura_horario02').load('../componentes/tabla_asignatura_horario02.php', { resultado });
+                $('#tabla_asignatura_horario03').load('../componentes/tabla_asignatura_horario03.php', { resultado });
+                $('#tabla_asignatura_horario04').load('../componentes/tabla_asignatura_horario04.php', { resultado });
+                $('#tabla_asignatura_horario05').load('../componentes/tabla_asignatura_horario05.php', { resultado });
 
                 Swal.fire({
                     text: 'Grupo Encontrado, Horario Cargado',

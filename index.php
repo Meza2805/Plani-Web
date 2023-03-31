@@ -32,32 +32,32 @@
 </head>
 <body>
     <div class="limiter">
-        <div class="container-login100" style="background-image: url(../images/Fondo02.png);
+        <div class="container-login100 " style="background-image: url(../images/Fondo02.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;">
-            <div class="wrap-login100 text-center" style=" background: rgb(2, 0, 36);
+            <div class="wrap-login100 text-center " style=" background: rgb(2, 0, 36);
             background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(35, 106, 201, 1) 100%, rgba(0, 212, 255, 1) 100%);">
-                <form class="login100-form" id="form_login" >
-                    <span class="login100-form-title p-b-26">
+                <form class="login100-form " id="form_login" >
+                    <span class="login100-form-title p-b-26 animate__animated animate__bounce" >
 						BIENVENIDO
 					</span>
-                    <img src="images/logo02.png" class="escudo_index" alt="">
+                    <img src="images/logo02.png" class="escudo_index animate__animated animate__bounce" alt="">
                     <!-- <span class="login100-form-title p-b-48">
 						<i class="zmdi zmdi-font"></i>
 					</span> -->
-                    <div class="wrap-input100 validate-input mt-3">
+                    <div class="wrap-input100 validate-input mt-3 animate__animated animate__bounce">
                         <input class="input100 text-center" type="text" maxlength="15" id="usuario" name="usuario" required>
                         <span class="focus-input100" data-placeholder="USUARIO"></span>
                     </div>
-                    <div class="wrap-input100 validate-input">
+                    <div class="wrap-input100 validate-input animate__animated animate__bounce">
                         <span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
                         <input class="input100 text-center" type="password" name="pass" maxlength="15" id="contra" required onkeydown="mensaje()">
                         <span class="focus-input100" data-placeholder="CONTRASEÑA"></span>
                     </div>
-                    <div class="container-login100-form-btn">
+                    <div class="container-login100-form-btn animate__animated animate__bounce">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
                             <button class="btn  login100-form-btn" type="submit">

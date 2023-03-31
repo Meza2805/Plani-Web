@@ -45,9 +45,17 @@
                 </div>
         </div>
         <div class="row mt-2">        
-                <div class="mt-2 col-3" id="tabla_bloque">                    
+                <div class="mt-2 col-2" id="tabla_bloque">                    
                 </div>
-                <div class="mt-2 col-4" id="tabla_asignatura_horario">                    
+                <div class="mt-2 col-2" id="tabla_asignatura_horario">                    
+                </div>
+                <div class="mt-2 col-2" id="tabla_asignatura_horario02">                    
+                </div>
+                <div class="mt-2 col-2" id="tabla_asignatura_horario03">                    
+                </div>
+                <div class="mt-2 col-2" id="tabla_asignatura_horario04">                    
+                </div>
+                <div class="mt-2 col-2" id="tabla_asignatura_horario05">                    
                 </div>
         </div>
     </form>

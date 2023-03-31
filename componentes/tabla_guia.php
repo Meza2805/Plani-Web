@@ -3,7 +3,7 @@ require_once "../includes/conexion.php";
 $codigo_grupo= $_REQUEST['resultado'];
 
 ?>
-<table class="table nowrap tabla_d  table-bordered compact hover display" id="">
+<table class="table table-dark table-striped " id="">
                                 <thead>
                                     <tr>
                                         <th scope="col">Código</th>

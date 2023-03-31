@@ -5,16 +5,16 @@
 <?php
 include 'includes/header.php';
 ?>
-   
+    
         <div class="row mt-4 mb-5">
             <div class="text-center">
-                <h2 class="letra_fondo"> <i class="bi bi-person-video2"></i></i>Registro de Cargo Educativo </h2>
+                <h2 class="letra_fondo  animate__animated animate__jackInTheBox animate__delay-1s	1s"> <i class="bi bi-person-video2"></i>Registro de Cargo Educativo </h2>
             </div>
         </div>
         <div class="container text-left mb-3">
             <div class="row">
                 <div class="col-6">
-                        <button class="btn fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal-cargo">
+                        <button class="btn fondo_degradado_azul text-light animate__animated  animate__fadeInBottomLeft  animate__delay-2s	2s" data-bs-toggle="modal" data-bs-target="#modal-cargo">
                         Agregar Nuevo <i class="bi bi-person-video2"></i>
                         </button>
                     </div>
@@ -25,7 +25,7 @@ include 'includes/header.php';
                 <hr>
         </div> 
 
-    <div class="table-responsive mt-4" id="cargo-remoto">                   
+    <div class="table-responsive mt-4 animate__animated animate__fadeInUp animate__delay-3s	3s" id="cargo-remoto">                   
     </div>
 
     <!-- llamado al modal de registro  cargo INCIO-->

@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="/css/footer_estatico.css">
     <link rel="stylesheet" href="../css/footable.bootstrap.css">
     <link rel="stylesheet" href="../css/footable.bootstrap.min.css">
+ 
     <!-- <link rel="stylesheet" href="../css/footer_estatico.css"> -->
 
     <!-- referencia a hoja de estilos de iconos de boostrap ubicacada localmente -->
@@ -52,7 +53,10 @@
     <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.css">
 
     <!-- Libreria de Animate.css -->
-    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+    <!-- <script src=href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> </script> -->
+    <!-- <script src="stylesheet" href="../node_modules/animate.css/animate.min.css">  </script> -->
+    <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.css">
+
 
 
     <!-- Libreria de DataTable.net -->
@@ -80,7 +84,7 @@
               </button>
                 <div class=" collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto"  style="font-size: large">
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-badge-fill"></i>  
                               <strong>Personal</strong>

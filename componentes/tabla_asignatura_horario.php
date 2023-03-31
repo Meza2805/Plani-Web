@@ -2,19 +2,19 @@
 require_once "../includes/conexion.php";    
 $codigo_grupo= $_REQUEST['resultado'];
 
+
 ?>
- <link rel="stylesheet" type="text/css" href="../css/ancho_tabla.css">
+
  <link rel="stylesheet" type="text/css" href="../css/ancho_tabla02.css">
-<table class="table nowrap tabla_d  table-bordered compact hover display" id="">
+<table class="table table-dark table-striped table-sm" id="">
                                 <thead>
                                     <tr>
                                         <th scope="col">Lunes</th>
-                                   
                                     </tr>
                                 </thead>
                                 <tbody >
                                 <?php
-                                    $sql = "call SP_MOSTRAR_ASIGANTURA_HORARIO($codigo_grupo)";
+                                    $sql = "call SP_MOSTRAR_ASIGANTURA_HORARIO($codigo_grupo,1)";
                                     $resultado = mysqli_query($conexion,$sql);
                                    while($ver = mysqli_fetch_row($resultado)){
                                 ?>
