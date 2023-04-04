@@ -55,7 +55,7 @@
     <!-- Libreria de Animate.css -->
     <!-- <script src=href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> </script> -->
     <!-- <script src="stylesheet" href="../node_modules/animate.css/animate.min.css">  </script> -->
-    <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.css">
+    <!-- <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.css"> -->
 
 
 

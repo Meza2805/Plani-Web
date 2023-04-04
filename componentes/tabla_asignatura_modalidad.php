@@ -25,7 +25,6 @@ require_once "../includes/conexion.php";
                                         <td><button class="btn fondo_degradado_rojo text-light" onclick="Eliminar_Asignacion('<?php echo $ver[0] ?>','<?php echo $ver[1] ?>')"><i class="bi bi-trash"></i></button></td>
                                     </tr>
                             <?php
-                                $conteo++;
                                  }
                             ?>   
                                 </tbody>
