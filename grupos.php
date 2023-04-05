@@ -21,7 +21,7 @@
                 </caption> 
      <hr>
 
-    <div class="table-responsive mt-1" id="tabla_grupo">    
+    <div class="table-responsive mt-1 mb-4" id="tabla_grupo">    
     </div>
 
 

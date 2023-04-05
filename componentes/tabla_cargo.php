@@ -22,7 +22,7 @@ require_once "../includes/conexion.php";
                                         <td><?php echo $ver [0] ?></td>
                                         <td><?php echo $ver [1]?></td>
                                         <td><?php echo $ver [2]?></td>
-                                        <td><button class="btn fondo_degradado_verde text-light" data-bs-toggle="modal"  data-bs-target="#modal-cargo_u" onclick="cargar_form_cargo('<?php echo $ver[0]?>','<?php echo $ver[1]?>')" >
+                                        <td><button class="btn fondo_degradado_azul text-light" data-bs-toggle="modal"  data-bs-target="#modal-cargo_u" onclick="cargar_form_cargo('<?php echo $ver[0]?>','<?php echo $ver[1]?>')" >
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>

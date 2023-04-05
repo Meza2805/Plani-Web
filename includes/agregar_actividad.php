@@ -30,6 +30,6 @@
     '$propuestas','$observaciones')";
     $r= mysqli_query($conexion,$sql);
     $data= mysqli_fetch_assoc($r);
-    $mensaje = $row["MENSAJE"];
+    // $mensaje = $row["MENSAJE"];
     echo json_encode($data);
 ?>

@@ -37,17 +37,17 @@ require_once "../includes/conexion.php";
                                 </thead>
                                 <tbody>
                                     <?php
-                                        $sql = "call SP_Mostrar_Actividad_Total()";
+                                        $sql = "call SP_Mostrar_Actividad01();";
                                         $resultado = mysqli_query($conexion,$sql);
                                     while($ver = mysqli_fetch_row($resultado)){
                                     ?>
                                     <tr>
-                                    <td><button class="btn fondo_degradado_verde text-light"  
+                                    <td><button class="btn fondo_degradado_azul text-light"  
                                          onclick="buscar_actividad('<?php echo $ver [0]?>');" data-bs-toggle="modal" data-bs-target="#modal_ac">
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
-                                        <td><button class="btn fondo_degradado_rojo text-light"><i class="bi bi-trash"></i></button></td>
+                                        <td><button class="btn fondo_degradado_rojo text-light" onclick="eliminar_actividad('<?php echo $ver [0]?>');"><i class="bi bi-trash"></i></button></td>
                                         <td class="text-center"><?php echo $ver [0] ?></td>
                                         <td ><p class="overflow-ellipsis"> <?php echo $ver [1]?></p></td>
                                         <td><p class="overflow-ellipsis "><?php echo $ver [2]?></p> </td>

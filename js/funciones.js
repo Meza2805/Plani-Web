@@ -459,7 +459,7 @@ function agregar_actividad(cedula, linea_accion, prota, meta_anual, meta_trimest
         data: agregar_act,
         success: function(data) {
             //alert(data.MENSAJE);
-            if (data.MENSAJE == "ACTIVIDAD REGISTRADA CORRECTAMENTE") {
+            if (data.MENSAJE == "Actividad registrada correctamente") {
                 Swal.fire({
                     text: data.MENSAJE,
                     icon: 'success',
@@ -480,6 +480,27 @@ function agregar_actividad(cedula, linea_accion, prota, meta_anual, meta_trimest
                     }
                 });
             }
+        }
+    });
+}
+// Funcion para eliminar o dar de baja una actividad curricular
+function eliminar_actividad(id) {
+    eli_ac = "id=" + id;
+    $.ajax({
+        type: "POST",
+        url: "../includes/eliminar_actividad.php",
+        dataType: "json",
+        data: eli_ac,
+        success: function(data) {
+            Swal.fire({
+                text: data.MENSAJE,
+                icon: 'info',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
         }
     });
 }
@@ -613,16 +634,16 @@ function buscar_actividad(id) {
             $('#meta_trimestral_u').val(data.METRA_TRIMESTRAL);
             $('#p_f_u').val(data.PARTICIPANTES_F);
             $('#p_m_u').val(data.PARTICIPANTES_M);
-            $('#cp01_u').val(data.PREGUNTA_01);
-            $('#cp02_u').val(data.PREGUNTA_02);
-            $('#cp03_u').val(data.PREGUNTA_03);
-            $('#cp04_u').val(data.PREGUNTA_04);
-            $('#cp05_u').val(data.PREGUNTA_05);
-            $('#mp01_u').val(data.P01);
-            $('#mp02_u').val(data.P02);
-            $('#mp03_u').val(data.P03);
-            $('#mp04_u').val(data.P04);
-            $('#mp05_u').val(data.P05);
+            $('#cp01_u').val(data.CU01);
+            $('#cp02_u').val(data.CU02);
+            $('#cp03_u').val(data.CU03);
+            $('#cp04_u').val(data.CU04);
+            $('#cp05_u').val(data.CU05);
+            $('#mp01_u').val(data.MEDIDA01);
+            $('#mp02_u').val(data.MEDIDA02);
+            $('#mp03_u').val(data.MEDIDA03);
+            $('#mp04_u').val(data.MEDIDA04);
+            $('#mp05_u').val(data.MEDIDA05);
             $('#difi_u').val(data.DIFICULTADES);
             $('#alerta_u').val(data.ALERTAS);
             $('#propuesta_u').val(data.PROPUESTA);
