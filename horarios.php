@@ -44,10 +44,10 @@
                 <div class="mt-2" id="tabla_guia">                    
                 </div>
         </div>
-        <div class="row mt-2">        
-                <div class="mt-2 col-2" id="tabla_bloque">                    
+        <div class="container mt-2">        
+                <div class="mt-2 " id="tabla_asignatura_horario">                    
                 </div>
-                <div class="mt-2 col-2" id="tabla_asignatura_horario">                    
+                <!-- <div class="mt-2 col-2" id="tabla_asignatura_horario">                    
                 </div>
                 <div class="mt-2 col-2" id="tabla_asignatura_horario02">                    
                 </div>
@@ -56,7 +56,7 @@
                 <div class="mt-2 col-2" id="tabla_asignatura_horario04">                    
                 </div>
                 <div class="mt-2 col-2" id="tabla_asignatura_horario05">                    
-                </div>
+                </div> -->
         </div>
     </form>
 
