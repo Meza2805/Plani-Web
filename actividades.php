@@ -25,46 +25,8 @@ include 'includes/header.php';
            
                 <div id="actividad01" class="table-responsive">
                 </div>
-                        <hr>
-                <!-- <div id="actividad02">
-                </div>
-                <div class="row mt-2">
-                    <div class="text-center">
-                        <h3 class="letra_fondo">AVANCES Y RESULTADOS</h3>
-                    </div>
-                </div>
-                <hr>
-                <div id="actividad03">
-                </div>
-                <div class="row mt-2">
-                    <div class="text-center">
-                        <h4 class="letra_fondo">VALORACIÓN CUALITATIVA</h4>
-                    </div>
-                </div>
-                <hr>
-                <div id="actividad04">
-                </div>
-                <div class="row mt-2">
-                    <div class="text-center">
-                        <h4 class="letra_fondo">PLAN DE MEDIDAS</h4>
-                    </div>
-                </div>
-                <hr>
-                <div id="actividad05">
-                </div> -->
-
-                        <!-- </div>
-
-                        
-        <div class="row mt-2">
-            <div class="text-center">
-                <h4 class="letra_fondo">ASPECTOS FINALES</h4>
-            </div>
-        </div>
-        <hr>
-        <div id="actividad06">
-        </div> -->
-
+            <hr>
+               
     <!-- llamado al modal de registro de actividades INCIO-->
         <form  id="form_actividad">
             <div class="modal fade" id="modal_actividad" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -415,7 +377,7 @@ include 'includes/header.php';
     let cp03=$('#cp03_u').val();
     let cp04=$('#cp04_u').val();
     let cp05=$('#cp05_u').val();
-    let mp01=$('#mp01_U').val();
+    let mp01=$('#mp01_u').val();
     let mp02=$('#mp02_u').val();
     let mp03=$('#mp03_u').val();
     let mp04=$('#mp04_u').val();
@@ -424,7 +386,6 @@ include 'includes/header.php';
     let alertas=$('#alerta_u').val();
     let propuestas=$('#propuesta_u').val();
     let observaciones=$('#observaciones_u').val();
-    
      actualizar_actividad(codigo,linea_accion,prota,meta_anual,meta_trimestral,p_femenino,p_masculino,cp01,cp02,cp03,cp04
      ,cp05,mp01,mp02,mp03,mp04,mp05,dificultades,alertas,propuestas,observaciones);
  });

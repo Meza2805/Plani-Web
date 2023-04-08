@@ -137,16 +137,7 @@ include 'includes/footer.php';
   if (result.isConfirmed) {
     $(document).ready(function(){
         eliminar_cargo(id_cargo);
-        // alert(id_cargo);
     });
   }
 })}
 </script>
-
-<!-- <script>
-$(document).ready( function () {
-    $('#cargo_tabla').DataTable();
-} );
-</script> -->
-
-

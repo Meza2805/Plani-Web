@@ -47,7 +47,7 @@ require_once "../includes/conexion.php";
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
-                                        <td><button class="btn fondo_degradado_rojo text-light" onclick="eliminar_actividad('<?php echo $ver [0]?>');"><i class="bi bi-trash"></i></button></td>
+                                        <td><button class="btn fondo_degradado_rojo text-light" onclick="consulta_eliminar_actividad('<?php echo $ver [0]?>');"><i class="bi bi-trash"></i></button></td>
                                         <td class="text-center"><?php echo $ver [0] ?></td>
                                         <td ><p class="overflow-ellipsis"> <?php echo $ver [1]?></p></td>
                                         <td><p class="overflow-ellipsis "><?php echo $ver [2]?></p> </td>
@@ -106,6 +106,11 @@ require_once "../includes/conexion.php";
                     "previous": "Anterior"
                 }
             },
+        pageLength : 5,
+        lengthMenu: [
+            [5,10, 25, 50, -1],
+            [5,10, 25, 50, 'Todas'],
+        ]
         });
             });   
 </script>

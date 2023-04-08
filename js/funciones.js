@@ -493,8 +493,8 @@ function eliminar_actividad(id) {
         data: eli_ac,
         success: function(data) {
             Swal.fire({
-                text: data.MENSAJE,
-                icon: 'info',
+                title: data.MENSAJE,
+                icon: 'success',
                 confirmButtonText: 'ACEPTAR'
             }).then((result) => {
                 if (result.isConfirmed) {
@@ -648,6 +648,7 @@ function buscar_actividad(id) {
             $('#alerta_u').val(data.ALERTAS);
             $('#propuesta_u').val(data.PROPUESTA);
             $('#observaciones_u').val(data.OBSERVACION);
+
         }
 
     });
@@ -705,6 +706,7 @@ function actualizar_actividad(codigo, linea_accion, prota, meta_anual, meta_trim
             }
         }
     });
+
 }
 // Funcion para asignar una asignatura a una o varias modalidades
 function agregar_turno(id_turno, id_modalidad) {
@@ -775,4 +777,23 @@ function buscar_codigo_grupo(id_modalidad, id_grado, id_turno, id_seccion) {
         }
     });
 
+}
+
+//Funcion para consultar eliminacion de Actividad Curricular
+function consulta_eliminar_actividad(id_actividad) {
+    Swal.fire({
+        title: '¿Esta seguro que desea eliminar el rergistro de la actividad Cod. ' + id_actividad + '?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#1F618D',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si',
+        cancelButtonText: 'No'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $(document).ready(function() {
+                eliminar_actividad(id_actividad);
+            });
+        }
+    })
 }
