@@ -5,12 +5,13 @@ require_once "../includes/conexion.php";
                                 <thead>
                                     <tr>
                                         <th >Código</th>
-                                        <th >Grado</th>
                                         <th >Modalidad</th>
+                                        <th >Grado</th>
+                                       
                                         <th >Sección</th>
                                         <th >Turno</th>
-                                        <th >Año Escolar</th>
-                                        <th >Estado de Grupo</th>
+                                        
+                                        <!-- <th >Estado de Grupo</th> -->
                                         <th>Docente Guía</th>
                                         <th >Editar</th>
                                         <th >Eliminar</th>
@@ -33,14 +34,14 @@ require_once "../includes/conexion.php";
                                         <td><?php echo $ver [3] ?></td>
                                         <td><?php echo $ver [4]?></td>
                                         <td><?php echo $ver [5]?></td>
-                                        <td><?php echo $ver [6] ?></td>
-                                        <td><?php echo $ver [7]?></td>
+                                        <!-- <td><?php echo $ver [6] ?></td> -->
+                                        <!-- <td><?php echo $ver [7]?></td> -->
                                       
-                                        <td><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-editar" >
+                                        <td><button class="btn fondo_degradado_azul" data-bs-toggle="modal" data-bs-target="#modal-editar" >
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
-                                        <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                                        <td><button class="btn fondo_degradado_rojo"><i class="bi bi-trash text-white"></i></button></td>
                                      
                                     </tr>
                             <?php

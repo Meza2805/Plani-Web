@@ -66,6 +66,8 @@ $resultado = mysqli_query($conexion,$sql);
 
 
 
+
+<!-- Codigo Jquery para captuar la cedula del docente al hacer clic en la tabla -->
 <script>
         //Cuando la página esté cargada completamente
         $(document).ready(function(){
@@ -80,8 +82,9 @@ $resultado = mysqli_query($conexion,$sql);
                 $('#tbdocente tbody').on('click', 'tr', function () {
                     var data = table.row(this).data();
                    // alert('You clicked on ' + data[0] + "'s row");
-                    $('#cedula02').val('');  //limpia el input
-                    $('#cedula02').val(data[0]);
+                    $('#cedula').val('');  //limpia el input
+                    $('#cedula').val(data[0]);
+                  
                 });
         });
         
