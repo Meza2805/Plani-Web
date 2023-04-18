@@ -6,10 +6,11 @@ require_once "../includes/conexion.php";
                                     <tr>
                                         <th >Código</th>
                                         <th >Modalidad</th>
+                                        <th >Turno</th>
                                         <th >Grado</th>
                                        
                                         <th >Sección</th>
-                                        <th >Turno</th>
+                                     
                                         
                                         <!-- <th >Estado de Grupo</th> -->
                                         <th>Docente Guía</th>
@@ -30,9 +31,11 @@ require_once "../includes/conexion.php";
                                    
                                         <td><?php echo $ver [0] ?></td>
                                         <td><?php echo $ver [1]?></td>
-                                        <td><?php echo $ver [2]?></td>
-                                        <td><?php echo $ver [3] ?></td>
                                         <td><?php echo $ver [4]?></td>
+                                        <td><?php echo $ver [2]?></td>
+                                      
+                                        <td><?php echo $ver [3] ?></td>
+                                      
                                         <td><?php echo $ver [5]?></td>
                                         <!-- <td><?php echo $ver [6] ?></td> -->
                                         <!-- <td><?php echo $ver [7]?></td> -->

@@ -797,3 +797,47 @@ function consulta_eliminar_actividad(id_actividad) {
         }
     })
 }
+
+// Funcion para insertar grupo
+function agregar_grupo(cedula, id_modalidad, id_grado, id_turno, id_seccion) {
+    cadena = "cedula=" + cedula +
+        "&id_modalidad=" + id_modalidad +
+        "&id_grado=" + id_grado +
+        "&id_turno=" + id_turno +
+        "&id_seccion=" + id_seccion;
+    // alert(cadena);
+    $.ajax({
+        type: "POST",
+        url: "../includes/agregar_grupo.php",
+        data: cadena,
+        success: function(mensaje) {
+            // alert(mensaje);
+            // // Actualizamos la página
+            // location.reload();
+            if (mensaje === 'Este grupo ya existe y esta asignado a otro Docente') {
+                Swal.fire({
+                    title: 'MENSAJE',
+                    text: mensaje,
+                    icon: 'info',
+                    confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
+                });
+            } else {
+                Swal.fire({
+                    title: 'MENSAJE',
+                    text: mensaje,
+                    icon: 'success',
+                    confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
+                });
+            }
+
+        }
+    });
+}

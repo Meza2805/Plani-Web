@@ -127,18 +127,43 @@
         });
     </script>
 
-        <!-- Prueba de Funcion para capturar elemento de una tabla  -->
-    <!-- <script text="type/javascript">
-        $('#tbdocente tr').on('click', function(){
-            var dato = $(this).find('td:first').html();
-        
-        
-            $('#cedula').val(dato);
-    
-        });
-    </script> -->
 
-    
+
+<!-- Evento del boton Guardar Grupo -->
+<script type="text/javascript" >
+var form = document.getElementById('form_grupo');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+        let cedula=$('#cedula').val();
+       
+      
+        // /*Ubicando el select del modalidad*/ 
+        let select_modalidad = document.getElementById('select_mod');
+        // /*Obteniendo el valor de la opcion de modalidad*/
+        let value_modalidad = select_modalidad.value;
+        // /*Ubicando el select de grado*/
+        let select_grado = document.getElementById('select_grados');
+        // /*Obteniendo el valor de la opcion de grado*/
+        let value_grado = select_grado.value;
+        // /*Obteniendo el valor de la opcion de turno*/
+        let select_turno = document.getElementById('select_t');
+        // /*Obteniendo el valor de la opcion de turno*/
+        let value_turno = select_turno.value;
+        // /*Obteniendo el valor de la opcion de turno*/
+        let select_seccion = document.getElementById('select_s');
+        // /*Obteniendo el valor de la opcion de turno*/
+        let value_seccion = select_seccion.value;
+
+        agregar_grupo(cedula ,value_modalidad ,value_grado,value_turno,value_seccion)
+        // alert(cedula +" "+value_modalidad +" "+value_grado+" "+value_turno+" "+value_seccion)
+       
+ });
+</script>
+
+
+
+
+
 
 <?php
 include 'includes/footer.php';
