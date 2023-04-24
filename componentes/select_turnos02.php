@@ -6,10 +6,15 @@
 ?>
 <select class="form-select form-control" id="select_t" required>
   <option selected value="">Turno</option>       
-  <?php
-    while ($data_select = mysqli_fetch_array($turno)) { ?>
-     <option value="<?php echo $data_select["ID"]; ?>"> <?php echo $data_select["TURNO"]; ?> </option>
-    <?php }?>
+  <?php 
+  while ($data_select = mysqli_fetch_array($turno)) 
+    { 
+     
+    ?>
+       <option value="<?php echo $data_select["ID"]; ?>"> <?php echo $data_select["TURNO"]; ?> </option>
+    <?php
+    
+    }?>
 </select>
 
 

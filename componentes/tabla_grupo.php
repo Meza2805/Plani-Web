@@ -40,7 +40,7 @@ require_once "../includes/conexion.php";
                                         <!-- <td><?php echo $ver [6] ?></td> -->
                                         <!-- <td><?php echo $ver [7]?></td> -->
                                       
-                                        <td><button class="btn fondo_degradado_azul" data-bs-toggle="modal" data-bs-target="#modal_grupoAC" >
+                                        <td><button class="btn fondo_degradado_azul" onclick="cargar_form_grupo('<?php echo $ver[0] ?>')" data-bs-toggle="modal" data-bs-target="#modal_grupoAC" >
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>

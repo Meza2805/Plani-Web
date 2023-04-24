@@ -97,7 +97,7 @@
                         <div class="row">
                                 <div class="form-floating mt-3">
                                             <input class="form-control " placeholder="Descripción de Protagonistas" id="grupo_ac" maxlength="1300" disabled></input>
-                                            <label for="observaciones" class="letra_fondo">iD Grupo</label>        
+                                            <label for="observaciones" class="letra_fondo">ID Grupo</label>        
                                 </div>
                             </div>
                             <div class="row">
@@ -119,19 +119,19 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div id="select_modalidad_ac" class="mt-3 fondo_azul"">
+                                <div id="select_modalidad_ac" class="mt-3 fondo_azul">
                                 </div>
                             </div>
                             <div class="row">
-                                <div id="select_grado_ac" class="mt-3 fondo_azul"">
+                                <div id="select_grado_ac" class="mt-3 fondo_azul">
                                 </div>
                             </div>
                             <div class="row">
-                                <div id="select_turno_ac" class="mt-3 fondo_azul"">
+                                <div id="select_turno_ac" class="mt-3 fondo_azul">
                                 </div>
                             </div>
                             <div class="row">
-                                <div id="select_seccion_ac" class="mt-3 fondo_azul"">
+                                <div id="select_seccion_ac" class="mt-3 fondo_azul">
                                 </div>
                             </div>
                         </div>
@@ -174,11 +174,6 @@
         });
     </script>
 
-    <script text="type/javascript">
-        $(document).ready(function(){
-            $('#select_modalidad_ac').load('../componentes/select_modalidades_ac.php');
-        });
-    </script>
 
         <!-- Codigo para cargar el select de grado en dependecia de la modalidad seleccionada -->
     <script text="type/javascript">
@@ -189,15 +184,18 @@
     });   
     </script>
 
+
+        <!-- Codigo para cargar el select de grado en dependecia de la modalidad seleccionada en el formulario de Actualizacion -->
     <script text="type/javascript">
         var codigo_modalidad;
         document.getElementById("select_modalidad_ac").addEventListener('change', (event) => {
         codigo_modalidad= (event.target.value);
-        $('#select_grado_ac').load('../componentes/select_grados_ac.php',{codigo_modalidad});
+        $('#select_grado_ac').load('../componentes/select_grados.php',{codigo_modalidad});
     });   
     </script>
 
-      <!-- Codigo para cargar el select de turno en dependecia de la modalidad seleccionada -->
+
+    <!-- Codigo para cargar el select de turno en dependecia de la modalidad seleccionada -->
     <script text="type/javascript">
         var codigo_modalidad;
         document.getElementById("select_modalidad").addEventListener('change', (event) => {
@@ -206,6 +204,17 @@
         });   
     </script>
 
+
+    <!-- Codigo para cargar el select de turno en dependecia de la modalidad seleccionada en el formulario de Actualizacion-->
+    <script text="type/javascript">
+        var codigo_modalidad;
+        document.getElementById("select_modalidad_ac").addEventListener('change', (event) => {
+        codigo_modalidad= (event.target.value);
+        $('#select_turno_ac').load('../componentes/select_turnos02.php',{codigo_modalidad});
+        });   
+    </script>
+
+
     <!-- Codigo para cargar el select de seccion  -->
     <script text="type/javascript">
         $(document).ready(function(){
@@ -213,6 +222,15 @@
         });
     </script>
 
+ <!-- Codigo para cargar el select de seccion en el formulario Actualizacion -->
+ <script text="type/javascript">
+        valida = 1
+       document.getElementById("select_modalidad_ac").addEventListener('change', (event) => {
+        codigo_modalidad= (event.target.value);
+         valida = 0
+        $('#select_seccion_ac').load('../componentes/select_seccion.php',{codigo_modalidad});
+        }); 
+</script>
 
 
 <!-- Evento del boton Guardar Grupo -->
@@ -220,6 +238,7 @@
 var form = document.getElementById('form_grupo');
  form.addEventListener('submit',function(event){
     event.preventDefault();
+           
         let cedula=$('#cedula').val();
        
       
@@ -242,6 +261,57 @@ var form = document.getElementById('form_grupo');
 
         agregar_grupo(cedula ,value_modalidad ,value_grado,value_turno,value_seccion)
         // alert(cedula +" "+value_modalidad +" "+value_grado+" "+value_turno+" "+value_seccion)
+       
+ });
+</script>
+
+
+<!-- Evento del boton Actualizar Grupo -->
+<script type="text/javascript" >
+var form = document.getElementById('form_grupoAC');
+ form.addEventListener('submit',function(event){
+    event.preventDefault();
+        let cedula=$('#cedula_ac').val();
+        // /*Ubicando el select del modalidad*/ 
+        let select_modalidad = document.getElementById('select_mod_ac');
+        // /*Obteniendo el valor de la opcion de modalidad*/
+        let value_modalidad = select_modalidad.value;
+        if (valida == 0){
+
+            // /*Ubicando el select de grado*/
+            let select_grado = document.getElementById('select_grados');
+            // /*Obteniendo el valor de la opcion de grado*/
+            let value_grado = select_grado.value;
+            // /*Obteniendo el valor de la opcion de turno*/
+            let select_turno = document.getElementById('select_t');
+            // /*Obteniendo el valor de la opcion de turno*/
+            let value_turno = select_turno.value;
+            // /*Obteniendo el valor de la opcion de turno*/
+            let select_seccion = document.getElementById('select_s');
+            // /*Obteniendo el valor de la opcion de turno*/
+            let value_seccion = select_seccion.value;
+        }else
+        {
+
+            // /*Ubicando el select de grado*/
+             select_grado = document.getElementById('select_grados_ac');
+            // /*Obteniendo el valor de la opcion de grado*/
+             value_grado = select_grado.value;
+            // /*Obteniendo el valor de la opcion de turno*/
+             select_turno = document.getElementById('select_t_ac');
+            // /*Obteniendo el valor de la opcion de turno*/
+             value_turno = select_turno.value;
+            // /*Obteniendo el valor de la opcion de turno*/
+             select_seccion = document.getElementById('select_s_ac');
+            // /*Obteniendo el valor de la opcion de turno*/
+             value_seccion = select_seccion.value;
+       
+        }
+
+        alert(cedula +' '+value_modalidad +' '+value_grado+' '+value_turno+' '+value_seccion)
+      
+        // // agregar_grupo(cedula ,value_modalidad ,value_grado,value_turno,value_seccion)
+        // // alert(cedula +" "+value_modalidad +" "+value_grado+" "+value_turno+" "+value_seccion)
        
  });
 </script>

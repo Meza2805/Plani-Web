@@ -69,6 +69,7 @@ function actualizar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
         }
     });
 }
+
 // Funcion para cargar los datos de la tabla en el formulario
 function cargar_form(cedula) {
     busqueda = "cedula=" + cedula;
@@ -92,9 +93,42 @@ function cargar_form(cedula) {
             //se llama el select de cargo y se le pasa el ID de cargo actual
             $('#cargo_u').load('../componentes/select_cargo_u.php', { id_cargo });
             $('#sexo_u').load('../componentes/select_sexo.php', { sexo });
+          
         }
     });
 }
+
+// Funcion para cargar los datos de la tabla en el formulario
+function cargar_form_grupo(id_grupo) {
+    busqueda = "id_grupo=" + id_grupo;
+    $.ajax({
+        type: "POST",
+        url: "../includes/buscar_grupo_all.php",
+        dataType: "json",
+        data: busqueda,
+        success: function(data) {
+            
+            var cedula = data.CEDULA_DOCENTE;
+            var id_modalidad = data.ID_MODALIDAD;
+            var id_grado = data.ID_GRADO;
+            var id_turno = data.ID_TURNO;
+            var id_seccion = data.ID_SECCION;
+            $('#grupo_ac').val(id_grupo);
+            $('#cedula_ac').val(cedula);
+            $('#select_modalidad_ac').load('../componentes/select_modalidades_ac.php',{id_modalidad});
+            $('#select_grado_ac').load('../componentes/select_grados_ac.php',{id_modalidad,id_grado});
+            $('#select_turno_ac').load('../componentes/select_turnos02_ac.php',{id_modalidad,id_turno});
+            $('#select_seccion_ac').load('../componentes/select_seccion_ac.php',{id_seccion});
+        }
+    });
+}
+
+
+
+
+
+
+
 // Funcion para eliminar o dar de baja a un personal educativo
 function eliminar_personal(cedula_recibe) {
     eliminar = "cedula=" + cedula_recibe;
