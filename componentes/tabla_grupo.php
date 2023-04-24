@@ -40,11 +40,11 @@ require_once "../includes/conexion.php";
                                         <!-- <td><?php echo $ver [6] ?></td> -->
                                         <!-- <td><?php echo $ver [7]?></td> -->
                                       
-                                        <td><button class="btn fondo_degradado_azul" data-bs-toggle="modal" data-bs-target="#modal-editar" >
+                                        <td><button class="btn fondo_degradado_azul" data-bs-toggle="modal" data-bs-target="#modal_grupoAC" >
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
-                                        <td><button class="btn fondo_degradado_rojo"><i class="bi bi-trash text-white"></i></button></td>
+                                        <td><button class="btn fondo_degradado_rojo" onclick="Eliminar_gr('<?php echo $ver[0] ?>','<?php echo $ver[2]?>','<?php echo $ver[3]?>','<?php echo $ver[4]?>')"><i class="bi bi-trash text-white"></i></button></td>
                                      
                                     </tr>
                             <?php

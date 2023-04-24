@@ -12,23 +12,7 @@
     </div>
 
 </div>
-<!-- <hr> -->
-<!-- Enunciado de pagina FIN -->
 
-<!-- Boton de agregar INICIO -->
-<!-- <div class="container text-left mb-3">
-    <div class="row">
-        <div class="col-3">
-        <button class="btn btn-info fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal-agregar">
-            Agregar Nuevo  <i class="bi bi-person-badge-fill"></i>
-         </button>
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control text-uppercase w-50"  placeholder="Buscar" id="searchTerm" type="text" onkeyup="Buscar()">
-        </div>
-    </div>
-    <hr>
-</div>  -->
 <!-- Boton de agregar FIN -->
 <div class="mb-2">
   <div class="row gx-5">
@@ -37,9 +21,7 @@
             Agregar Nuevo  <i class="bi bi-person-badge-fill"></i>
          </button>
     </div>
-    <!-- <div class="col-5">
-      <div class="p-2"><input type="text" class="form-control"  placeholder="Buscar" id="searchTerm" type="text" onkeyup="Buscar()"></div>
-    </div> -->
+
   </div>
 </div>
 
@@ -145,15 +127,12 @@
                         <label for="fecha" class="form-label fondo_azul"> Fecha de Nacimiento</label>
                         <input type="date" name="fecha_nac" id="fecha_nacu" class="form-control fondo_azul" required id="fechau" max="2004-12-31" min="1957-01-01">
                     </div>
-                    <div class="mb-3">
-                        <select class="form-select form-control fondo_azul"  id="sexou" required>
-                                <option selected disabled value="">Sexo</option>
-                                <option value="1" class="fondo_azul">Femenino</option>
-                                <option value="2" class="fondo_azul" >Masculino</option>
-                        </select>
+                    <div class="mb-3" >
+                        <div id="sexo_u">    
+                        </div>
                     </div>  
                     <!-- Llamado a todos los cargos actuales de la base de datos -->
-                    <div class="mb-3 fondo_azul" id="cargo_u"> </div>
+                     <div class="mb-3 fondo_azul" id="cargo_u"> </div>
                     <div class="form-floating  mb-3">
                         <input type="text" id="telefonou" class="form-control fondo_azul" placeholder="Numero Telefonico +505" pattern="^\d{8}" minlength="0" maxlength="8" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"   required>
                         <label for="floatingInput" class="fondo_azul">Numero Telefonico +505</label>
@@ -173,7 +152,12 @@
 </form>
 <!-- Modal de actualizacion de Personal FIN -->
 
-
+<!-- Codigo para cargar el select de sexo  -->
+<script text="type/javascript">
+    $(document).ready(function(){
+        // $('#sexo_u').load('../componentes/select_sexo.php');
+    });
+</script>
 
 
 
@@ -199,7 +183,6 @@ var form = document.getElementById('form_registro');
         let select_sexo = document.getElementById('sexo');
         // /*Obteniendo el valor de la opcion de sexo*/
         let value_sexo = select_sexo.value;
-     
         agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nac, value_sexo, telefono, direccion, value_cargo);
  });
 </script>
@@ -226,8 +209,9 @@ var form = document.getElementById('form_actualizar');
         let select_sexo = document.getElementById('sexou');
         // /*Obteniendo el valor de la opcion de sexo*/
         let value_sexo = select_sexo.value;
-
+        
         actualizar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nac, value_sexo, telefono, direccion, value_cargo);
+      
 });
 </script>
 

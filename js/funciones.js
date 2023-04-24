@@ -77,8 +77,8 @@ function cargar_form(cedula) {
         url: "../includes/buscar_personal.php",
         dataType: "json",
         data: busqueda,
-
         success: function(data) {
+            var id_cargo, id_sexo;
             $('#cedulau').val(cedula);
             $('#p_nombreu').val(data.PRIMER_NOMBRE);
             $('#s_nombreu').val(data.SEGUNDO_NOMBRE);
@@ -87,8 +87,12 @@ function cargar_form(cedula) {
             $('#fecha_nacu').val(data.FECHA_NAC);
             $('#telefonou').val(data.TELEFONO);
             $('#direccionu').val(data.DIRECCION);
+            id_cargo = data.ID_CARGO;
+            sexo = data.SEXO;
+            //se llama el select de cargo y se le pasa el ID de cargo actual
+            $('#cargo_u').load('../componentes/select_cargo_u.php', { id_cargo });
+            $('#sexo_u').load('../componentes/select_sexo.php', { sexo });
         }
-
     });
 }
 // Funcion para eliminar o dar de baja a un personal educativo
@@ -816,8 +820,7 @@ function agregar_grupo(cedula, id_modalidad, id_grado, id_turno, id_seccion) {
             // location.reload();
             if (mensaje === 'Este grupo ya existe y esta asignado a otro Docente') {
                 Swal.fire({
-                    title: 'MENSAJE',
-                    text: mensaje,
+                    title: mensaje,
                     icon: 'info',
                     confirmButtonText: 'ACEPTAR'
                 }).then((result) => {
@@ -827,8 +830,7 @@ function agregar_grupo(cedula, id_modalidad, id_grado, id_turno, id_seccion) {
                 });
             } else {
                 Swal.fire({
-                    title: 'MENSAJE',
-                    text: mensaje,
+                    title: mensaje,
                     icon: 'success',
                     confirmButtonText: 'ACEPTAR'
                 }).then((result) => {
@@ -840,4 +842,33 @@ function agregar_grupo(cedula, id_modalidad, id_grado, id_turno, id_seccion) {
 
         }
     });
+}
+
+function eliminar_grupo(id_grupo) {
+    eli_grupo = "id_grupo=" + id_grupo;
+    $.ajax({
+        type: "POST",
+        url: "../includes/eliminar_grupo.php",
+        dataType: "json",
+        data: eli_grupo,
+        // success: function(data) {
+        //     alert(data.MENSAJE);
+        //     location.reload();
+        // }
+        success: function(data) {
+            // alert(data.MENSAJE);
+            // location.reload();
+            Swal.fire({
+                // title: 'MENSAJE',
+                title: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
+        }
+    });
+
 }

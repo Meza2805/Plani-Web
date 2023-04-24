@@ -10,7 +10,7 @@ $(document).ready(function() {
     $('#cargo').load('../componentes/select_cargo.php');
 });
 
-// Codigo para cargar el cargo de la base de datos en el formulario de actualizar
-$(document).ready(function() {
-    $('#cargo_u').load('../componentes/select_cargo_u.php');
-});
+// // Codigo para cargar el cargo de la base de datos en el formulario de actualizar
+// $(document).ready(function() {
+//     $('#cargo_u').load('../componentes/select_cargo_u.php');
+// });
