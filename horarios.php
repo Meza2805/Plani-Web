@@ -16,47 +16,30 @@
     <form id="id_horario">
         <div class="container">
             <div class="row">
-                <div class="col" id="select_modalidad" class="mt-3 fondo_azul">
+                <div class="col content-select" id="select_modalidad" class="mt-3 fondo_azul">
+              
                 </div>
-                <div class="col"  id="select_grado" class="mt-3 fondo_azul"">
+                <div class="col"  id="select_grado" class="mt-3 fondo_azul">
                 </div>
             </div>
 
             <div class="row mt-2">
                 <div class="col" id="select_turno" class="mt-3 fondo_azul">
                 </div>
-                <div class="col"  id="select_seccion" class="mt-3 fondo_azul"">
+                <div class="col"  id="select_seccion" class="mt-3 fondo_azul">
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-4" id="txt_cedula">
-                   
-                </div>
-            </div>
-            <div class="row mt-2">        
-                <div class="mt-2" id="tabla_docente">                    
-                </div>
-            </div> -->
         </div>  
         <div class="container mt-3 mb-3" id="btn">
         </div>
-        <div class="row mt-2">        
+              
                 <div class="mt-2" id="tabla_guia">                    
                 </div>
-        </div>
-        <div class="container mt-2">        
+        
+        <div class=" mt-2">        
                 <div class="mt-2 " id="tabla_asignatura_horario">                    
                 </div>
-                <!-- <div class="mt-2 col-2" id="tabla_asignatura_horario">                    
-                </div>
-                <div class="mt-2 col-2" id="tabla_asignatura_horario02">                    
-                </div>
-                <div class="mt-2 col-2" id="tabla_asignatura_horario03">                    
-                </div>
-                <div class="mt-2 col-2" id="tabla_asignatura_horario04">                    
-                </div>
-                <div class="mt-2 col-2" id="tabla_asignatura_horario05">                    
-                </div> -->
+              
         </div>
     </form>
 
@@ -78,8 +61,6 @@
             $('#select_modalidad').load('../componentes/select_modalidades.php');
         });
     </script>
-
-
 
       <!-- Codigo para cargar el select de turno en dependecia de la modalidad seleccionada -->
     <script text="type/javascript">

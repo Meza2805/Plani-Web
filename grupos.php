@@ -57,19 +57,19 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div id="select_modalidad" class="mt-3 fondo_azul"">
+                                <div id="select_modalidad" class="mt-3 fondo_azul">
                                 </div>
                             </div>
                             <div class="row">
-                                <div id="select_grado" class="mt-3 fondo_azul"">
+                                <div id="select_grado" class="mt-3 fondo_azul">
                                 </div>
                             </div>
                             <div class="row">
-                                <div id="select_turno" class="mt-3 fondo_azul"">
+                                <div id="select_turno" class="mt-3 fondo_azul">
                                 </div>
                             </div>
                             <div class="row">
-                                <div id="select_seccion" class="mt-3 fondo_azul"">
+                                <div id="select_seccion" class="mt-3 fondo_azul">
                                 </div>
                             </div>
                         </div>
@@ -271,6 +271,8 @@ var form = document.getElementById('form_grupo');
 var form = document.getElementById('form_grupoAC');
  form.addEventListener('submit',function(event){
     event.preventDefault();
+    
+        let id_grupo=$('#grupo_ac').val();
         let cedula=$('#cedula_ac').val();
         // /*Ubicando el select del modalidad*/ 
         let select_modalidad = document.getElementById('select_mod_ac');
@@ -307,12 +309,9 @@ var form = document.getElementById('form_grupoAC');
              value_seccion = select_seccion.value;
        
         }
-
-        alert(cedula +' '+value_modalidad +' '+value_grado+' '+value_turno+' '+value_seccion)
-      
-        // // agregar_grupo(cedula ,value_modalidad ,value_grado,value_turno,value_seccion)
+        // alert(id_grupo+' '+ cedula +' '+value_modalidad +' '+value_grado+' '+value_turno+' '+value_seccion)      
+        actualizar_grupo(id_grupo,cedula ,value_modalidad ,value_grado,value_turno,value_seccion)
         // // alert(cedula +" "+value_modalidad +" "+value_grado+" "+value_turno+" "+value_seccion)
-       
  });
 </script>
 
@@ -335,9 +334,6 @@ var form = document.getElementById('form_grupoAC');
   }
 })}
 </script>
-
-
-
 
 <?php
 include 'includes/footer.php';

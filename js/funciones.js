@@ -781,7 +781,6 @@ function buscar_codigo_grupo(id_modalidad, id_grado, id_turno, id_seccion) {
         dataType: "json",
         data: cadena,
         success: function(data) {
-
             resultado = data.MENSAJE
             if (resultado == 'No Existe un grupo con esas caracteristicas') {
                 $('#tabla_guia').hide();
@@ -789,10 +788,8 @@ function buscar_codigo_grupo(id_modalidad, id_grado, id_turno, id_seccion) {
                     text: data.MENSAJE,
                     icon: 'error',
                     confirmButtonText: 'ACEPTAR'
-
                 }).then((result) => {
                     if (result.isConfirmed) {
-
                     }
                 });
             } else {
@@ -800,10 +797,10 @@ function buscar_codigo_grupo(id_modalidad, id_grado, id_turno, id_seccion) {
                 $('#tabla_guia').load('../componentes/tabla_guia.php', { resultado });
                 $('#tabla_bloque').load('../componentes/tabla_bloque.php', { resultado });
                 $('#tabla_asignatura_horario').load('../componentes/tabla_asignatura_horario.php', { resultado });
-                $('#tabla_asignatura_horario02').load('../componentes/tabla_asignatura_horario02.php', { resultado });
-                $('#tabla_asignatura_horario03').load('../componentes/tabla_asignatura_horario03.php', { resultado });
-                $('#tabla_asignatura_horario04').load('../componentes/tabla_asignatura_horario04.php', { resultado });
-                $('#tabla_asignatura_horario05').load('../componentes/tabla_asignatura_horario05.php', { resultado });
+                // $('#tabla_asignatura_horario02').load('../componentes/tabla_asignatura_horario02.php', { resultado });
+                // $('#tabla_asignatura_horario03').load('../componentes/tabla_asignatura_horario03.php', { resultado });
+                // $('#tabla_asignatura_horario04').load('../componentes/tabla_asignatura_horario04.php', { resultado });
+                // $('#tabla_asignatura_horario05').load('../componentes/tabla_asignatura_horario05.php', { resultado });
 
                 Swal.fire({
                     text: 'Grupo Encontrado, Horario Cargado',
@@ -877,6 +874,53 @@ function agregar_grupo(cedula, id_modalidad, id_grado, id_turno, id_seccion) {
         }
     });
 }
+
+
+// Funcion para actualizar grupo
+function actualizar_grupo(id_grupo,cedula, id_modalidad, id_grado, id_turno, id_seccion) {
+
+    cadena = "id_grupo=" + id_grupo +
+        "&cedula=" + cedula +
+        "&id_modalidad=" + id_modalidad +
+        "&id_grado=" + id_grado +
+        "&id_turno=" + id_turno +
+        "&id_seccion=" + id_seccion;
+    // alert(cadena);
+    $.ajax({
+        type: "POST",
+        url: "../includes/actualizar_grupo.php",
+        data: cadena,
+        success: function(mensaje) {
+            // alert(mensaje);
+            // // Actualizamos la página
+            // location.reload();
+            if (mensaje === 'Este grupo ya existe y esta asignado a otro Docente') {
+                Swal.fire({
+                    title: mensaje,
+                    icon: 'info',
+                    confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
+                });
+            } else {
+                Swal.fire({
+                    title: mensaje,
+                    icon: 'success',
+                    confirmButtonText: 'ACEPTAR'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
+                });
+            }
+
+        }
+    });
+}
+
+
 
 function eliminar_grupo(id_grupo) {
     eli_grupo = "id_grupo=" + id_grupo;

@@ -3,8 +3,8 @@
   $consulta_cargo = "call SP_Mostrar_Modalidades;";
   $modalidad = mysqli_query($conexion,$consulta_cargo);
 ?>
-<select class="form-select form-control" id="select_mod" required>
-  <option selected value="">Modalidades</option>       
+<select class="form-select form-control fondo_degradado_azul" id="select_mod"  required>
+  <option selected value="0">Modalidades</option>       
   <?php
     while ($data_select = mysqli_fetch_array($modalidad)) { ?>
     <option value="<?php echo $data_select["ID"] ?>"> <?php echo $data_select["DESCRIPCION"]; ?> </option>
