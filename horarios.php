@@ -44,6 +44,47 @@
     </form>
 
 
+    
+<!-- Modal de Bloque 01 INICIO-->
+<form id="form_registro" >
+    <div   class="modal fade" id="modal-bloque" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 fondo_azul" id="exampleModalLabel">  <i class="bi bi-person-badge-fill"></i>  <strong>Registrar Personal Educativo</strong> </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                <div class="modal-body"> 
+                   
+                  
+                 
+                <div class="row">
+                    <div id="select_grado" class="mt-3 fondo_azul">
+                    </div>
+                </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn fondo_degradado_azul text-light" id="guardar">Guardar</button>
+                    <button type="button" class="btn fondo_degradado_rojo text-light" data-bs-dismiss="modal">Cerrar</button>     
+                </div> 
+            </div>
+      </div>
+    </div>
+</form>
+<!-- Modal de Bloque 01 FIN -->
+
+      <!-- Codigo para cargar el select de grado en dependecia de la modalidad seleccionada en el formulario de Actualizacion -->
+    <!-- <script text="type/javascript">
+        var codigo_modalidad;
+        document.getElementById("select_modalidad").addEventListener('change', (event) => {
+        codigo_modalidad= (event.target.value);
+        $('#select_grado').load('../componentes/select_grados.php',{codigo_modalidad});
+        });   
+    </script> -->
+
+
+
 
         <!-- Funcion para llamar a la tabla de grupos de clases -->
     <script text="type/javascript">

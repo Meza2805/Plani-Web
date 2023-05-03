@@ -27,7 +27,7 @@ while($row = mysqli_fetch_array($result)) {
 <?php
         // Llenar tabla
         foreach($horario as $hora => $dias) {
-            ?>
+?>
             <tr>
                 <td><?php echo $hora ?></td>
                 <td><?php echo "{$dias['Lunes']}" ?></td>
@@ -35,10 +35,11 @@ while($row = mysqli_fetch_array($result)) {
                 <td><?php echo "{$dias['Miercoles']}" ?></td>
                 <td><?php echo "{$dias['Jueves']}" ?></td>
                 <td><?php echo "{$dias['Viernes']}" ?></td>
-                <td><button class="btn fondo_degradado_azul text-light" data-bs-toggle="modal"  data-bs-target="" onclick="" >
-                                            <i class="bi bi-pencil text-white"></i>
-                                            </button>
-                                        </td>
+                <td>
+                <button class="btn fondo_degradado_azul text-light"  onclick="alert('Probando')" >
+                        <i class="bi bi-pencil text-white"></i>
+                    </button>
+                </td>
             </tr>
 <?php
         }

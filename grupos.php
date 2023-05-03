@@ -185,7 +185,7 @@
     </script>
 
 
-        <!-- Codigo para cargar el select de grado en dependecia de la modalidad seleccionada en el formulario de Actualizacion -->
+  <!-- Codigo para cargar el select de grado en dependecia de la modalidad seleccionada en el formulario de Actualizacion -->
     <script text="type/javascript">
         var codigo_modalidad;
         document.getElementById("select_modalidad_ac").addEventListener('change', (event) => {

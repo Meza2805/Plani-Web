@@ -20,10 +20,11 @@
     // }
 ?>
 
-    <link rel="shortcut icon" href="images/educacion.png">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <!-- referencia a hoja de estilos principal ubicada localmente -->
     <link rel="stylesheet" href="../css/mis_estilos.css">
     <link rel="stylesheet" href="../css/estilos.css">
@@ -35,7 +36,7 @@
 
     <!-- referencia a hoja de estilos de iconos de boostrap ubicacada localmente -->
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-
+    <link rel="shortcut icon" href="../images/educacion.png">
 
 
     <!-- Referencia a hoja de las principales funciones Javscript -->
