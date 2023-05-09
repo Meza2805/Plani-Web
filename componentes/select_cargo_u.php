@@ -4,8 +4,8 @@
   $cargo = mysqli_query($conexion,$consulta_cargo);
   $id_cargo= $_REQUEST['id_cargo'];
 ?>
-<select class="form-select form-control fondo_azul"  id="select_cargo" required>
- 
+<select class="form-select form-control fondo_azul"  id="select_cargo_u" required>
+  <option  value= "" class="fondo_azul">Cargo</option>    
   <?php
     while ($data_select = mysqli_fetch_array($cargo)) 
     { 
@@ -18,7 +18,7 @@
       else
       {
       ?>
-        <option  selected="selected"  value="<?php echo $id ?>"> <?php echo $data_select["DESCRIPCION"]; ?> </option>
+        <option  selected="selected"  value="<?php echo $id_cargo ?>"> <?php echo $data_select["DESCRIPCION"]; ?> </option>
       <?php
       }
     }?>

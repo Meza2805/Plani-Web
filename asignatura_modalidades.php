@@ -90,9 +90,10 @@ include 'includes/footer.php';
         // /*Obteniendo el valor de la opcion de asignatura*/
         let id_asignatura = select_asignatura.value;
         // /*Ubicando el select de la asignatura*/ 
-        let select_modalidad = document.getElementById('select_modalidad');
+        let select_modalidad = document.getElementById('select_mod');
         // /*Obteniendo el valor de la opcion de asignatura*/
         let id_modalidad = select_modalidad.value;
+        alert('funciona')
         agregar_asmd(id_asignatura,id_modalidad);
         });
 </script>
@@ -117,3 +118,4 @@ include 'includes/footer.php';
   }
 })}
 </script>
+

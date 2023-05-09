@@ -51,15 +51,12 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5 fondo_azul" id="exampleModalLabel">  <i class="bi bi-person-badge-fill"></i>  <strong>Registrar Personal Educativo</strong> </h1>
+                    <h1 class="modal-title fs-5 fondo_azul" id="exampleModalLabel">  <i class="bi bi-person-badge-fill"></i>  <strong>Registro / Actualización Bloques de Clases</strong> </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                  </div>
                 <div class="modal-body"> 
-                   
-                  
-                 
                 <div class="row">
-                    <div id="select_grado" class="mt-3 fondo_azul">
+                    <div id="select_grado_ac" class="mt-3 fondo_azul">
                     </div>
                 </div>
                     
@@ -72,19 +69,10 @@
       </div>
     </div>
 </form>
-<!-- Modal de Bloque 01 FIN -->
-
-      <!-- Codigo para cargar el select de grado en dependecia de la modalidad seleccionada en el formulario de Actualizacion -->
-    <!-- <script text="type/javascript">
-        var codigo_modalidad;
-        document.getElementById("select_modalidad").addEventListener('change', (event) => {
-        codigo_modalidad= (event.target.value);
-        $('#select_grado').load('../componentes/select_grados.php',{codigo_modalidad});
-        });   
-    </script> -->
 
 
 
+   
 
         <!-- Funcion para llamar a la tabla de grupos de clases -->
     <script text="type/javascript">
@@ -100,21 +88,35 @@
     <script text="type/javascript">
         $(document).ready(function(){
             $('#select_modalidad').load('../componentes/select_modalidades.php');
+            
         });
+       
     </script>
+
+
+
 
       <!-- Codigo para cargar el select de turno en dependecia de la modalidad seleccionada -->
     <script text="type/javascript">
+
+
         var codigo_modalidad;
+        
         document.getElementById("select_modalidad").addEventListener('change', (event) => {
         codigo_modalidad= (event.target.value);
         $('#select_turno').load('../componentes/select_turnos02.php',{codigo_modalidad});
         $('#select_grado').load('../componentes/select_grados.php',{codigo_modalidad});
         $('#select_seccion').load('../componentes/select_seccion.php');
         $('#btn').load('../componentes/btn_buscarHorario.php');
-        // $('#tabla_docente').load('../componentes/tabla_docente.php');
-        // $('#txt_cedula').load('../componentes/txt_cedula.php');
-        });   
+
+        $('#select_grado_ac').load('../componentes/select_grados_Modal.php',{codigo_modalidad});  
+        $('#tabla_docente').load('../componentes/tabla_docente.php');
+        $('#txt_cedula').load('../componentes/txt_cedula.php');
+        // $('#select_mod').on('select2:select', function (e) {
+        //  var data = e.params.data;
+        // console.log(data);
+});
+   
     </script>
 
     
@@ -135,6 +137,13 @@
            
         });
     </script>
+
+    <script text="type/javascript">
+        $(document).ready(function(){
+            // $('#select_grado').load('../componentes/select_grados.php',{codigo_modalidad});  
+        });
+    </script>
+
 
 
     

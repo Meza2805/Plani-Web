@@ -13,7 +13,7 @@ function agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
         "&telefono=" + telefono +
         "&direccion=" + direccion +
         "&value_cargo=" + value_cargo;
-
+    alert(cadena)
     $.ajax({
         type: "POST",
         url: "../includes/agregar_personal.php",
@@ -48,7 +48,7 @@ function actualizar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
         "&telefono=" + telefono +
         "&direccion=" + direccion +
         "&value_cargo=" + value_cargo;
-    // alert(cadena_actualizar);
+    alert(cadena_actualizar);
     $.ajax({
         type: "POST",
         url: "../includes/actualizar_personal.php",
@@ -89,11 +89,12 @@ function cargar_form(cedula) {
             $('#telefonou').val(data.TELEFONO);
             $('#direccionu').val(data.DIRECCION);
             id_cargo = data.ID_CARGO;
+
             sexo = data.SEXO;
             //se llama el select de cargo y se le pasa el ID de cargo actual
             $('#cargo_u').load('../componentes/select_cargo_u.php', { id_cargo });
             $('#sexo_u').load('../componentes/select_sexo.php', { sexo });
-          
+
         }
     });
 }
@@ -107,22 +108,31 @@ function cargar_form_grupo(id_grupo) {
         dataType: "json",
         data: busqueda,
         success: function(data) {
-            
+
             var cedula = data.CEDULA_DOCENTE;
             var id_modalidad = data.ID_MODALIDAD;
             var id_grado = data.ID_GRADO;
             var id_turno = data.ID_TURNO;
             var id_seccion = data.ID_SECCION;
+            var cedula = data.CEDULA_DOCENTE;
             $('#grupo_ac').val(id_grupo);
             $('#cedula_ac').val(cedula);
-            $('#select_modalidad_ac').load('../componentes/select_modalidades_ac.php',{id_modalidad});
-            $('#select_grado_ac').load('../componentes/select_grados_ac.php',{id_modalidad,id_grado});
-            $('#select_turno_ac').load('../componentes/select_turnos02_ac.php',{id_modalidad,id_turno});
-            $('#select_seccion_ac').load('../componentes/select_seccion_ac.php',{id_seccion});
+            $('#select_modalidad_ac').load('../componentes/select_modalidades_ac.php', { id_modalidad });
+            $('#select_grado_ac').load('../componentes/select_grados_ac.php', { id_modalidad, id_grado });
+            $('#select_turno_ac').load('../componentes/select_turnos02_ac.php', { id_modalidad, id_turno });
+            $('#select_seccion_ac').load('../componentes/select_seccion_ac.php', { id_seccion });
+            $('#select_docente_ac').load('../componentes/select_docentes_ac.php', { cedula });
         }
     });
 }
 
+
+// function cargar_horario(codigo_modalidad) {
+//     $('#select_turno').load('../componentes/select_turnos02.php', { codigo_modalidad });
+//     $('#select_grado').load('../componentes/select_grados.php', { codigo_modalidad });
+//     $('#select_seccion').load('../componentes/select_seccion.php');
+//     $('#btn').load('../componentes/btn_buscarHorario.php');
+// }
 
 
 
@@ -421,14 +431,14 @@ function delete_asig(id_asignatura) {
 function agregar_asmd(id_asignatura, id_modalidad) {
     agregar_asmd = "id_asignatura=" + id_asignatura +
         "&id_modalidad=" + id_modalidad;
+    alert(agregar_asmd)
     $.ajax({
         type: "POST",
         url: "../includes/asignar_asignatura.php",
         dataType: "json",
         data: agregar_asmd,
         success: function(data) {
-            // alert(data.MENSAJE);
-            // location.reload();
+
             Swal.fire({
                 text: data.MENSAJE,
                 icon: 'info',
@@ -774,6 +784,7 @@ function buscar_codigo_grupo(id_modalidad, id_grado, id_turno, id_seccion) {
         "&id_grado=" + id_grado +
         "&id_turno=" + id_turno +
         "&id_seccion=" + id_seccion;
+
     var resultado;
     $.ajax({
         type: "POST",
@@ -784,25 +795,25 @@ function buscar_codigo_grupo(id_modalidad, id_grado, id_turno, id_seccion) {
             resultado = data.MENSAJE
             if (resultado == 'No Existe un grupo con esas caracteristicas') {
                 $('#tabla_guia').hide();
+                $('#tabla_asignatura_horario').hide();
                 Swal.fire({
                     text: data.MENSAJE,
                     icon: 'error',
                     confirmButtonText: 'ACEPTAR'
                 }).then((result) => {
-                    if (result.isConfirmed) {
-                    }
+                    if (result.isConfirmed) {}
                 });
             } else {
                 $('#tabla_guia').show();
                 $('#tabla_guia').load('../componentes/tabla_guia.php', { resultado });
-                // $('#tabla_bloque').load('../componentes/tabla_bloque.php', { resultado });
+                $('#tabla_asignatura_horario').show();
                 $('#tabla_asignatura_horario').load('../componentes/tabla_asignatura_horario.php', { resultado });
-               
-                Swal.fire({
-                    text: 'Grupo Encontrado, Horario Cargado',
-                    icon: 'success',
-                    confirmButtonText: 'ACEPTAR'
-                })
+
+                // Swal.fire({
+                //     text: 'Grupo Encontrado, Horario Cargado',
+                //     icon: 'success',
+                //     confirmButtonText: 'ACEPTAR'
+                // })
             }
 
         }
@@ -873,7 +884,7 @@ function agregar_grupo(cedula, id_modalidad, id_grado, id_turno, id_seccion) {
 
 
 // Funcion para actualizar grupo
-function actualizar_grupo(id_grupo,cedula, id_modalidad, id_grado, id_turno, id_seccion) {
+function actualizar_grupo(id_grupo, cedula, id_modalidad, id_grado, id_turno, id_seccion) {
 
     cadena = "id_grupo=" + id_grupo +
         "&cedula=" + cedula +

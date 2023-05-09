@@ -33,7 +33,7 @@
 
 <!-- Modal de registro de Personal INICIO -->
 <form id="form_registro" >
-    <div   class="modal fade" id="modal-agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div   class="modal fade" id="modal-agregar"  aria-labelledby="exampleModalLabel" aria-hidden="true" >
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
@@ -66,10 +66,11 @@
                         <input type="date" name="fecha_nac" id="fecha_nac" class="form-control fondo_azul" required id="fecha" max="2004-12-31" min="1957-01-01">
                     </div>
                     <div class="mb-3">
-                        <select class="form-select form-control fondo_azul"  id="sexo" required>
+                        <select class="form-select form-control fondo_azul "   id="sexo" required>
                                 <option selected disabled value="">Sexo</option>
                                 <option value="1" class="fondo_azul">Femenino</option>
-                                <option value="2" class="fondo_azul" >Masculino</option>
+                                <option value="2" class="fondo_azul" >Masculino</option> 
+
                         </select>
                      </div>  
                      <div class="mb-3" id="cargo">
@@ -92,6 +93,9 @@
     </div>
 </form>
 <!-- Modal de registro de Personal FIN -->
+
+
+
 
 <!-- Modal de actualizacion de Personal INICIO -->
 <form id="form_actualizar" >
@@ -183,6 +187,7 @@ var form = document.getElementById('form_registro');
         let select_sexo = document.getElementById('sexo');
         // /*Obteniendo el valor de la opcion de sexo*/
         let value_sexo = select_sexo.value;
+        alert('Funciona')
         agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nac, value_sexo, telefono, direccion, value_cargo);
  });
 </script>
@@ -210,6 +215,8 @@ var form = document.getElementById('form_actualizar');
         // /*Obteniendo el valor de la opcion de sexo*/
         let value_sexo = select_sexo.value;
         
+
+    
         actualizar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nac, value_sexo, telefono, direccion, value_cargo);
       
 });
@@ -242,6 +249,17 @@ var form = document.getElementById('form_actualizar');
 
 
 
+<!-- 
+<script>
+      $(document).ready(function()
+       { 
+      $('.mi-selector').select2(); 
+      $('#sexo').select2({
+        width: '100%',
+        dropdownParent: $("#modal-agregar")
+    })
+    });
+</script> -->
 
 
 

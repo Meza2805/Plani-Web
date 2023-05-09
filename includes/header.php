@@ -70,12 +70,17 @@
     <script src="../node_modules/datatables.net/js/jquery.dataTables.js"> </script>
     <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"> </script>
     <!-- <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script> -->
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
 <body class="cuerpo"> 
    <!-- MENU -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top fondo_degradado_azul">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top fondo_degradado_azul" style="z-index:999" >
             <div class="container">
                 <a class="navbar-brand" href="../principal.php"><img src="/images/logo02.png" class="logo" alt=""></a>
                 <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

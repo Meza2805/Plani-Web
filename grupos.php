@@ -29,7 +29,7 @@
 
         <!-- llamado al modal de registro de grupos de clases INCIO-->
         <form  id="form_grupo">
-            <div class="modal fade" id="modal_grupo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modal_grupo" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                             <div class="modal-header">
@@ -38,7 +38,7 @@
                             </div>
                         <div class="modal-body">
                         <!-- <h4 class="text-center letra_fondo">Buscar Docente </h4> -->
-                            <div class="row">
+                            <!-- <div class="row">
                                
                                 <h5 class=" letra_fondo mt-3">Busque y Seleccione el Docente </h5>
                                 <div class="container">
@@ -49,11 +49,15 @@
                                 </div>
                                 </div>
                                 
-                            </div>
-                            <div class="row">
+                            </div> -->
+                            <!-- <div class="row">
                                 <div class="form-floating mt-3">
                                             <input class="form-control " placeholder="Descripción de Protagonistas" id="cedula" maxlength="1300" disabled></input>
                                             <label for="observaciones" class="letra_fondo">Cedula de Docente</label>        
+                                </div>
+                            </div> -->
+                            <div class="row">
+                                <div id="select_docente" class="mt-3 fondo_azul">
                                 </div>
                             </div>
                             <div class="row">
@@ -85,7 +89,7 @@
 
           <!-- llamado al modal de registro de grupos de clases INCIO-->
           <form  id="form_grupoAC">
-            <div class="modal fade" id="modal_grupoAC" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modal_grupoAC"  aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                             <div class="modal-header">
@@ -100,7 +104,7 @@
                                             <label for="observaciones" class="letra_fondo">ID Grupo</label>        
                                 </div>
                             </div>
-                            <div class="row">
+                            <!-- <div class="row">
                                
                                 <h5 class=" letra_fondo mt-3">Busque y Seleccione el Docente </h5>
                                 <div class="container">
@@ -111,13 +115,17 @@
                                 </div>
                                 </div>
                                 
-                            </div>
+                            </div> -->
                             <div class="row">
+                                <div id="select_docente_ac" class="mt-3 fondo_azul">
+                                </div>
+                            </div>
+                            <!-- <div class="row">
                                 <div class="form-floating mt-3">
                                             <input class="form-control " placeholder="Descripción de Protagonistas" id="cedula_ac" maxlength="1300" disabled></input>
                                             <label for="observaciones" class="letra_fondo">Cedula de Docente</label>        
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="row">
                                 <div id="select_modalidad_ac" class="mt-3 fondo_azul">
                                 </div>
@@ -173,6 +181,23 @@
             $('#select_modalidad').load('../componentes/select_modalidades.php');
         });
     </script>
+
+
+    <!-- Funcion para llamar el select de los docentes disponibles para asignar a un grupo -->
+    <script text="type/javascript">
+    $(document).ready(function(){
+        $('#select_docente').load('../componentes/select_docentes.php');
+    });
+    </script>
+
+
+
+   <!-- Funcion para llamar el select de los docentes disponibles para asignar a un grupo -->
+   <!-- <script text="type/javascript">
+    $(document).ready(function(){
+        $('#select_docente_ac').load('../componentes/select_docentes_ac.php');
+    });
+    </script> -->
 
 
         <!-- Codigo para cargar el select de grado en dependecia de la modalidad seleccionada -->
@@ -239,9 +264,8 @@ var form = document.getElementById('form_grupo');
  form.addEventListener('submit',function(event){
     event.preventDefault();
            
-        let cedula=$('#cedula').val();
+        let cedula=$('#select_doc').val();
        
-      
         // /*Ubicando el select del modalidad*/ 
         let select_modalidad = document.getElementById('select_mod');
         // /*Obteniendo el valor de la opcion de modalidad*/
@@ -260,7 +284,7 @@ var form = document.getElementById('form_grupo');
         let value_seccion = select_seccion.value;
 
         agregar_grupo(cedula ,value_modalidad ,value_grado,value_turno,value_seccion)
-        // alert(cedula +" "+value_modalidad +" "+value_grado+" "+value_turno+" "+value_seccion)
+        // alert(cedula)
        
  });
 </script>
@@ -273,7 +297,7 @@ var form = document.getElementById('form_grupoAC');
     event.preventDefault();
     
         let id_grupo=$('#grupo_ac').val();
-        let cedula=$('#cedula_ac').val();
+        let cedula=$('#select_doc_a').val();
         // /*Ubicando el select del modalidad*/ 
         let select_modalidad = document.getElementById('select_mod_ac');
         // /*Obteniendo el valor de la opcion de modalidad*/
