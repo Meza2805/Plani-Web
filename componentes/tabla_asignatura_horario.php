@@ -30,13 +30,13 @@ while($row = mysqli_fetch_array($result)) {
 ?>
             <tr>
                 <td><?php echo $hora ?></td>
-                <td><?php echo "{$dias['LUNES']}" ?></td>
-                <td><?php echo "{$dias['MARTES']}" ?></td>
-                <td><?php echo "{$dias['MIERCOLES']}" ?></td>
-                <td><?php echo "{$dias['JUEVES']}" ?></td>
-                <td><?php echo "{$dias['VIERNES']}" ?></td>
+                <td><?php echo "{$dias['Lunes']}" ?></td>
+                <td><?php echo "{$dias['Martes']}" ?></td>
+                <td><?php echo "{$dias['Miercoles']}" ?></td>
+                <td><?php echo "{$dias['Jueves']}" ?></td>
+                <td><?php echo "{$dias['Viernes']}" ?></td>
                 <td>
-                <button class="btn fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal-bloque" onclick="alert('Probando')" >
+                <button class="btn fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal-bloque" >
                         <i class="bi bi-pencil text-white"></i>
                     </button>
                 </td>

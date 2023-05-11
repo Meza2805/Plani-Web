@@ -56,8 +56,34 @@
                  </div>
                 <div class="modal-body"> 
                 <div class="row">
-                    <div id="select_grado_ac" class="mt-3 fondo_azul">
+                    <div id="h_bloque" class="mt-3 fondo_azul ">
+                        <div id="lunes" class="row"></div>
+                        <div id="martes" class="row"></div>
+                        <div id="miercoles" class="row"></div>
+                        <div id="jueves" class="row"></div>
+                        <div id="viernes" class="row"></div>
+
+
+
+                        <!-- <table id="example3" class="table table-light  table-striped">
+                            <thead>
+                            <tr>
+                                <th></th>
+                            </tr>
+                            </thead>
+                                <tbody>
+                                    <tr>
+                                        <td id="lunes">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="martes">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                        </table> -->
                     </div>
+                    
                 </div>
                     
                 </div>
@@ -140,7 +166,11 @@
 
     <script text="type/javascript">
         $(document).ready(function(){
-            // $('#select_grado').load('../componentes/select_grados.php',{codigo_modalidad});  
+            $('#lunes').load('../componentes/Horario_Bloque/select_dia_lunes.php'); 
+            $('#martes').load('../componentes/Horario_Bloque/select_dia_martes.php'); 
+            $('#miercoles').load('../componentes/Horario_Bloque/select_dia_miercoles.php'); 
+            $('#jueves').load('../componentes/Horario_Bloque/select_dia_jueves.php'); 
+            $('#viernes').load('../componentes/Horario_Bloque/select_dia_viernes.php');  
         });
     </script>
 
