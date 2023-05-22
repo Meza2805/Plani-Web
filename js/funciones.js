@@ -122,22 +122,10 @@ function cargar_form_grupo(id_grupo) {
             $('#select_turno_ac').load('../componentes/select_turnos02_ac.php', { id_modalidad, id_turno });
             $('#select_seccion_ac').load('../componentes/select_seccion_ac.php', { id_seccion });
             $('#select_docente_ac').load('../componentes/select_docentes_ac.php', { cedula });
+
         }
     });
 }
-
-
-// function cargar_horario(codigo_modalidad) {
-//     $('#select_turno').load('../componentes/select_turnos02.php', { codigo_modalidad });
-//     $('#select_grado').load('../componentes/select_grados.php', { codigo_modalidad });
-//     $('#select_seccion').load('../componentes/select_seccion.php');
-//     $('#btn').load('../componentes/btn_buscarHorario.php');
-// }
-
-
-
-
-
 
 // Funcion para eliminar o dar de baja a un personal educativo
 function eliminar_personal(cedula_recibe) {
@@ -640,13 +628,6 @@ function login(usuario, contra) {
         }
     });
 
-
-    // Swal.fire({
-    //     title: 'MENSAJE',
-    //     text: login,
-    //     icon: 'info'
-    // });
-
 }
 // Funcion para llamar al cuadro de consulta para salir del sistema
 function salir() {
@@ -672,7 +653,6 @@ function buscar_actividad(id) {
         url: "../includes/buscar_actividad.php",
         dataType: "json",
         data: busqueda,
-
         success: function(data) {
             // alert(data.DESCRIPCION);
             $('#codigo_u').val(id);
@@ -696,11 +676,10 @@ function buscar_actividad(id) {
             $('#alerta_u').val(data.ALERTAS);
             $('#propuesta_u').val(data.PROPUESTA);
             $('#observaciones_u').val(data.OBSERVACION);
-
         }
-
     });
 }
+
 // Funcion para agregar una actividad escolar
 function actualizar_actividad(codigo, linea_accion, prota, meta_anual, meta_trimestral, p_femenino, p_masculino, cp01, cp02, cp03, cp04, cp05, mp01, mp02, mp03, mp04, mp05, dificultades, alertas, propuestas, observaciones) {
     agregar_act = "codigo=" + codigo +
@@ -807,13 +786,7 @@ function buscar_codigo_grupo(id_modalidad, id_grado, id_turno, id_seccion) {
                 $('#tabla_guia').show();
                 $('#tabla_guia').load('../componentes/tabla_guia.php', { resultado });
                 $('#tabla_asignatura_horario').show();
-                $('#tabla_asignatura_horario').load('../componentes/tabla_asignatura_horario.php', { resultado });
-
-                // Swal.fire({
-                //     text: 'Grupo Encontrado, Horario Cargado',
-                //     icon: 'success',
-                //     confirmButtonText: 'ACEPTAR'
-                // })
+                $('#tabla_asignatura_horario').load('../componentes/tabla_asignatura_horario.php', { resultado, id_modalidad });
             }
 
         }
@@ -882,7 +855,6 @@ function agregar_grupo(cedula, id_modalidad, id_grado, id_turno, id_seccion) {
     });
 }
 
-
 // Funcion para actualizar grupo
 function actualizar_grupo(id_grupo, cedula, id_modalidad, id_grado, id_turno, id_seccion) {
 
@@ -928,7 +900,6 @@ function actualizar_grupo(id_grupo, cedula, id_modalidad, id_grado, id_turno, id
 }
 
 
-
 function eliminar_grupo(id_grupo) {
     eli_grupo = "id_grupo=" + id_grupo;
     $.ajax({
@@ -955,5 +926,16 @@ function eliminar_grupo(id_grupo) {
             });
         }
     });
+
+}
+
+function mostrar_bloque(bloque, id_modalidad) {
+    // alert(bloque + "  " + id_modalidad)
+    // $('#h_bloque').load('../componentes/Horario_Bloque/txt_bloque.php', { bloque });
+    $('#lunes').load('../componentes/Horario_Bloque/select_dia_lunes.php', { id_modalidad });
+    $('#martes').load('../componentes/Horario_Bloque/select_dia_martes.php', { id_modalidad });
+    $('#miercoles').load('../componentes/Horario_Bloque/select_dia_miercoles.php', { id_modalidad });
+    $('#jueves').load('../componentes/Horario_Bloque/select_dia_jueves.php', { id_modalidad });
+    $('#viernes').load('../componentes/Horario_Bloque/select_dia_viernes.php', { id_modalidad });
 
 }

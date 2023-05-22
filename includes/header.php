@@ -144,10 +144,10 @@
                                 <li class=""><a class="dropdown-item text-white" href="../grupos.php"><strong>Grupos de Clases</strong></a></li> 
                                 <hr>
                                 <li class=""><a class="dropdown-item text-white" href="../horarios.php"><strong>Horarios de Clases</strong></a></li>  
-                                <hr>
+                                <!-- <hr>
                                 <li><a class="dropdown-item text-white" href="../bloque.php">  <strong>titulo pendiente Bloque01</strong></a></li>
                                 <hr>
-                                <li><a class="dropdown-item text-white mb-2" href="../bloque_clases.php"><strong>titulo pendiente Bloque02</strong></a></li>                           
+                                <li><a class="dropdown-item text-white mb-2" href="../bloque_clases.php"><strong>titulo pendiente Bloque02</strong></a></li>                            -->
                             </ul>
                         </li>
                         <!-- <li class="nav-item dropdown">

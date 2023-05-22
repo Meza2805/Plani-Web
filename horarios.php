@@ -57,31 +57,12 @@
                 <div class="modal-body"> 
                 <div class="row">
                     <div id="h_bloque" class="mt-3 fondo_azul ">
+                        <div id="codigo_bloque"></div>
                         <div id="lunes" class="row"></div>
                         <div id="martes" class="row"></div>
                         <div id="miercoles" class="row"></div>
                         <div id="jueves" class="row"></div>
                         <div id="viernes" class="row"></div>
-
-
-
-                        <!-- <table id="example3" class="table table-light  table-striped">
-                            <thead>
-                            <tr>
-                                <th></th>
-                            </tr>
-                            </thead>
-                                <tbody>
-                                    <tr>
-                                        <td id="lunes">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td id="martes">
-                                        </td>
-                                    </tr>
-                                </tbody>
-                        </table> -->
                     </div>
                     
                 </div>
@@ -124,10 +105,7 @@
 
       <!-- Codigo para cargar el select de turno en dependecia de la modalidad seleccionada -->
     <script text="type/javascript">
-
-
         var codigo_modalidad;
-        
         document.getElementById("select_modalidad").addEventListener('change', (event) => {
         codigo_modalidad= (event.target.value);
         $('#select_turno').load('../componentes/select_turnos02.php',{codigo_modalidad});
@@ -135,12 +113,14 @@
         $('#select_seccion').load('../componentes/select_seccion.php');
         $('#btn').load('../componentes/btn_buscarHorario.php');
 
-        $('#select_grado_ac').load('../componentes/select_grados_Modal.php',{codigo_modalidad});  
-        $('#tabla_docente').load('../componentes/tabla_docente.php');
-        $('#txt_cedula').load('../componentes/txt_cedula.php');
-        // $('#select_mod').on('select2:select', function (e) {
-        //  var data = e.params.data;
-        // console.log(data);
+        // $('#select_grado_ac').load('../componentes/select_grados_Modal.php',{codigo_modalidad});  
+        // $('#tabla_docente').load('../componentes/tabla_docente.php');
+        // $('#txt_cedula').load('../componentes/txt_cedula.php');
+        // $('#lunes').load('../componentes/Horario_Bloque/select_dia_lunes.php', {codigo_modalidad});
+        // $('#martes').load('../componentes/Horario_Bloque/select_dia_martes.php',{codigo_modalidad});
+        // $('#miercoles').load('../componentes/Horario_Bloque/select_dia_miercoles.php',{codigo_modalidad});
+        // $('#jueves').load('../componentes/Horario_Bloque/select_dia_jueves.php',{codigo_modalidad});
+        // $('#viernes').load('../componentes/Horario_Bloque/select_dia_viernes.php',{codigo_modalidad});
 });
    
     </script>
@@ -164,7 +144,7 @@
         });
     </script>
 
-    <script text="type/javascript">
+    <!-- <script text="type/javascript">
         $(document).ready(function(){
             $('#lunes').load('../componentes/Horario_Bloque/select_dia_lunes.php'); 
             $('#martes').load('../componentes/Horario_Bloque/select_dia_martes.php'); 
@@ -172,7 +152,7 @@
             $('#jueves').load('../componentes/Horario_Bloque/select_dia_jueves.php'); 
             $('#viernes').load('../componentes/Horario_Bloque/select_dia_viernes.php');  
         });
-    </script>
+    </script> -->
 
 
 

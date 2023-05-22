@@ -37,25 +37,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                         <div class="modal-body">
-                        <!-- <h4 class="text-center letra_fondo">Buscar Docente </h4> -->
-                            <!-- <div class="row">
-                               
-                                <h5 class=" letra_fondo mt-3">Busque y Seleccione el Docente </h5>
-                                <div class="container">
-                                <div class="form-floating">
-                                    <div class="mt-2 p-3 border border-primary" id="tabla_docente">
-                                
-                                    </div>
-                                </div>
-                                </div>
-                                
-                            </div> -->
-                            <!-- <div class="row">
-                                <div class="form-floating mt-3">
-                                            <input class="form-control " placeholder="Descripción de Protagonistas" id="cedula" maxlength="1300" disabled></input>
-                                            <label for="observaciones" class="letra_fondo">Cedula de Docente</label>        
-                                </div>
-                            </div> -->
+                       
                             <div class="row">
                                 <div id="select_docente" class="mt-3 fondo_azul">
                                 </div>

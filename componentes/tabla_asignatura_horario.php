@@ -1,7 +1,8 @@
 <?php
 require_once "../includes/conexion.php";    
 $codigo_grupo= $_REQUEST['resultado'];
- $sql = "call SP_HORARIO($codigo_grupo);";
+$id_modalidad= $_REQUEST['id_modalidad'];
+$sql = "call SP_HORARIO($codigo_grupo);";
 $horario = []; //arreglo para almacenar el resultado de la consulta
 $result=mysqli_query($conexion,$sql) ;
 while($row = mysqli_fetch_array($result)) {
@@ -36,7 +37,7 @@ while($row = mysqli_fetch_array($result)) {
                 <td><?php echo "{$dias['Jueves']}" ?></td>
                 <td><?php echo "{$dias['Viernes']}" ?></td>
                 <td>
-                <button class="btn fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal-bloque" >
+                <button class="btn fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal-bloque" onclick="mostrar_bloque('<?php echo $hora ?>','<?php echo $id_modalidad ?>')" >
                         <i class="bi bi-pencil text-white"></i>
                     </button>
                 </td>
