@@ -5,7 +5,7 @@
     $codigo_turno= $_POST['id_turno'];
     $codigo_seccion= $_POST['id_seccion'];
 
-    $sql= " call SP_Buscar_Codigo_Grupo( $codigo_modalidad,$codigo_grado,$codigo_turno,$codigo_seccion)" ;
+    $sql= " call SP_Buscar_Codigo_Grupo( $codigo_modalidad,$codigo_grado,$codigo_seccion,$codigo_turno)" ;
     $r= mysqli_query($conexion,$sql);
     $data = mysqli_fetch_assoc($r);
    

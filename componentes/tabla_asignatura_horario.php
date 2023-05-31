@@ -8,7 +8,7 @@ $result=mysqli_query($conexion,$sql) ;
 while($row = mysqli_fetch_array($result)) {
     // Verificar que existe hora_inicial en arreglo
     $hora = $row['BLOQUE'];
-    $horario[$hora][$row['DIA']] = $row['ASIGNATURA'];
+    $horario[$hora][$row['DESCRIPCION']] = $row['ASIGNATURA'];
 }
 ?>
  <link rel="stylesheet" type="text/css" href="../css/ancho_tabla02.css">
@@ -31,11 +31,11 @@ while($row = mysqli_fetch_array($result)) {
 ?>
             <tr>
                 <td><?php echo $hora ?></td>
-                <td><?php echo "{$dias['Lunes']}" ?></td>
-                <td><?php echo "{$dias['Martes']}" ?></td>
-                <td><?php echo "{$dias['Miercoles']}" ?></td>
-                <td><?php echo "{$dias['Jueves']}" ?></td>
-                <td><?php echo "{$dias['Viernes']}" ?></td>
+                <td><?php echo "{$dias['LUNES']}" ?></td>
+                <td><?php echo "{$dias['MARTES']}" ?></td>
+                <td><?php echo "{$dias['MIERCOLES']}" ?></td>
+                <td><?php echo "{$dias['JUEVES']}" ?></td>
+                <td><?php echo "{$dias['VIERNES']}" ?></td>
                 <td>
                 <button class="btn fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal-bloque" onclick="mostrar_bloque('<?php echo $hora ?>','<?php echo $id_modalidad ?>')" >
                         <i class="bi bi-pencil text-white"></i>
