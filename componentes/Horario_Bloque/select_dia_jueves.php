@@ -4,18 +4,21 @@
   $consulta = "call SP_Mostrar_Asignatura_SModalidad($codigo_modalidad);";
   $grado = mysqli_query($conexion,$consulta);
 ?>
-<div class="row mb-3">
-<h5 class="text-start">Jueves</h5>
-     <select name="select" class="form-select form-control mb-1">
+     <select id="select_jueves00" class="form-select form-control mb-1 mi-selector" required>
      <option value="0">Asignatura</option>
       <?php
       while ($data_select = mysqli_fetch_array($grado)) { ?>
       <option value="<?php echo $data_select["ID"]; ?>"> <?php echo $data_select["ASIGNATURA"]; ?> </option>
       <?php }?>
     </select> 
-    <select name="select" class="form-select form-control mb-1">
-        <option value="Docente">Docente</option>
-        <option value="value2">Value 2</option>
-        <option value="value3">Value 3</option>
-    </select>
-</div>
+
+    <script>
+      $(document).ready(function()
+       { 
+      $('.mi-selector').select2(); 
+      $('#select_jueves00').select2({
+        width: '100%',
+    })
+    });
+</script>
+ 

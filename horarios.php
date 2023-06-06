@@ -17,7 +17,6 @@
         <div class="container">
             <div class="row">
                 <div class="col content-select" id="select_modalidad" class="mt-3 fondo_azul">
-              
                 </div>
                 <div class="col"  id="select_grado" class="mt-3 fondo_azul">
                 </div>
@@ -46,7 +45,7 @@
 
     
 <!-- Modal de Bloque 01 INICIO-->
-<form id="form_registro" >
+<!-- <form id="form_registro" >
     <div   class="modal fade" id="modal-bloque" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -58,15 +57,23 @@
                 <div class="row">
                     <div id="h_bloque" class="mt-3 fondo_azul ">
                         <div id="codigo_bloque"></div>
+                        <h5 class="text-start">Lunes</h5>
                         <div id="lunes" class="row"></div>
+                        <div id="docente_lunes" class="row"></div>
+                        <h5 class="text-start">Martes</h5>
                         <div id="martes" class="row"></div>
+                        <div id="docente_martes" class="row"></div>
+                        <h5 class="text-start">Miercoles</h5>
                         <div id="miercoles" class="row"></div>
+                        <div id="docente_miercoles" class="row"></div>
+                        <h5 class="text-start">Jueves</h5>
                         <div id="jueves" class="row"></div>
+                        <div id="docente_jueves" class="row"></div>
+                        <h5 class="text-start">Viernes</h5>
                         <div id="viernes" class="row"></div>
+                        <div id="docente_viernes" class="row"></div>
                     </div>
-                    
                 </div>
-                    
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn fondo_degradado_azul text-light" id="guardar">Guardar</button>
@@ -75,8 +82,42 @@
             </div>
       </div>
     </div>
-</form>
+</form> -->
+<div class ="container w-75"  
+style=" background: rgb(2, 0, 36);
+        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(35, 106, 201, 1) 100%, rgba(0, 212, 255, 1) 100%);
+        border-radius: 10px 100px / 120px;" id="containerHorario">
+   <form id="form_registro">
+        <div class="container p-3">
+            <h3 class="fondo_azul text-center text-light" id="">  <i class=""></i>  <strong>Registro / Actualización Bloques de Clases</strong> </h3>
+        </div>
+        <div class="container"> 
+            <div class="row">
+                    <div id="h_bloque" class="mt-3 text-light"> </div>
+                    <div id="codigo_bloque"></div>
+                    <h5 class="text-start text-light">Lunes</h5>
+                    <div id="lunes" class="row mb-3"></div>
+                    <div id="docente_lunes" class="row"></div>
+                    <h5 class="text-start text-light">Martes</h5>
+                    <div id="martes" class="row mb-3"></div>
+                    <div id="docente_martes" class="row"></div>
+                    <h5 class="text-start text-light">Miercoles</h5>
+                    <div id="miercoles" class="row mb-3"></div>
+                    <div id="docente_miercoles" class="row"></div>
+                    <h5 class="text-start text-light">Jueves</h5>
+                    <div id="jueves" class="row mb-3"></div>
+                    <div id="docente_jueves" class="row"></div>
+                    <h5 class="text-start text-light">Viernes</h5>
+                    <div id="viernes" class="row mb-3"></div>
+                    <div id="docente_viernes" class="row"></div>
+            </div>
+        </div>
+        <div class="mt-3 mb-3 text-center">
+            <button type="submit" class="btn fondo_degradado_azul text-light mb-3" id="guardar">Guardar</button>
+        </div> 
+    </form>
 
+</div>
 
 
    
@@ -95,7 +136,6 @@
     <script text="type/javascript">
         $(document).ready(function(){
             $('#select_modalidad').load('../componentes/select_modalidades.php');
-            
         });
        
     </script>
@@ -154,9 +194,20 @@
         });
     </script> -->
 
+        <!-- Evento para buscar horario -->
+    <script type="text/javascript">
+        var form = document.getElementById('form_registro');
+        form.addEventListener('submit',function(event){
+        event.preventDefault();
+          alert('Funcionando')
+        });
+    </script>
 
-
-    
+<script text="type/javascript">
+    $(document).ready(function(){
+        $('#containerHorario').hide()
+    });
+</script>
 <?php
 include 'includes/footer.php';
 ?>

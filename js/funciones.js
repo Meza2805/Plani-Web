@@ -931,11 +931,21 @@ function eliminar_grupo(id_grupo) {
 
 function mostrar_bloque(bloque, id_modalidad) {
     // alert(bloque + "  " + id_modalidad)
-    // $('#h_bloque').load('../componentes/Horario_Bloque/txt_bloque.php', { bloque });
+
+    // $('#containerHorario').load('../componentes/Horario_Bloque/Container.php');
+    $('#containerHorario').show()
+    $('#h_bloque').load('../componentes/Horario_Bloque/txt_bloque.php', { bloque });
     $('#lunes').load('../componentes/Horario_Bloque/select_dia_lunes.php', { id_modalidad });
+    $('#docente_lunes').load('../componentes/Horario_Bloque/select_docente_lunes.php');
     $('#martes').load('../componentes/Horario_Bloque/select_dia_martes.php', { id_modalidad });
+    $('#docente_martes').load('../componentes/Horario_Bloque/select_docente_martes.php');
     $('#miercoles').load('../componentes/Horario_Bloque/select_dia_miercoles.php', { id_modalidad });
+    $('#docente_miercoles').load('../componentes/Horario_Bloque/select_docente_miercoles.php');
     $('#jueves').load('../componentes/Horario_Bloque/select_dia_jueves.php', { id_modalidad });
+    $('#docente_jueves').load('../componentes/Horario_Bloque/select_docente_jueves.php');
     $('#viernes').load('../componentes/Horario_Bloque/select_dia_viernes.php', { id_modalidad });
+    $('#docente_viernes').load('../componentes/Horario_Bloque/select_docente_viernes.php');
+
+
 
 }
