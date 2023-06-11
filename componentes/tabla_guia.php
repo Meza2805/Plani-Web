@@ -2,6 +2,8 @@
 require_once "../includes/conexion.php";    
 $codigo_grupo= $_REQUEST['resultado'];
 
+
+
 ?>
 <table class="table table-light table-striped " id="">
                                 <thead>
@@ -37,3 +39,13 @@ $codigo_grupo= $_REQUEST['resultado'];
                             ?>
                                 </tbody>
 </table>
+
+
+
+<script text="type/javascript">
+    
+            var CodigoGrupoFinal ="<?php echo $codigo_grupo?>"
+    console.log(CodigoGrupoFinal)
+
+      
+    </script>

@@ -187,7 +187,7 @@ var form = document.getElementById('form_registro');
         let select_sexo = document.getElementById('sexo');
         // /*Obteniendo el valor de la opcion de sexo*/
         let value_sexo = select_sexo.value;
-        alert('Funciona')
+        // alert('Funciona')
         agregar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nac, value_sexo, telefono, direccion, value_cargo);
  });
 </script>

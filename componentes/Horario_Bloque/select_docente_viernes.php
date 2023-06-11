@@ -1,10 +1,10 @@
 <?php
   require'../../includes/conexion.php';
-  $consulta02 = "call SP_Mostrar_Docentes();";
+  $consulta02 = "call SP_MostrarDocentesActivos();";
   $docente = mysqli_query($conexion,$consulta02);
 ?>
-    <select id="select_viernest" class="form-select form-control mb-1 mi-selector" required>
-      <option value="0">Docente</option>
+    <select id="select_viernes" class="form-select form-control mb-1 mi-selector" required>
+      <option value="">Docente</option>
       <?php
         while ($data_select = mysqli_fetch_array($docente)) { ?>
         <option value="<?php echo $data_select["cedula"]; ?>"> <?php echo $data_select["NOMBRE"]; ?> </option>

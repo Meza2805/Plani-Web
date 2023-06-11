@@ -48,7 +48,7 @@ function actualizar_personal(cedula, p_nombre, s_nombre, p_apellido, s_apellido,
         "&telefono=" + telefono +
         "&direccion=" + direccion +
         "&value_cargo=" + value_cargo;
-    alert(cadena_actualizar);
+    // alert(cadena_actualizar);
     $.ajax({
         type: "POST",
         url: "../includes/actualizar_personal.php",
@@ -899,7 +899,6 @@ function actualizar_grupo(id_grupo, cedula, id_modalidad, id_grado, id_turno, id
     });
 }
 
-
 function eliminar_grupo(id_grupo) {
     eli_grupo = "id_grupo=" + id_grupo;
     $.ajax({
@@ -945,7 +944,44 @@ function mostrar_bloque(bloque, id_modalidad) {
     $('#docente_jueves').load('../componentes/Horario_Bloque/select_docente_jueves.php');
     $('#viernes').load('../componentes/Horario_Bloque/select_dia_viernes.php', { id_modalidad });
     $('#docente_viernes').load('../componentes/Horario_Bloque/select_docente_viernes.php');
+}
 
-
-
+function Insertar_Bloque_Horario(DocenteLunes, DocenteMartes, DocenteMiercoles, DocenteJueves, DocenteViernes, AsignaturaLunes, AsignaturaMartes,
+    AsignaturaMiercoles, AsignaturaJueves, AsignaturaViernes, CodigoGrupoFinal, h01, h02, codigo_modalidad) {
+    horario = "DocenteLunes=" + DocenteLunes +
+        "&DocenteMartes=" + DocenteMartes +
+        "&DocenteMiercoles=" + DocenteMiercoles +
+        "&DocenteJueves=" + DocenteJueves +
+        "&DocenteViernes=" + DocenteViernes +
+        "&AsignaturaLunes=" + AsignaturaLunes +
+        "&AsignaturaMartes=" + AsignaturaMartes +
+        "&AsignaturaMiercoles=" + AsignaturaMiercoles +
+        "&AsignaturaJueves=" + AsignaturaJueves +
+        "&AsignaturaViernes=" + AsignaturaViernes +
+        "&CodigoGrupoFinal=" + CodigoGrupoFinal +
+        "&h01=" + h01 +
+        "&h02=" + h02;
+    // alert(codigo_modalidad)
+    $.ajax({
+        type: "POST",
+        url: "../includes/agregar_bloque.php",
+        dataType: "json",
+        data: horario,
+        success: function(data) {
+            Swal.fire({
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // location.reload();
+                    let id_modalidad = codigo_modalidad;
+                    let resultado = CodigoGrupoFinal
+                    $('#tabla_asignatura_horario').show();
+                    $('#tabla_asignatura_horario').load('../componentes/tabla_asignatura_horario.php', { resultado, id_modalidad });
+                    $('#containerHorario').hide()
+                }
+            });
+        }
+    });
 }

@@ -86,28 +86,11 @@
                                             <label for="observaciones" class="letra_fondo">ID Grupo</label>        
                                 </div>
                             </div>
-                            <!-- <div class="row">
-                               
-                                <h5 class=" letra_fondo mt-3">Busque y Seleccione el Docente </h5>
-                                <div class="container">
-                                <div class="form-floating">
-                                    <div class="mt-2 p-3 border border-primary" id="tabla_docente_ac">
-                                
-                                    </div>
-                                </div>
-                                </div>
-                                
-                            </div> -->
                             <div class="row">
                                 <div id="select_docente_ac" class="mt-3 fondo_azul">
                                 </div>
                             </div>
-                            <!-- <div class="row">
-                                <div class="form-floating mt-3">
-                                            <input class="form-control " placeholder="Descripción de Protagonistas" id="cedula_ac" maxlength="1300" disabled></input>
-                                            <label for="observaciones" class="letra_fondo">Cedula de Docente</label>        
-                                </div>
-                            </div> -->
+
                             <div class="row">
                                 <div id="select_modalidad_ac" class="mt-3 fondo_azul">
                                 </div>

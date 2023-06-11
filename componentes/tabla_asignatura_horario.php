@@ -38,8 +38,8 @@ while($row = mysqli_fetch_array($result)) {
                 <td><?php echo "{$dias['VIERNES']}" ?></td>
                 <td>
                 <button class="btn fondo_degradado_azul text-light" data-bs-toggle="modal" data-bs-target="#modal-bloque" onclick="mostrar_bloque('<?php echo $hora ?>','<?php echo $id_modalidad ?>')" >
-                        <i class="bi bi-pencil text-white"></i>
-                    </button>
+                  <i class="bi bi-pencil text-white"></i>  
+                    </button>  
                 </td>
             </tr>
 <?php
