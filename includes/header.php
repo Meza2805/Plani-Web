@@ -53,25 +53,12 @@
     <script src="../node_modules/sweetalert2/dist/sweetalert2.js"></script>
     <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.css">
 
-    <!-- Libreria de Animate.css -->
-    <!-- <script src=href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> </script> -->
-    <!-- <script src="stylesheet" href="../node_modules/animate.css/animate.min.css">  </script> -->
-    <!-- <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.css"> -->
-
-
-
-    <!-- Libreria de DataTable.net -->
-        <!-- Estilos CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"> -->
     <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.css">
     <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
 
         <!-- Javascript -->
     <script src="../node_modules/datatables.net/js/jquery.dataTables.js"> </script>
     <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"> </script>
-    <!-- <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script> -->
-
-
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
@@ -84,8 +71,6 @@
             <div class="container">
                 <a class="navbar-brand" href="../principal.php"><img src="/images/logo02.png" class="logo" alt=""></a>
                 <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <!-- <span class="navbar-toggler-icon text-light"></span> -->
-                <!-- <p>Menu</p -->
                 <i class="bi bi-menu-button-wide text-light"></i>
               </button>
                 <div class=" collapse navbar-collapse" id="navbarNavDropdown">
@@ -99,8 +84,6 @@
                                 <li class=""><a class="dropdown-item text-white" href="../personal_cargo.php"><strong>Cargo</strong></a></li>
                                 <hr>
                                 <li class="mb-2"><a class="dropdown-item text-white" href="../personal_registro.php">  <strong>Registro</strong></a></li>
-                                
-                                
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -113,53 +96,20 @@
                                     <li class=""><a class="dropdown-item text-white" href="../asignatura_modalidades.php">  <strong>Modalidades y Asignaturas</strong></a></li>
                                     <hr>
                                     <li><a class="dropdown-item text-white mb-2" href="../actividades.php">  <strong>Actividades Curriculares</strong></a></li>
-                                    <!-- <li><a class="dropdown-item text-white" href="../grados.php"><strong>Grados</strong></a></li>
-                                    <hr> -->
-                                   
-                                    <!-- <li class="mb-2"><a class="dropdown-item text-white" href="../modalidades.php"><strong>Modalidades</strong></a></li> -->
-                                    <!-- <hr>
-                                  
-                                    <li class="mb-2"><a class="dropdown-item text-white" href="../turno.php"><strong>Turnos</strong></a></li>  -->
                                 </ul>
                         </li>
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-book"></i>  <strong> Asignacion</strong>
-                            </a>
-                            <ul class="dropdown-menu  mx-1">
-                            <li><a class="dropdown-item text-white" href="../asignatura_modalidades.php">  <strong>Modalidades y Asignaturas</strong></a></li>
-                            <hr>
-                            <li><a class="dropdown-item text-white" href="../grado_modalidades.php">  <strong>Modalidades y Grados</strong></a></li>
-                            <hr>
-                            <li class="mb-2"><a class="dropdown-item text-white" href="../turno_modalidades.php">  <strong>Modalidades y Turnos</strong></a></li>
-                            </ul>
-                        </li> -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-filter-square"></i> <strong> Organización</strong>
                             </a>
                             <ul class="dropdown-menu mx-2">
-                                <!-- <li><a class="dropdown-item text-white" href="../actividades.php">  <strong>Actividades Curriculares</strong></a></li>
-                                <hr> -->
                                 <li class=""><a class="dropdown-item text-white" href="../grupos.php"><strong>Grupos de Clases</strong></a></li> 
                                 <hr>
                                 <li class=""><a class="dropdown-item text-white" href="../horarios.php"><strong>Horarios de Clases</strong></a></li>  
-                                <!-- <hr>
-                                <li><a class="dropdown-item text-white" href="../bloque.php">  <strong>titulo pendiente Bloque01</strong></a></li>
                                 <hr>
-                                <li><a class="dropdown-item text-white mb-2" href="../bloque_clases.php"><strong>titulo pendiente Bloque02</strong></a></li>                            -->
+                                <li class=""><a class="dropdown-item text-white" href="../InfoDocente.php"><strong>Información Docente</strong></a></li>  
                             </ul>
                         </li>
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-aspect-ratio"></i>  <strong> Bloques</strong>
-                            </a>
-                            <ul class="dropdown-menu  mx-2">
-                                <li><a class="dropdown-item text-white" href="../bloque.php">  <strong>Registro</strong></a></li>
-                                <hr>
-                                <li><a class="dropdown-item text-white" href="../bloque_clases.php"><strong>Bloque de Clases</strong></a></li>
-                            </ul>
-                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link mx-1 text-white" href="../reportes.php"> <i class="bi bi-file-break-fill"></i><strong> Reportes</strong> </a>
                         </li>
