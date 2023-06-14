@@ -3,10 +3,10 @@
   $consulta = "call SP_Mostrar_Asignatura()";
   $asignatura = mysqli_query($conexion,$consulta);
 ?>
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
 
-<select class="form-select form-control " id="select_asig" required>
+<select class="form-select form-control  mi-selector" id="select_asig" required>
   <option selected value="">Asignatura</option>       
   <?php
     while ($data_select = mysqli_fetch_array($asignatura)) { ?>
@@ -18,8 +18,16 @@
 
 
 <script>
- $(document).ready(function() {
-        $('.mi-selector').select2();
+      $(document).ready(function()
+       { 
+      $('.mi-selector').select2(); 
+      $('#select_asig').select2({
+        width: '100%',
+        dropdownParent: $("#modal-agregar")
+    })
     });
 </script>
 
+<style>
+.select2-container:not(.select2-container--open) { z-index: 1;}
+</style>

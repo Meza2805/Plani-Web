@@ -8,5 +8,6 @@
     $sql=  "call SP_Insertar_Grupo($id_grado,$id_seccion,$id_turno,$id_modalidad,'$cedula');";
     $r= mysqli_query($conexion,$sql);
     $data= mysqli_fetch_assoc($r);
+    $mensaje = $row["MENSAJE"];
     echo json_encode($data);
 ?>

@@ -419,7 +419,7 @@ function delete_asig(id_asignatura) {
 function agregar_asmd(id_asignatura, id_modalidad) {
     agregar_asmd = "id_asignatura=" + id_asignatura +
         "&id_modalidad=" + id_modalidad;
-    alert(agregar_asmd)
+
     $.ajax({
         type: "POST",
         url: "../includes/asignar_asignatura.php",
@@ -429,7 +429,7 @@ function agregar_asmd(id_asignatura, id_modalidad) {
 
             Swal.fire({
                 text: data.MENSAJE,
-                icon: 'info',
+                icon: 'success',
                 confirmButtonText: 'ACEPTAR'
             }).then((result) => {
                 if (result.isConfirmed) {
@@ -825,13 +825,13 @@ function agregar_grupo(cedula, id_modalidad, id_grado, id_turno, id_seccion) {
         type: "POST",
         url: "../includes/agregar_grupo.php",
         data: cadena,
-        success: function(mensaje) {
+        success: function(data) {
             // alert(mensaje);
             // // Actualizamos la página
             // location.reload();
-            if (mensaje === 'Este grupo ya existe y esta asignado a otro Docente') {
+            if (data.MENSAJE === 'Este grupo ya existe y esta asignado a otro Docente') {
                 Swal.fire({
-                    title: mensaje,
+                    title: data.MENSAJE,
                     icon: 'info',
                     confirmButtonText: 'ACEPTAR'
                 }).then((result) => {
@@ -841,7 +841,7 @@ function agregar_grupo(cedula, id_modalidad, id_grado, id_turno, id_seccion) {
                 });
             } else {
                 Swal.fire({
-                    title: mensaje,
+                    title: data.MENSAJE,
                     icon: 'success',
                     confirmButtonText: 'ACEPTAR'
                 }).then((result) => {

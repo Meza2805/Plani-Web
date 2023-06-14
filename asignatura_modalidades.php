@@ -31,7 +31,7 @@ include 'includes/header.php';
 
 <!-- Modal de asignar modalidad FIN -->
 <form  id="id_form" >
-    <div class="modal fade" id="modal-agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal-agregar"  aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
@@ -93,7 +93,7 @@ include 'includes/footer.php';
         let select_modalidad = document.getElementById('select_mod');
         // /*Obteniendo el valor de la opcion de asignatura*/
         let id_modalidad = select_modalidad.value;
-        alert('funciona')
+      
         agregar_asmd(id_asignatura,id_modalidad);
         });
 </script>
