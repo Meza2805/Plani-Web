@@ -961,7 +961,7 @@ function Insertar_Bloque_Horario(DocenteLunes, DocenteMartes, DocenteMiercoles, 
         "&CodigoGrupoFinal=" + CodigoGrupoFinal +
         "&h01=" + h01 +
         "&h02=" + h02;
-    // alert(codigo_modalidad)
+    alert(horario)
     $.ajax({
         type: "POST",
         url: "../includes/agregar_bloque.php",

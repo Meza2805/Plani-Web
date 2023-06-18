@@ -4,11 +4,11 @@
   $modalidad = mysqli_query($conexion,$consulta_cargo);
 ?>
 
-<select class="form-select form-control fondo_degradado_azul mi-selector" style="width: 100%" id=""    required>
-  <option selected value="0">Busque y Seleccione un Docente</option>       
+<select class="form-select form-control fondo_degradado_azul mi-selector" style="width: 100%" id="sdi01"    required>
+  <option selected value="">Busque y Seleccione un Docente</option>       
   <?php
     while ($data_select = mysqli_fetch_array($modalidad)) { ?>
-    <option value="<?php echo $data_select["cedula"] ?>"> <?php echo $data_select["NOMBRE"]; ?> </option>
+    <option value="<?php echo $data_select["cedula"];?>"> <?php echo $data_select["NOMBRE"]; ?> </option>
     <?php }?>
 </select>
 
@@ -16,11 +16,17 @@
       $(document).ready(function()
        { 
       $('.mi-selector').select2(); 
-      $('#select_doc').select2({
-        width: '100%',
-        dropdownParent: $("#modal_grupo")
-    })
+   
     });
+
+    $('#sdi01').on('select2:select', function (e) {
+    var data = e.params.data;
+  
+    cedula= (data.id);
+          
+        $('#tablaInfo01').load('../componentes/tabla_Detalle_Docente.php',{cedula});
+        $('#tablaInfo02').load('../componentes/tabla_Detalle_Docente02.php',{cedula});
+});
 </script>
 
 <!-- <style>
