@@ -26,6 +26,7 @@
           
         $('#tablaInfo01').load('../componentes/tabla_Detalle_Docente.php',{cedula});
         $('#tablaInfo02').load('../componentes/tabla_Detalle_Docente02.php',{cedula});
+        $('#btnBuscarInfoDocente').load('../componentes/btn_BuscarInfoDocente.php');
 });
 </script>
 

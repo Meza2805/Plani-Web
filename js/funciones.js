@@ -787,6 +787,7 @@ function buscar_codigo_grupo(id_modalidad, id_grado, id_turno, id_seccion) {
                 $('#tabla_guia').load('../componentes/tabla_guia.php', { resultado });
                 $('#tabla_asignatura_horario').show();
                 $('#tabla_asignatura_horario').load('../componentes/tabla_asignatura_horario.php', { resultado, id_modalidad });
+                $('#BtnPdf').load('../componentes/btn_pdfHorario.php');
             }
 
         }
@@ -944,6 +945,7 @@ function mostrar_bloque(bloque, id_modalidad) {
     $('#docente_jueves').load('../componentes/Horario_Bloque/select_docente_jueves.php');
     $('#viernes').load('../componentes/Horario_Bloque/select_dia_viernes.php', { id_modalidad });
     $('#docente_viernes').load('../componentes/Horario_Bloque/select_docente_viernes.php');
+
 }
 
 function Insertar_Bloque_Horario(DocenteLunes, DocenteMartes, DocenteMiercoles, DocenteJueves, DocenteViernes, AsignaturaLunes, AsignaturaMartes,
@@ -976,7 +978,7 @@ function Insertar_Bloque_Horario(DocenteLunes, DocenteMartes, DocenteMiercoles, 
                 if (result.isConfirmed) {
                     // location.reload();
                     let id_modalidad = codigo_modalidad;
-                    let resultado = CodigoGrupoFinal
+                    let resultado = CodigoGrupoFinal;
                     $('#tabla_asignatura_horario').show();
                     $('#tabla_asignatura_horario').load('../componentes/tabla_asignatura_horario.php', { resultado, id_modalidad });
                     $('#containerHorario').hide()
@@ -984,4 +986,76 @@ function Insertar_Bloque_Horario(DocenteLunes, DocenteMartes, DocenteMiercoles, 
             });
         }
     });
+}
+
+function BuscarInfoAdmin(cedula) {
+    c = "cedula=" + cedula;
+    $.ajax({
+        type: "POST",
+        url: "../includes/mostrar_InforAdmin.php",
+        dataType: "json",
+        data: c,
+        success: function(data) {
+            // alert(data.USUARIO)
+            $('#userAdmin').val(data.USUARIO);
+            $('#contaAdmin').val(data.CONTRA);
+            $('#cedula01').val(data.CEDULA);
+            $('#nombre01').val(data.NOMBRE);
+        }
+    });
+
+}
+
+function ActualizarInfoAdmin(cedula, user, contra) {
+    info = "cedula=" + cedula +
+        "&user=" + user +
+        "&contra=" + contra;
+    $.ajax({
+        type: "POST",
+        url: "../includes/actualizar_InfoAdmin.php",
+        dataType: "json",
+        data: info,
+        success: function(data) {
+            Swal.fire({
+                text: data.MENSAJE,
+                icon: 'success',
+                confirmButtonText: 'ACEPTAR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
+        }
+    });
+}
+
+function CargarActividad(id_actividad) {
+    window.open("../fpdf/reportes/ActividadCurricular.php?id_actividad=" + id_actividad);
+}
+
+function ReporteHorario() {
+    // alert(CodigoG)
+    // alert(CodigoGrupoFinal);
+    window.open("../fpdf/reportes/HorarioClases.php?CodigoGrupoFinal=" + CodigoG + "&datosGrupo=" + datosGrupo + "&yearG=" + yearG + "&DocenteGuia=" + DocenteGuia);
+    location.reload();
+}
+
+function ReportInfoDocente() {
+    // alert(CedulaInfo + " " + DocenteInfo + " " + HorasClasesInfo);
+    let ddgrupo;
+    info = "cedula=" + CedulaInfo;
+    $.ajax({
+        type: "POST",
+        url: "../includes/GrupoDocente.php",
+        dataType: "json",
+        data: info,
+        success: function(data) {
+            // alert(data.columna);
+            let ddgrupo = data.columna;
+            window.open("../fpdf/reportes/InfoDocente.php?CedulaInfo=" + CedulaInfo + "&DocenteInfo=" + DocenteInfo + "&HorasClasesInfo=" + HorasClasesInfo + "&ddgrupo=" + ddgrupo);
+        }
+    });
+    // alert(ddgrupo);
+
+
 }

@@ -21,10 +21,18 @@ $cedula = $_REQUEST['cedula'];
                                         <td><?php echo $ver [1]?></td>
                                     </tr>
                             <?php
+                            $Docente = $ver [0] ;
+                            $HorasClases = $ver [1];
                                  }
                             ?>
                                 </tbody>
                             </table>
+
+<script text="type/javascript">
+    let CedulaInfo = "<?php echo $cedula ?>";
+    let DocenteInfo = "<?php echo $Docente ?>";
+    let HorasClasesInfo = "<?php echo $HorasClases ?>";
+</script> 
 
                             <!-- llamado a la hoja de funciones -->
 <!-- <script src="../js/DataTable.js"></script> -->

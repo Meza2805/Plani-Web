@@ -6,7 +6,6 @@
     <?php
     include 'includes/header.php';
     ?>
-
     <div class="row mt-4">
         <div class="text-center flex-column d-flex">
             <h3 class="letra_fondo"> <i class="bi bi-alarm-fill"></i> Horarios de Clases</h3>
@@ -29,8 +28,18 @@
                 </div>
             </div>
         </div>  
-        <div class="container mt-3 mb-3" id="btn">
+        <!-- <div class="container mt-3 mb-3" id="btn">
+        </div> -->
+
+        <div class="row mt-3">
+            <div class="col-3" id="btn">
+            </div>
+            <div class="col-3" id="BtnPdf">
+            </div>
         </div>
+
+        <!-- <div class="container mt-3 mb-3" id="BtnPdf">
+        </div> -->
         
         <div class="mt-2" id="tabla_guia">                    
         </div>
@@ -88,6 +97,7 @@ style=" background: rgb(2, 0, 36);
         $('#select_grado').load('../componentes/select_grados.php',{codigo_modalidad});
         $('#select_seccion').load('../componentes/select_seccion.php');
         $('#btn').load('../componentes/btn_buscarHorario.php');
+       
 });
     </script>
 

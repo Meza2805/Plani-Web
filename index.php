@@ -18,13 +18,13 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="node_modules/css-hamburgers/hamburgers.css">
+    <!-- <link rel="stylesheet" type="text/css" href="node_modules/css-hamburgers/hamburgers.css"> -->
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="node_modules/animsition/css/animsition.css">
+    <!-- <link rel="stylesheet" type="text/css" href="node_modules/animsition/css/animsition.css"> -->
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="node_modules/select2/select2.css">
+    <!-- <link rel="stylesheet" type="text/css" href="node_modules/select2/select2.css"> -->
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="node_modules/daterangepicker/daterangepicker.css">
+    <!-- <link rel="stylesheet" type="text/css" href="node_modules/daterangepicker/daterangepicker.css"> -->
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -78,23 +78,23 @@
     <!--===============================================================================================-->
     <script src="node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
     <!-- <script src="vendor/animsition/js/animsition.min.js"></script> -->
-    <script src="node_modules/animsition/js/animsition.js"></script>
+    <!-- <script src="node_modules/animsition/js/animsition.js"></script> -->
     <!--===============================================================================================-->
     <!-- <script src="vendor/bootstrap/js/popper.js"></script> -->
-    <script src="node_modules/@popperjs/core/lib/popper.js"></script>
+    <!-- <script src="node_modules/@popperjs/core/lib/popper.js"></script> -->
     <!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <!--===============================================================================================-->
     <!-- <script src="vendor/select2/select2.min.js"></script> -->
-    <script src="node_modules/select2/select2.js"></script>
+    <!-- <script src="node_modules/select2/select2.js"></script> -->
     <!--===============================================================================================-->
     <!-- <script src="vendor/daterangepicker/moment.min.js"></script> -->
-    <script src="node_modules/daterangepicker/moment.js"></script>
+    <!-- <script src="node_modules/daterangepicker/moment.js"></script> -->
     <!-- <script src="vendor/daterangepicker/daterangepicker.js"></script> -->
-    <script src="node_modules/daterangepicker/daterangepicker.js"></script>
+    <!-- <script src="node_modules/daterangepicker/daterangepicker.js"></script> -->
     <!--===============================================================================================-->
     <!-- <script src="vendor/countdowntime/countdowntime.js"></script> -->
-    <script src="node_modules/countdowntime/countdowntime.js"></script>
+    <!-- <script src="node_modules/countdowntime/countdowntime.js"></script> -->
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
     <!--===============================================================================================-->

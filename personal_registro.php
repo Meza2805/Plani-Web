@@ -43,26 +43,26 @@
                 <div class="modal-body"> 
                     <div class="form-floating mb-3">
                         <input type="text" id="cedula" class="form-control fondo_azul" placeholder="Numero de Cedula"   minlength="0" maxlength="16" pattern="^\d{3}-\d{6}-\d{4}[A-Z]{1}$" required>
-                        <label for="floatingInput" class="fondo_azul"> Numero de Cedula    (incluya "-") </label>
+                        <label for="cedula" class="fondo_azul"> Numero de Cedula    (incluya "-") </label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" name="p_nombre" id="p_nombre" class="form-control fondo_azul" placeholder="Primer Nombre" minlength="0" maxlength="15" required>
-                        <label for="floatingInput" class="fondo_azul">Primer Nombre</label>
+                        <label for="p_nombre" class="fondo_azul">Primer Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" name="s_nombre" id="s_nombre" class="form-control fondo_azul" placeholder="Segundo Nombre" minlength="0" maxlength="15">
-                        <label for="floatingInput" class="fondo_azul">Segundo Nombre</label>
+                        <label for="s_nombre" class="fondo_azul">Segundo Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" name="p_apellido" id="p_apellido" class="form-control fondo_azul" placeholder="Primer Apellido" minlength="0" maxlength="15" required>
-                        <label for="floatingInput" class="fondo_azul">Primer apellido</label>
+                        <label for="p_apellido" class="fondo_azul">Primer apellido</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" name="s_apellido" id="s_apellido" class="form-control fondo_azul" placeholder="Segundo Apellido" minlength="0" maxlength="15">
-                        <label for="floatingInput" class="fondo_azul">Segundo apellido</label>
+                        <label for="s_apellido" class="fondo_azul">Segundo apellido</label>
                     </div>
                      <div class="form-group mb-3">
-                        <label for="fecha" class="form-label fondo_azul"> Fecha de Nacimiento</label>
+                        <label for="fecha_nac" class="form-label fondo_azul"> Fecha de Nacimiento</label>
                         <input type="date" name="fecha_nac" id="fecha_nac" class="form-control fondo_azul" required id="fecha" max="2004-12-31" min="1957-01-01">
                     </div>
                     <div class="mb-3">
@@ -77,11 +77,11 @@
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" id="telefono" class="form-control" placeholder="Numero Telefonico +505" pattern="^\d{8}" minlength="0" maxlength="8" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"   required>
-                        <label for="floatingInput" class="fondo_azul">Numero Telefonico +505</label>
+                        <label for="telefono" class="fondo_azul">Numero Telefonico +505</label>
                     </div>
                     <div class="form-floating col-sm-12 mt-3">
                         <textarea class="form-control limitar_area" placeholder="Dirección" id="direccion" maxlength="300" required></textarea>
-                        <label for="floatingTextarea" class="fondo_azul"> Dirección </label>
+                        <label for="direccion" class="fondo_azul"> Dirección </label>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -109,26 +109,26 @@
                 <div class="modal-body">
                     <div class="form-floating mb-3">
                         <input type="text" id="cedulau" class="form-control fondo_azul" placeholder="Numero de Cedula"   minlength="0" maxlength="16" disabled required>
-                        <label for="floatingInput" class="fondo_azul">Numero de Cedula</label>
+                        <label for="cedulau" class="fondo_azul">Numero de Cedula</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" name="p_nombre" id="p_nombreu" class="form-control fondo_azul" placeholder="Primer Nombre" minlength="0" maxlength="15" required>
-                        <label for="floatingInput" class="fondo_azul">Primer Nombre</label>
+                        <label for="p_nombreu" class="fondo_azul">Primer Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" name="s_nombre" id="s_nombreu" class="form-control fondo_azul" placeholder="Segundo Nombre" minlength="0" maxlength="15">
-                        <label for="floatingInput" class="fondo_azul">Segundo Nombre</label>
+                        <label for="s_nombreu" class="fondo_azul">Segundo Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" name="p_apellido" id="p_apellidou" class="form-control fondo_azul" placeholder="Primer Apellido" minlength="0" maxlength="15" required>
-                        <label for="floatingInput" class="fondo_azul">Primer apellido</label>
+                        <label for="p_apellidou" class="fondo_azul">Primer apellido</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" name="s_apellido" id="s_apellidou" class="form-control fondo_azul" placeholder="Segundo Apellido" minlength="0" maxlength="15">
-                        <label for="floatingInput" class="fondo_azul">Segundo apellido</label>
+                        <label for="s_apellidou" class="fondo_azul">Segundo apellido</label>
                     </div>
                      <div class="form-group mb-3">
-                        <label for="fecha" class="form-label fondo_azul"> Fecha de Nacimiento</label>
+                        <label for="fecha_nacu" class="form-label fondo_azul"> Fecha de Nacimiento</label>
                         <input type="date" name="fecha_nac" id="fecha_nacu" class="form-control fondo_azul" required id="fechau" max="2004-12-31" min="1957-01-01">
                     </div>
                     <div class="mb-3" >
@@ -139,11 +139,11 @@
                      <div class="mb-3 fondo_azul" id="cargo_u"> </div>
                     <div class="form-floating  mb-3">
                         <input type="text" id="telefonou" class="form-control fondo_azul" placeholder="Numero Telefonico +505" pattern="^\d{8}" minlength="0" maxlength="8" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"   required>
-                        <label for="floatingInput" class="fondo_azul">Numero Telefonico +505</label>
+                        <label for="telefonou" class="fondo_azul">Numero Telefonico +505</label>
                     </div>
                     <div class="form-floating col-sm-12 mt-3">
                         <textarea class="form-control fondo_azul" placeholder="Dirección" id="direccionu" maxlength="300" required></textarea>
-                        <label for="floatingTextarea" class="fondo_azul"> Dirección </label>
+                        <label for="direccionu" class="fondo_azul"> Dirección </label>
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="../css/mis_estilos.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="/css/footer_estatico.css">
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="../css/footable.bootstrap.css">
     <link rel="stylesheet" href="../css/footable.bootstrap.min.css">
  
@@ -110,9 +111,9 @@
                                 <li class=""><a class="dropdown-item text-white" href="../InfoDocente.php"><strong>Información Docente</strong></a></li>  
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link mx-1 text-white" href="../reportes.php"> <i class="bi bi-file-break-fill"></i><strong> Reportes</strong> </a>
-                        </li>
+                        </li> -->
                     </ul>
                     <ul class="navbar-nav ms-auto ">
                         <li class="nav-item dropdown">
@@ -126,7 +127,7 @@
                                 </strong> 
                             </a>
                             <ul class="dropdown-menu mx-4">
-                                <li><a class="dropdown-item text-white" href="../view/usuario_perfil.php"> <i class="bi bi-gear"></i> <strong>Admin Usuarios</strong></a></li>
+                                <li><a class="dropdown-item text-white" href="../usuario_perfil.php"> <i class="bi bi-gear"></i> <strong>Admin Usuarios</strong></a></li>
                                 <hr>
                                 <li><a class="dropdown-item text-white" href="#" onclick="salir()"><strong>Salir</strong></a></li>
                             </ul>

@@ -5,7 +5,14 @@
 
     <title>Principal</title>
 <?php
-include 'includes/header.php';
+if($cargo = 'DIRECTOR')
+{
+    include 'includes/header.php';
+}else
+{
+    include 'includes/header_usuario.php';
+}
+
 ?>
 
 <script>

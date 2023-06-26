@@ -11,7 +11,10 @@ include 'includes/header.php';
         </div>
         <div id="tablaInfo01" class=" mt-3 text-center" >   
         </div>
+        
         <div id="tablaInfo02" class=" mt-3 text-center" >   
+        </div>
+        <div id="btnBuscarInfoDocente" class="text-left mt-3 text-center mb-3" >   
         </div>
  </div>
 

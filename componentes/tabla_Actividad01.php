@@ -8,6 +8,7 @@ require_once "../includes/conexion.php";
                                     <tr >
                                         <th class="text-center">Editar</th>
                                         <th class="text-center">Eliminar</th>
+                                        <th class="text-center">Imprimir</th>
                                         <th  class="text-center" >Código</th>
                                         <th  class="text-center">   Linea de Acción</th>
                                         <th  class="text-center">Protagonistas</th>
@@ -47,7 +48,9 @@ require_once "../includes/conexion.php";
                                             <i class="bi bi-pencil text-white"></i>
                                             </button>
                                         </td>
-                                        <td><button class="btn fondo_degradado_rojo text-light" onclick="consulta_eliminar_actividad('<?php echo $ver [0]?>');"><i class="bi bi-trash"></i></button></td>
+                                        <td><button class="btn fondo_degradado_rojo text-light text-center" onclick="consulta_eliminar_actividad('<?php echo $ver [0]?>');"><i class="bi bi-trash"></i></button></td>
+                                        <td><button class="btn fondo_degradado_verde text-light" onclick="CargarActividad('<?php echo $ver [0]?>');"><i class="bi bi-printer-fill"></i></i></button></td>
+                                        
                                         <td class="text-center"><?php echo $ver [0] ?></td>
                                         <td ><p class="overflow-ellipsis"> <?php echo $ver [1]?></p></td>
                                         <td><p class="overflow-ellipsis "><?php echo $ver [2]?></p> </td>

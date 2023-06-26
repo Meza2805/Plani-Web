@@ -105,7 +105,6 @@ include 'includes/footer.php';
     event.preventDefault();
     let cargo=$('#cargo_d').val();
     agregar_cargo(cargo);
-
  });
 </script>
 
